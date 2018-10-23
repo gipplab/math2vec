@@ -240,3 +240,78 @@
 2018-38-23 18:38:21.575 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
 2018-38-23 18:38:21.590 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
 2018-38-23 18:38:21.590 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 19:00:35.245 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/abbr.ann
+2018-00-23 19:00:35.277 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/abbr.ann
+2018-00-23 19:00:35.279 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 19:00:35.376 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/preTest.ann
+2018-00-23 19:00:35.445 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/preTest.ann
+2018-00-23 19:00:35.446 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 19:00:35.467 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/appendixTest.ann
+2018-00-23 19:00:35.483 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/appendixTest.ann
+2018-00-23 19:00:35.484 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 19:00:35.530 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/olTest.ann
+2018-00-23 19:00:35.637 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/olTest.ann
+2018-00-23 19:00:35.638 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 19:00:35.696 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
+2018-00-23 19:00:35.712 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
+2018-00-23 19:00:35.714 [ForkJoinPool.commonPool-worker-1] DEBUG SentenceSplitter - Start sentence splitting.
+2018-01-23 19:01:25.458 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/abbr.ann
+2018-01-23 19:01:25.483 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/abbr.ann
+2018-01-23 19:01:25.484 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-01-23 19:01:25.524 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/preTest.ann
+2018-01-23 19:01:25.556 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/preTest.ann
+2018-01-23 19:01:25.557 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-01-23 19:01:25.569 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/appendixTest.ann
+2018-01-23 19:01:25.591 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/appendixTest.ann
+2018-01-23 19:01:25.591 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-01-23 19:01:25.616 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/olTest.ann
+2018-01-23 19:01:25.743 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/olTest.ann
+2018-01-23 19:01:25.744 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-01-23 19:01:25.771 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
+2018-01-23 19:01:25.779 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
+2018-01-23 19:01:25.779 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-02-23 19:02:25.154 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/abbr.ann
+2018-02-23 19:02:25.180 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/abbr.ann
+2018-02-23 19:02:25.180 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-02-23 19:02:25.238 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/preTest.ann
+2018-02-23 19:02:25.271 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/preTest.ann
+2018-02-23 19:02:25.272 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-02-23 19:02:25.283 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/appendixTest.ann
+2018-02-23 19:02:25.301 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/appendixTest.ann
+2018-02-23 19:02:25.302 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-02-23 19:02:25.355 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/olTest.ann
+2018-02-23 19:02:25.411 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/olTest.ann
+2018-02-23 19:02:25.411 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-02-23 19:02:25.423 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
+2018-02-23 19:02:25.429 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
+2018-02-23 19:02:25.430 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-04-23 19:04:06.938 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/abbr.ann
+2018-04-23 19:04:06.975 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/abbr.ann
+2018-04-23 19:04:06.977 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-04-23 19:04:07.019 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/preTest.ann
+2018-04-23 19:04:07.036 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/preTest.ann
+2018-04-23 19:04:07.036 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-04-23 19:04:07.045 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/appendixTest.ann
+2018-04-23 19:04:07.055 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/appendixTest.ann
+2018-04-23 19:04:07.055 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-04-23 19:04:07.079 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/olTest.ann
+2018-04-23 19:04:07.165 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/olTest.ann
+2018-04-23 19:04:07.165 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-04-23 19:04:07.203 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
+2018-04-23 19:04:07.218 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
+2018-04-23 19:04:07.218 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-04-23 19:04:17.859 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/abbr.ann
+2018-04-23 19:04:17.892 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/abbr.ann
+2018-04-23 19:04:17.893 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-04-23 19:04:17.950 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/preTest.ann
+2018-04-23 19:04:17.967 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/preTest.ann
+2018-04-23 19:04:17.967 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-04-23 19:04:17.977 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/appendixTest.ann
+2018-04-23 19:04:18.002 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/appendixTest.ann
+2018-04-23 19:04:18.003 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-04-23 19:04:18.047 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/olTest.ann
+2018-04-23 19:04:18.149 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/olTest.ann
+2018-04-23 19:04:18.150 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-04-23 19:04:18.186 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
+2018-04-23 19:04:18.199 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/Math2Vec/planetext/data-out/noprobs.ann
+2018-04-23 19:04:18.199 [main] DEBUG SentenceSplitter - Start sentence splitting.

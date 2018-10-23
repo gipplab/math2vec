@@ -33,7 +33,7 @@ public class SentenceSplitter {
     private HashMap<String, String> annotations;
 
     public SentenceSplitter(Path inDir, Path outDir, Path file){
-        String filename = file.getFileName().toString().split("\\.")[0];
+        String filename = file.getFileName().toString().split("\\.txt")[0];
         annFile = inDir.resolve(filename + ".ann");
         txtFile = inDir.resolve(filename + ".txt");
         outFile = outDir.resolve(filename + ".txt");
@@ -68,7 +68,8 @@ public class SentenceSplitter {
                 for ( int end = splitter.next(); end != BreakIterator.DONE; end = splitter.next() ){
                     sentenceTmp = txt.substring(start, end);
                     if ( sentenceTmp.matches(".*[.\\s]\\w\\.\\s*$") ||
-                            sentenceTmp.matches("^\\w\\.\\s$") )
+                            sentenceTmp.matches("^\\w\\.\\s$") ||
+                            sentenceTmp.matches("^\\s*\\.\\s*$"))
                         continue;
 
                     sentence = new StringBuffer();
