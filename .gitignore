@@ -2,3 +2,6 @@
 out/
 target/
 *.iml
+
+data-out/
+data-out-processed/
