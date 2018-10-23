@@ -1,0 +1,45 @@
+2018-00-23 16:00:03.551 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test4.ann
+2018-00-23 16:00:03.697 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test4.ann
+2018-00-23 16:00:03.700 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 16:00:03.789 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test.ann
+2018-00-23 16:00:03.857 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test.ann
+2018-00-23 16:00:03.857 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 16:00:03.875 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test2.ann
+2018-00-23 16:00:04.053 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test2.ann
+2018-00-23 16:00:04.054 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 16:00:04.105 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test3.ann
+2018-00-23 16:00:04.113 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test3.ann
+2018-00-23 16:00:04.113 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 16:00:04.123 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/noprobs.ann
+2018-00-23 16:00:04.129 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/noprobs.ann
+2018-00-23 16:00:04.129 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 16:00:22.759 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test4.ann
+2018-00-23 16:00:22.799 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test4.ann
+2018-00-23 16:00:22.799 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 16:00:22.831 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test.ann
+2018-00-23 16:00:22.876 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test.ann
+2018-00-23 16:00:22.877 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 16:00:22.896 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test2.ann
+2018-00-23 16:00:23.032 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test2.ann
+2018-00-23 16:00:23.034 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 16:00:23.090 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test3.ann
+2018-00-23 16:00:23.097 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test3.ann
+2018-00-23 16:00:23.098 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-00-23 16:00:23.109 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/noprobs.ann
+2018-00-23 16:00:23.117 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/noprobs.ann
+2018-00-23 16:00:23.118 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-08-23 17:08:57.910 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test4.ann
+2018-08-23 17:08:58.174 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test4.ann
+2018-08-23 17:08:58.174 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-08-23 17:08:58.310 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test.ann
+2018-08-23 17:08:58.369 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test.ann
+2018-08-23 17:08:58.372 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-08-23 17:08:58.413 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test2.ann
+2018-08-23 17:08:58.725 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test2.ann
+2018-08-23 17:08:58.725 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-08-23 17:08:58.844 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/test3.ann
+2018-08-23 17:08:58.904 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/test3.ann
+2018-08-23 17:08:58.906 [main] DEBUG SentenceSplitter - Start sentence splitting.
+2018-08-23 17:08:58.934 [main] DEBUG SentenceSplitter - Load annotations for Ann-File: /home/andreg-p/Projects/PlaneText/data-out/noprobs.ann
+2018-08-23 17:08:58.954 [main] DEBUG SentenceSplitter - Finish loading annotations of file: /home/andreg-p/Projects/PlaneText/data-out/noprobs.ann
+2018-08-23 17:08:58.954 [main] DEBUG SentenceSplitter - Start sentence splitting.
