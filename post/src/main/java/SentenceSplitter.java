@@ -21,8 +21,12 @@ public class SentenceSplitter {
 
     private static final Pattern LLAMAPUNG_PATTERN =
             Pattern.compile(".*<annotation.*?encoding=\"application/x-llamapun\".*?>(.*?)<.*");
+
+    private static final Pattern ABBR_PATTERN =
+            Pattern.compile(".*title=\"(.*?)\".*");
+
     private static final Pattern TOKEN_PATTERN =
-            Pattern.compile("(__H\\d+_\\d+__)|(__MATH_\\d+__)|([\\s]{2,})|(\\t)");
+            Pattern.compile("(__H\\d+_\\d+__)|(__MATH_\\d+__)|(__ABBR_\\d+__)|([\\s]{2,})|(\\t+)");
 
     private Path annFile, txtFile, outFile;
 
@@ -72,7 +76,9 @@ public class SentenceSplitter {
                     while(tokenMatcher.find()){
                         if ( tokenMatcher.group(2) != null ){
                             tokenMatcher.appendReplacement(sentence, annotations.get(tokenMatcher.group(2)));
-                        } else if ( tokenMatcher.group(3) != null || tokenMatcher.group(4) != null ) {
+                        } else if ( tokenMatcher.group(3) != null ){
+                            tokenMatcher.appendReplacement(sentence, annotations.get(tokenMatcher.group(3)));
+                        } else if ( tokenMatcher.group(4) != null || tokenMatcher.group(5) != null ) {
                             tokenMatcher.appendReplacement(sentence, " ");
                         } else {
                             tokenMatcher.appendReplacement(sentence, "");
@@ -99,15 +105,24 @@ public class SentenceSplitter {
             lineStream.forEach( l -> {
                 if ( l.startsWith("T") ){
                     lastTag[0] = l.split("\t")[2];
-                } else if ( l.startsWith("#") ){
-                    if ( lastTag[0].matches("__MATH.*") ){ // math token
+                } else if ( l.startsWith("#") ) {
+                    if (lastTag[0].matches("__MATH.*")) { // math token
                         String mml = l.split("\t")[2];
                         Matcher m = LLAMAPUNG_PATTERN.matcher(mml);
-                        if ( m.matches() ){
+                        if (m.matches()) {
                             annotations.put(lastTag[0], tagByMath(m.group(1)));
                         } else {
                             LOG.error("MML doesn't match LLAMAPUN pattern. Ann-File: " + annFile.toString() +
                                     ", Token: " + lastTag[0]);
+                        }
+                    } else if (lastTag[0].matches("__ABBR.*")) { // abbreviation token
+                        String abbr = l.split("\t")[2];
+                        Matcher m = ABBR_PATTERN.matcher(abbr);
+                        if (m.matches()){
+                            annotations.put(lastTag[0], m.group(1));
+                        } else {
+                            LOG.error("ABBR doesn't match abbreviation pattern. Ann-File: " + annFile.toString() +
+                                    ", Abbr: " + abbr);
                         }
                     } else { // header token
                         // can be ignored for our dataset
