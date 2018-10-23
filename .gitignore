@@ -5,3 +5,6 @@ target/
 
 data-out/
 data-out-processed/
+
+logs/
+

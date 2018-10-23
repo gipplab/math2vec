@@ -49,7 +49,7 @@ public class PostProcessor {
                         try {
                             ss.start();
                         } catch ( RuntimeException re ){
-                            System.out.println("Skipped " + ss.getFile().toString() + " because: " + re.getMessage());
+                            LOG.info("Skipped " + ss.getFile().toString() + " because: " + re.getMessage());
                         }
                         currentlyProcessedDocs++;
                     } );

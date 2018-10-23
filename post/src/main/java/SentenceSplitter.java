@@ -83,9 +83,11 @@ public class SentenceSplitter {
                     tokenMatcher = TOKEN_PATTERN.matcher(sentenceTmp);
                     while(tokenMatcher.find()){
                         if ( tokenMatcher.group(2) != null ){
-                            tokenMatcher.appendReplacement(sentence, annotations.get(tokenMatcher.group(2)));
+                            String rep = annotations.get(tokenMatcher.group(2));
+                            tokenMatcher.appendReplacement(sentence, rep == null ? "" : rep);
                         } else if ( tokenMatcher.group(3) != null ){
-                            tokenMatcher.appendReplacement(sentence, annotations.get(tokenMatcher.group(3)));
+                            String rep = annotations.get(tokenMatcher.group(3));
+                            tokenMatcher.appendReplacement(sentence, rep == null ? "" : rep);
                         } else if ( tokenMatcher.group(4) != null || tokenMatcher.group(5) != null ) {
                             tokenMatcher.appendReplacement(sentence, " ");
                         } else {
