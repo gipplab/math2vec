@@ -1,0 +1,156 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'optparse'
+require 'fileutils'
+require 'pathname'
+require_relative '../lib/planetext'
+require 'pp'
+
+module PlaneText
+  class NoConfigError < StandardError; end
+  class BadSelector < StandardError; end
+  extend PlaneText::Common
+
+  changes = Hash.new { |h, k| h[k] = [] }
+  output_dir = nil
+  limit = 0
+  verbose = false
+
+  option_parser = OptionParser.new do |opts|
+    planetext = File.basename($0)
+    opts.banner = "Usage: #{planetext} [options] <tags.yaml> <files...>" # TODO
+    opts.separator ""
+
+    opts.on('-h', '--help', 'Display this help') do
+      puts opts
+      exit
+    end
+
+    %i(independent decoration object metainfo).each do |column|
+      opts.on( "-#{column[0]}", "--#{column} SELECTOR", "Classify a selector as #{column}") do |selector|
+        changes[column] << selector
+      end
+    end
+    opts.on( "-u", "--unclassify SELECTOR", "Unclassify a selector") do |selector|
+      changes[false] << selector
+    end
+
+    opts.on('-l', '--limit NUM', Integer, 'Limit number of documents examined at once') do |num|
+      limit = num
+    end
+
+    opts.on('-O', '--output DIR', 'Output converted files to this directory') do |dir|
+      output_dir = dir
+    end
+
+    opts.on('-v', '--[no-]verbose', 'Display the current selectors and progress') do |bool|
+      verbose = bool
+    end
+
+    opts.separator ''
+    opts.separator 'Selector format: ROW:NAMESPACE:TAG[ATTRIBUTE: WORD1 WORD2...]'
+    opts.separator 'Everything except TAG is optional; ROW defaults to last row'
+  end
+
+  begin
+    option_parser.parse!
+    progress_file =
+      ARGV.shift or
+        raise NoConfigError.new("config not specified")
+    input_dir =
+      ARGV.shift or
+        raise NoConfigError.new("document directory not specified")
+  rescue OptionParser::InvalidOption, NoConfigError => x
+    STDERR.puts "Error: #{x}"
+    exit(1)
+  end
+
+  if output_dir
+    unless File.exist?(output_dir)
+      FileUtils.cp_r(input_dir, output_dir)
+    end
+  end
+
+  progress_data = get_progress_data(progress_file)
+  tags = progress_data[:tags]
+  changes.each do |column, selectors|
+    selectors.each do |selector|
+      # test shortcut (LINE:TAG.CLASS.CLASS...)
+      md = /^(?:(\d+):)?([^\.\s]+)(\.\S*)/.match(selector)
+      if md
+        _, line, tag, classes = *md
+        attr = 'class'
+        values = classes.split('.')[1..-1]
+      else
+        # test full (LINE:TAG[ATTR: WORD WORD...])
+        md = /^(?:(\d+):)?([^\]\[]+)(?:\[([^:]*)(?::\s*([^\]]*))?\])?/.match(selector)
+        STDERR.puts "Error: bad selector #{selector}" and next unless md
+        _, line, tag, attr, values = *md
+        values = (values || "").split
+      end
+
+      tag = "xmlns:#{tag}" unless tag.include?(?:)
+      tag = tag[1..-1] if tag[0] == ':'
+      data = [tag, attr, *values].compact
+      line = line.to_i if line
+
+      tags.each do |_, old_data_array|
+        deleted = old_data_array.delete(data)
+        progress_data[:processed_files] = [] if deleted
+      end
+      next unless column
+
+      if line && line >= 0 && line < tags[column].length
+        tags[column][line, 0] = [data]
+      else
+        tags[column] << data
+      end
+    end
+  end
+  save_progress_file(progress_file, progress_data)
+
+  if verbose
+    tags.each do |column, selectors|
+      puts column.upcase, selectors.map { |selector| to_selector(*selector) }, ""
+    end
+  end
+
+  limit = :all if output_dir
+  searcher = UnknownSearcher.new(input_dir, progress_file, limit)
+  if output_dir
+    unless File.exist?(output_dir)
+      FileUtils.cp_r(input_dir, output_dir)
+    end
+
+    input_path = Pathname.new(input_dir).realpath
+    output_path = Pathname.new(output_dir).realpath
+
+    searcher.per_doc do |xml_file, doc|
+      out = output_path + Pathname.new(xml_file).relative_path_from(input_path)
+
+      #File.open(out, 'w') do |f|
+      #  f.write(doc.enriched_xml)
+      #end
+
+      File.open(out.sub_ext('.txt'), 'w') do |f|
+        f.write(doc.text)
+      end
+
+      File.open(out.sub_ext('.ann'), 'w') do |f|
+        f.puts(doc.brat_ann)
+      end
+    end
+  end
+  searcher.run
+
+  searcher.unknown_standoffs.each do |standoff|
+    attributes = standoff.attributes.map { |attr, value|
+      %{ #{attr}="#{value.gsub('"', '\\"')}"}
+    }.join
+    tag = "<#{standoff.name}#{attributes}>"
+    puts "#{standoff.file_name}: (#{standoff.start_offset}-#{standoff.end_offset}) #{tag}"
+  end
+
+  puts "", "Processed files: #{searcher.done}/#{searcher.total}" if verbose
+end

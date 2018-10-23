@@ -1,0 +1,23 @@
+form method="POST"
+  table
+    - if flash[:error]
+      tr
+        td colspan="2" style="color: red"
+          = flash[:error]
+    tr
+      td Login
+      td
+        input name="username" id="username" value=flash[:username]
+    tr
+      td Password
+      td
+        input name="password" type="password"
+    tr
+      td
+      td
+        input type="submit"
+          Login
+javascript:
+  var login = document.getElementById('username');
+  login.focus();
+  login.select();

@@ -1,0 +1,99 @@
+doctype html
+html
+  head
+    title PlaneText
+    meta charset="UTF-8"
+    // set up constants
+    // load require.js and set up dependencies
+    // both with local fallbacks if CDN is down
+    javascript:
+      var unknowns = #{{JSON.dump(unknown.tree)}};
+      var selectors = #{{JSON.dump(unknown.selectors)}};
+      var dataset_url = #{{JSON.dump(dataset_url)}};
+      var app_url = #{{JSON.dump(app_url)}};
+      var require = {
+        baseUrl: app_url + 'js',
+        paths: {
+          jquery: [
+            '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min',
+            'lib/jquery.min',
+          ],
+        },
+      };
+    script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"
+    javascript:
+      window.requirejs || document.write('<script src="#{url('js/lib/require.min.js')}">\x3C/script>')
+    javascript:
+      require(['planetext'], function(PlaneText) {
+        PlaneText.init_step();
+      })
+    link rel="stylesheet" href=url('css/step.css')
+  body
+    header
+      div PlaneText
+    div.leftheader.untagged Unknown Tags
+    div.selects.untagged
+      div
+        div Tag
+        ul id="tag" tabindex="1" class="uniselect"
+          - unknown.tree.each do |tag_name, _|
+            li draggable="true" #{tag_name}
+      div
+        div Attribute
+        ul id="attr" tabindex="2" class="uniselect"
+      div
+        div Word
+        ul id="word" multiple="multiple" tabindex="3" class="multiselect"
+      div
+        div Value
+        ul id="value" tabindex="4" class="uniselect"
+      div
+        div Instance
+        ul id="instance" tabindex="5" class="uniselect"
+    div.leftheader.tagged Classified Tags
+    div.selects.tagged
+      div
+        div Independent
+        ul id="independent" tabindex="6" class="uniselect"
+          - unknown.selectors[:independent].each do |selector|
+            li draggable="true" =selector
+      div
+        div Decoration
+        ul id="decoration" tabindex="7" class="uniselect"
+          - unknown.selectors[:decoration].each do |selector|
+            li draggable="true" =selector
+      div
+        div Object
+        ul id="object" tabindex="8" class="uniselect"
+          - unknown.selectors[:object].each do |selector|
+            li draggable="true" =selector
+      div
+        div Metainfo
+        ul id="metainfo" tabindex="9" class="uniselect"
+          - unknown.selectors[:metainfo].each do |selector|
+            li draggable="true" =selector
+      div
+        div Options
+        ul id="options"
+          li
+            label for="autosubmit"
+              input#autosubmit type="checkbox" checked=('checked' if autosubmit)
+              | Autosubmit
+          li
+            input type="button" id="submit" value="Submit" disabled=('disabled' if autosubmit)
+          li
+            form id="doc_limit_form" action="#"
+              | Docs&nbsp;
+              input type="number" id="doc_limit" min="0" value=doc_limit
+              input type="submit" value="Set"
+          li
+            a href="#{dataset_url}/progress" Config
+            | ,&nbsp;
+            a href="#{dataset_url}/output" Data
+    #tagtext
+    #frame
+      iframe
+    footer
+      #progress
+        | #{unknown.done}/#{unknown.total}
+      #selector

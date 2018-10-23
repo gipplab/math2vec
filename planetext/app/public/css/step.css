@@ -1,0 +1,185 @@
+/* line 37, ../../assets/sass/step.sass */
+html, body {
+  margin: 0;
+  box-sizing: content-box;
+  font-family: sans-serif;
+}
+
+/* line 41, ../../assets/sass/step.sass */
+header {
+  background-color: black;
+  color: white;
+  font: bold italic 30px sans-serif;
+  width: 100%;
+  height: 35px;
+}
+/* line 46, ../../assets/sass/step.sass */
+header > div {
+  padding-left: 3px;
+}
+
+/* line 48, ../../assets/sass/step.sass */
+.untagged {
+  top: 35px;
+}
+
+/* line 50, ../../assets/sass/step.sass */
+.tagged {
+  top: 159px;
+}
+/* line 52, ../../assets/sass/step.sass */
+.tagged ul {
+  background-color: #eeffee;
+}
+/* line 54, ../../assets/sass/step.sass */
+.tagged #options {
+  background-color: #ebe0d6;
+}
+
+/* line 56, ../../assets/sass/step.sass */
+.leftheader {
+  -moz-transform: translate(-49.5px, 49.5px) rotate(-90deg);
+  -o-transform: translate(-49.5px, 49.5px) rotate(-90deg);
+  -webkit-transform: translate(-49.5px, 49.5px) rotate(-90deg);
+  width: 116px;
+  height: 21px;
+  position: absolute;
+  text-align: right;
+  padding: 2px 4px;
+  background-color: black;
+  color: white;
+  font: bold italic 15px sans-serif;
+}
+
+/* line 60, ../../assets/sass/step.sass */
+.inserted {
+  background-color: #bbbbbb;
+}
+
+/* line 62, ../../assets/sass/step.sass */
+.selects {
+  position: absolute;
+  left: 25px;
+  right: 0;
+  height: 124px;
+}
+/* line 67, ../../assets/sass/step.sass */
+.selects > div {
+  float: left;
+  width: 20%;
+  height: 124px;
+}
+/* line 71, ../../assets/sass/step.sass */
+.selects > div > div {
+  font: bold 1em sans-serif;
+  padding: 3px 2px;
+  background-color: #444444;
+  color: white;
+  height: 18px;
+}
+/* line 77, ../../assets/sass/step.sass */
+.selects ul {
+  margin: -1px;
+  border: 1px solid #999999;
+  padding: 0;
+  list-item-marker: none;
+  overflow-y: auto;
+  width: 100%;
+  height: 100px;
+  outline: none;
+}
+/* line 86, ../../assets/sass/step.sass */
+.selects ul.droppable {
+  background-color: #dddd66 !important;
+}
+/* line 88, ../../assets/sass/step.sass */
+.selects ul:focus {
+  background-color: #eeeeff;
+}
+/* line 90, ../../assets/sass/step.sass */
+.selects ul li {
+  cursor: default;
+  padding: 0 3px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  list-style-type: none;
+}
+/* line 96, ../../assets/sass/step.sass */
+.selects ul li[draggable] {
+  cursor: move;
+}
+/* line 98, ../../assets/sass/step.sass */
+.selects ul li.selected {
+  color: black;
+  background-color: #d4d4d4;
+}
+/* line 101, ../../assets/sass/step.sass */
+.selects ul.uniselect:focus li.selected {
+  color: white;
+  background-color: #2a80df;
+}
+/* line 104, ../../assets/sass/step.sass */
+.selects ul.multiselect:focus li.selected {
+  color: white;
+  background-color: #95c0ef;
+}
+/* line 107, ../../assets/sass/step.sass */
+.selects ul.multiselect:focus li.selectcursor {
+  color: white;
+  background-color: #2a80df;
+}
+/* line 110, ../../assets/sass/step.sass */
+.selects ul li.selected.empty, .selects ul li.selectcursor.empty {
+  color: #999999;
+}
+/* line 112, ../../assets/sass/step.sass */
+.selects ul li.empty {
+  color: #cccccc;
+}
+
+/* line 114, ../../assets/sass/step.sass */
+#frame {
+  position: fixed;
+  top: 303px;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+/* line 120, ../../assets/sass/step.sass */
+#frame iframe {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+/* line 124, ../../assets/sass/step.sass */
+#tagtext {
+  position: fixed;
+  top: 283px;
+  height: 20px;
+  left: 0;
+  right: 0;
+  background-color: black;
+  color: white;
+}
+
+/* line 132, ../../assets/sass/step.sass */
+footer {
+  position: fixed;
+  left: 0;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  color: white;
+}
+
+/* line 140, ../../assets/sass/step.sass */
+#progress {
+  float: right;
+}
+
+/* line 142, ../../assets/sass/step.sass */
+#doc_limit {
+  width: 30px;
+}

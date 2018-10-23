@@ -1,0 +1,56 @@
+---
+:tags:
+  :independent: []
+  :decoration:
+  - html
+  - head
+  - body
+  - section
+  - div
+  - span
+  - p
+  - article
+  - h2
+  - h3
+  - br
+  - blockquote
+  - ol
+  - li
+  - dl
+  - dt
+  - dd
+  - a
+  :object:
+  - math
+  - h1[@class="ltx_title ltx_title_document"]
+  - h1[@class="ltx_title ltx_font_bold ltx_title_document"]
+  - h1[@class="ltx_title ltx_font_smallcaps ltx_title_document"]
+  - h1[@class="ltx_title ltx_centering ltx_title_document"]
+  - h2[@class="ltx_title ltx_title_section"]
+  - h2[@class="ltx_title ltx_title_subsection"]
+  - h3[@class="ltx_title ltx_title_subsection"]
+  - h4[@class="ltx_title ltx_title_subsubsection"]
+  - h4[@class="ltx_title ltx_title_paragraph"]
+  - h5[@class="ltx_title ltx_title_paragraph"]
+  - h6[@class="ltx_title ltx_title_abstract"]
+  :metainfo:
+  - meta
+  - footer
+  - div[@class="ltx_authors"]
+  - div[@class="ltx_keywords"]
+  - div[@class="ltx_classification"]
+  - div[@class="ltx_date ltx_role_creation"]
+  - span
+  - ul[@class="ltx_biblist"]
+  - figure
+  - table
+  - img
+  - svg
+  - cite
+  - section[@class="ltx_bibliography"]
+  - section[@class="ltx_appendix"]
+  - title
+  - h6
+  - ul
+  - pre
+  - code

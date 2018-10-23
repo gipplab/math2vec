@@ -1,0 +1,143 @@
+$header: 35px
+$headerfontsize: 30px
+$padding: 3px
+$selectheader: 18px
+$selectheadertbpad: 3px
+$selectheaderrlpad: 2px
+$selectheight: 100px
+$selectleftheaderheight: 25px
+$footer: 20px
+$tagtextheight: 20px
+
+$selecttotalheight: $selectheader + $selectheight + 2 * $selectheadertbpad
+$taggedtop: $header + $selecttotalheight
+$tagtexttop: $taggedtop + $selecttotalheight
+$frametop: $tagtexttop + $tagtextheight
+
+@mixin vertical($width, $height)
+  $lrpad: 4px
+  $tbpad: 2px
+  $transx: -($width - $height) / 2
+  $transy: ($width - $height) / 2
+  -moz-transform: translate($transx, $transy) rotate(-90deg)
+  -o-transform: translate($transx, $transy) rotate(-90deg)
+  -webkit-transform: translate($transx, $transy) rotate(-90deg)
+  // TODO IE
+  // filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)
+  // -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"
+  width: $width - $lrpad * 2
+  height: $height - $tbpad * 2
+  position: absolute
+  text-align: right
+  padding: $tbpad $lrpad
+@mixin header()
+  background-color: #000000
+  color: #ffffff
+
+html, body
+  margin: 0
+  box-sizing: content-box
+  font-family: sans-serif
+header
+  @include header()
+  font: bold italic $headerfontsize sans-serif
+  width: 100%
+  height: $header
+  & > div
+    padding-left: $padding
+.untagged
+  top: $header
+.tagged
+  top: $taggedtop
+  ul
+    background-color: #eeffee
+  #options
+    background-color: #ebe0d6
+.leftheader
+  @include vertical($selecttotalheight, $selectleftheaderheight)
+  @include header()
+  font: bold italic 15px sans-serif
+.inserted
+  background-color: #bbbbbb
+.selects
+  position: absolute
+  left: $selectleftheaderheight
+  right: 0
+  height: $selecttotalheight
+  & > div
+    float: left
+    width: 20%
+    height: $selecttotalheight
+    & > div // header
+      font: bold 1em sans-serif
+      padding: $selectheadertbpad $selectheaderrlpad
+      background-color: #444444
+      color: #ffffff
+      height: $selectheader
+  ul
+    margin: -1px
+    border: 1px solid #999999
+    padding: 0
+    list-item-marker: none
+    overflow-y: auto
+    width: 100%
+    height: $selectheight
+    outline: none
+    &.droppable
+      background-color: #dddd66 !important
+    &:focus
+      background-color: #eeeeff
+    li
+      cursor: default
+      padding: 0 $padding
+      overflow-x: hidden
+      white-space: nowrap
+      list-style-type: none
+    li[draggable]
+      cursor: move
+    li.selected
+      color: #000000
+      background-color: #d4d4d4
+    &.uniselect:focus li.selected
+      color: #ffffff
+      background-color: #2a80df
+    &.multiselect:focus li.selected
+      color: #ffffff
+      background-color: #95c0ef
+    &.multiselect:focus li.selectcursor
+      color: #ffffff
+      background-color: #2a80df
+    li.selected.empty, li.selectcursor.empty
+      color: #999999
+    li.empty
+      color: #cccccc
+#frame
+  position: fixed
+  top: $frametop
+  bottom: $footer
+  left: 0
+  right: 0
+  iframe
+    height: 100%
+    width: 100%
+    overflow: auto
+#tagtext
+  position: fixed
+  top: $tagtexttop
+  height: $tagtextheight
+  left: 0
+  right: 0
+  background-color: #000000
+  color: #ffffff
+footer
+  position: fixed
+  left: 0
+  height: $footer
+  bottom: 0
+  right: 0
+  background-color: #000000
+  color: #ffffff
+#progress
+  float: right
+#doc_limit
+  width: 30px

@@ -1,0 +1,6 @@
+mark_displacement: false
+webapp:
+  session_secret: secret
+  users: []
+    # user: password
+    # (delete `[]` from the `users` line)
