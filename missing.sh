@@ -1,8 +1,8 @@
 #!/bin/bash
 
-DIRIN="~/arxmliv/no_problems_raw"
-DIRPROC="~/arxmliv/no_problems_txt"
-DIROUT="~/arxmliv/no_problems_tmp"
+DIRIN="/home/andreg-p/arxmliv/no_problems_raw"
+DIRPROC="/home/andreg-p/arxmliv/no_problems_txt"
+DIROUT="/home/andreg-p/arxmliv/no_problems_tmp"
 
 for file in $(ls $DIRIN); do
 	name=${file%.*}
