@@ -115,7 +115,9 @@ public class SentenceSplitter {
         try ( Stream<String> lineStream = Files.lines(annFile) ) {
             String[] lastTag = new String[]{""};
             lineStream.forEach( l -> {
-                if ( l.startsWith("T") ){
+                if ( l.matches("[\\s\\t]*") ){ // empty annotation file
+                    LOG.debug("Skip because of empty annotation file.");
+                } else if ( l.startsWith("T") ){
                     lastTag[0] = l.split("\t")[2];
                 } else if ( l.startsWith("#") ) {
                     if (lastTag[0].matches("__MATH.*")) { // math token
