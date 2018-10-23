@@ -7,7 +7,6 @@
   - body
   - section
   - div
-  - span
   - p
   - article
   - h2
@@ -22,6 +21,7 @@
   - a
   - sup
   - sub
+  - span
   :object:
   - math
   - h1[@class="ltx_title ltx_title_document"]
@@ -51,7 +51,6 @@
   - div[@class="ltx_keywords"]
   - div[@class="ltx_classification"]
   - div[@class="ltx_date ltx_role_creation"]
-  - span
   - ul[@class="ltx_biblist"]
   - figure
   - table
