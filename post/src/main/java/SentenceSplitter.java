@@ -30,9 +30,12 @@ public class SentenceSplitter {
 
     private Path annFile, txtFile, outFile;
 
+    private final Path origIn;
+
     private HashMap<String, String> annotations;
 
     public SentenceSplitter(Path inDir, Path outDir, Path file){
+        origIn = file;
         String filename = file.getFileName().toString().split("\\.txt")[0];
         annFile = inDir.resolve(filename + ".ann");
         txtFile = inDir.resolve(filename + ".txt");
@@ -40,7 +43,11 @@ public class SentenceSplitter {
         annotations = new HashMap<>();
     }
 
-    public void start() {
+    public Path getFile(){
+        return origIn;
+    }
+
+    public void start() throws RuntimeException {
         try {
             Files.deleteIfExists(outFile);
             Files.createFile(outFile);
@@ -93,13 +100,15 @@ public class SentenceSplitter {
                 }
             }
         } catch ( FileNotFoundException fnne ){
-            fnne.printStackTrace();
+            LOG.error("File cannot be found!", fnne);
+            throw new RuntimeException("File not found exception!");
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.error("Cannot read or write files.", e);
+            throw new RuntimeException("Cannot read/write file.");
         }
     }
 
-    private void loadAnnotations() {
+    private void loadAnnotations() throws RuntimeException {
         LOG.debug("Load annotations for Ann-File: " + annFile.toString());
         try ( Stream<String> lineStream = Files.lines(annFile) ) {
             String[] lastTag = new String[]{""};
@@ -135,6 +144,7 @@ public class SentenceSplitter {
             LOG.debug("Finish loading annotations of file: " + annFile.toString());
         } catch ( IOException ioe ){
             LOG.error("Cannot read from annotation file " + annFile.toString());
+            throw new RuntimeException("Cannot read from annotation file " + annFile.toString());
         }
     }
 

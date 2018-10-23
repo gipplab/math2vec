@@ -46,7 +46,11 @@ public class PostProcessor {
                     .filter( p -> p.toString().endsWith(".txt") ) // only take txt and not annotation file
                     .map( p -> new SentenceSplitter(docsPath, outputPath, p) )
                     .forEach( ss -> {
-                        ss.start();
+                        try {
+                            ss.start();
+                        } catch ( RuntimeException re ){
+                            System.out.println("Skipped " + ss.getFile().toString() + " because: " + re.getMessage());
+                        }
                         currentlyProcessedDocs++;
                     } );
         } catch ( IOException ioe ){
