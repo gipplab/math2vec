@@ -8,6 +8,6 @@ for file in $(ls $DIRIN); do
 	name=${file%.*}
 	if ! [[ -f "$DIRPROC/$name.txt" ]]; then
 		echo "$name was not processed yet => move to output directory..."
-		$(cp $DIRIN/$name.html $DIROUT/$name.html)
+		#$(cp $DIRIN/$name.html $DIROUT/$name.html)
 	fi
 done	
