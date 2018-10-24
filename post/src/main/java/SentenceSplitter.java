@@ -34,6 +34,8 @@ public class SentenceSplitter {
 
     private HashMap<String, String> annotations;
 
+    private boolean noAnnotations = false;
+
     public SentenceSplitter(Path inDir, Path outDir, Path file){
         origIn = file;
         String filename = file.getFileName().toString().split("\\.txt")[0];
@@ -79,23 +81,27 @@ public class SentenceSplitter {
                             sentenceTmp.matches("^\\s*\\.\\s*$"))
                         continue;
 
-                    sentence = new StringBuffer();
-                    tokenMatcher = TOKEN_PATTERN.matcher(sentenceTmp);
-                    while(tokenMatcher.find()){
-                        if ( tokenMatcher.group(2) != null ){
-                            String rep = annotations.get(tokenMatcher.group(2));
-                            tokenMatcher.appendReplacement(sentence, rep == null ? "" : rep);
-                        } else if ( tokenMatcher.group(3) != null ){
-                            String rep = annotations.get(tokenMatcher.group(3));
-                            tokenMatcher.appendReplacement(sentence, rep == null ? "" : rep);
-                        } else if ( tokenMatcher.group(4) != null || tokenMatcher.group(5) != null ) {
-                            tokenMatcher.appendReplacement(sentence, " ");
-                        } else {
-                            tokenMatcher.appendReplacement(sentence, "");
+                    if ( noAnnotations ){
+                        bw.write(sentenceTmp + NL);
+                    } else {
+                        sentence = new StringBuffer();
+                        tokenMatcher = TOKEN_PATTERN.matcher(sentenceTmp);
+                        while(tokenMatcher.find()){
+                            if ( tokenMatcher.group(2) != null ){
+                                String rep = annotations.get(tokenMatcher.group(2));
+                                tokenMatcher.appendReplacement(sentence, rep == null ? "" : rep);
+                            } else if ( tokenMatcher.group(3) != null ){
+                                String rep = annotations.get(tokenMatcher.group(3));
+                                tokenMatcher.appendReplacement(sentence, rep == null ? "" : rep);
+                            } else if ( tokenMatcher.group(4) != null || tokenMatcher.group(5) != null ) {
+                                tokenMatcher.appendReplacement(sentence, " ");
+                            } else {
+                                tokenMatcher.appendReplacement(sentence, "");
+                            }
                         }
+                        tokenMatcher.appendTail(sentence);
+                        bw.write(sentence.toString() + NL);
                     }
-                    tokenMatcher.appendTail(sentence);
-                    bw.write(sentence.toString() + NL);
 
                     // update lengths
                     start = end;
@@ -117,6 +123,8 @@ public class SentenceSplitter {
             lineStream.forEach( l -> {
                 if ( l.matches("[\\s\\t]*") ){ // empty annotation file
                     LOG.debug("Skip because of empty annotation file.");
+                    noAnnotations = true;
+                    throw new BreakException(); // BAD PRACTICE! but it seems to be the only way to terminate forEach...
                 } else if ( l.startsWith("T") ){
                     lastTag[0] = l.split("\t")[2];
                 } else if ( l.startsWith("#") ) {
@@ -146,6 +154,8 @@ public class SentenceSplitter {
                 }
             });
             LOG.debug("Finish loading annotations of file: " + annFile.toString());
+        } catch ( BreakException be ){
+            // nothing to do here, just avoiding throwing this exception further
         } catch ( IOException ioe ){
             LOG.error("Cannot read from annotation file " + annFile.toString());
             throw new RuntimeException("Cannot read from annotation file " + annFile.toString());
@@ -160,4 +170,6 @@ public class SentenceSplitter {
         }
         return buf.toString();
     }
+
+    private class BreakException extends RuntimeException {}
 }
