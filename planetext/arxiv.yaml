@@ -9,8 +9,6 @@
   - div
   - p
   - article
-  - h2
-  - h3
   - br
   - blockquote
   - ol
@@ -22,27 +20,16 @@
   - sup
   - sub
   - span
+  - del
+  - ins
   :object:
   - math
-  - h1[@class="ltx_title ltx_title_document"]
-  - h1[@class="ltx_title ltx_font_bold ltx_title_document"]
-  - h1[@class="ltx_title ltx_font_smallcaps ltx_title_document"]
-  - h1[@class="ltx_title ltx_centering ltx_title_document"]
-  - h1[@class="ltx_title ltx_align_left ltx_title_document"]
-  - h1[@class="ltx_title ltx_font_schwabacher ltx_title_document"]
-  - h1[@class="ltx_title ltx_font_sansserif ltx_title_document"]
-  - h1[@class="ltx_title ltx_font_typewriter ltx_title_document"]
-  - h1[@class="ltx_title ltx_font_slanted ltx_title_document"]
-  - h2[@class="ltx_title ltx_title_section"]
-  - h2[@class="ltx_title ltx_title_subsection"]
-  - h3[@class="ltx_title ltx_title_subsection"]
-  - h4[@class="ltx_title ltx_title_subsection"]
-  - h4[@class="ltx_title ltx_title_subsubsection"]
-  - h4[@class="ltx_title ltx_font_typewriter ltx_title_subsubsection"]
-  - h4[@class="ltx_title ltx_title_paragraph"]
-  - h5[@class="ltx_title ltx_title_paragraph"]
-  - h5[@class="ltx_title ltx_title_subparagraph"]
-  - h6[@class="ltx_title ltx_title_abstract"]
+  - h1
+  - h2
+  - h3
+  - h4
+  - h5
+  - h5
   - abbr
   :metainfo:
   - meta
@@ -65,3 +52,4 @@
   - pre
   - code
   - style
+  - object
