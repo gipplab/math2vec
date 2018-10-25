@@ -137,14 +137,14 @@ module PlaneText
       start_time = Time.now.to_f
 
       printf(
-        "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%06.3f \r",
+        "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%02d \r",
         0,
         "",
         proc_files,
         NUM_OF_FILES,
         0,
         0,
-        0.0
+        0
       )
 
       unprocessed_files.each do |xml_file_name|
@@ -176,10 +176,10 @@ module PlaneText
 
           proc_files += 1
           current_process = 100*proc_files/NUM_OF_FILES
-          time = (Time.now.to_f - start_time).to_f/1000.to_f
+          time = (Time.now.to_f - start_time)
 
           printf(
-            "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%06.3f \r",
+            "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%02d \r",
             current_process,
             "=" * (current_process/2),
             proc_files,
