@@ -96,14 +96,14 @@ public class PostProcessor {
                 number,
                 maxDocs,
                 TimeUnit.MILLISECONDS.toHours(time),
-                TimeUnit.MILLISECONDS.toMinutes(time),
-                TimeUnit.MILLISECONDS.toSeconds(time));
+                TimeUnit.MILLISECONDS.toMinutes(time)%60,
+                TimeUnit.MILLISECONDS.toSeconds(time)%60);
     }
 
     public static void main(String[] args) throws InterruptedException, IOException {
-        String in = "/home/andreg-p/Projects/Math2Vec/planetext/data-out/";
-        String out = "/home/andreg-p/Projects/Math2Vec/planetext/data-out-processed";
-//        String in = null, out = null;
+//        String in = "/home/andreg-p/Projects/Math2Vec/planetext/data-out/";
+//        String out = "/home/andreg-p/Projects/Math2Vec/planetext/data-out-processed";
+        String in = null, out = null;
 
         for ( int i = 0; i < args.length; i++ ){
             if ( args[i].matches("-{1,2}(h|help)") ){
