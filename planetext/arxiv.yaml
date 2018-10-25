@@ -29,7 +29,7 @@
   - h3
   - h4
   - h5
-  - h5
+  - h6
   - abbr
   :metainfo:
   - meta
@@ -47,7 +47,6 @@
   - section[@class="ltx_bibliography"]
   - section[@class="ltx_appendix"]
   - title
-  - h6
   - ul
   - pre
   - code
