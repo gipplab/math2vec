@@ -96,7 +96,12 @@ module PlaneText
       @progress_file = progress_file
       @all = limit == :all
       @limit = (Integer === limit && limit > 0) ? limit : nil
-      @max_threads = 8
+      @max_threads = Concurrent.processor_count # returns CPUs
+      if @max_threads <= 1
+        @max_threads = 1
+      else
+        puts "Initialize parallel working on #{@max_threads} threads."
+      end
     end
 
     def per_doc(&block)
