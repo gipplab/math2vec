@@ -149,6 +149,7 @@ public class PostProcessor {
                     e.printStackTrace();
                 }
             }
+            System.out.println(); // stop with a new line
         }
     }
 

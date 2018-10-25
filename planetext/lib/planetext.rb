@@ -2,7 +2,10 @@ require 'yaml'
 require 'settingslogic'
 require 'archive/tar/minitar'
 require 'zlib'
+require 'concurrent'
 require_relative 'extract'
+
+NUM_OF_FILES = 3
 
 module PlaneText
 
@@ -19,7 +22,6 @@ module PlaneText
     suppress_errors true
     load!
   end
-
 
   module Common
 
@@ -94,6 +96,7 @@ module PlaneText
       @progress_file = progress_file
       @all = limit == :all
       @limit = (Integer === limit && limit > 0) ? limit : nil
+      @max_threads = 8
     end
 
     def per_doc(&block)
@@ -103,12 +106,16 @@ module PlaneText
     def run
       progress_data = get_progress_data(@progress_file)
 
-      @unknown_standoffs = []
+      @unknown_standoffs = Concurrent::Array.new
       all_files = Dir.chdir(@dataset_dir) { |dir|
         Dir['**/*.{xml,xhtml,html}']
       }
+
       processed_files = @all && [] || progress_data[:processed_files] || all_files
       unprocessed_files = all_files - processed_files
+
+      processed_files_TS = Concurrent::Array.new
+      processed_files_TS.concat(processed_files)
 
       @selectors = {
         displaced: to_xpath(progress_data[:tags][:independent]),
@@ -116,7 +123,25 @@ module PlaneText
         replaced: to_xpath(progress_data[:tags][:object]),
         removed: to_xpath(progress_data[:tags][:metainfo])
       }
+
+      thread_pool = Concurrent::FixedThreadPool.new(@max_threads)
+
       dirty_files = 0
+      proc_files = 0
+      current_process = 0
+      start_time = Time.now.to_f
+
+      printf(
+        "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%06.3f \r",
+        0,
+        "",
+        proc_files,
+        NUM_OF_FILES,
+        0,
+        0,
+        0.0
+      )
+
       unprocessed_files.each do |xml_file_name|
         xml_file = File.absolute_path(xml_file_name, @dataset_dir)
         xml = File.read(xml_file)
@@ -129,21 +154,47 @@ module PlaneText
           deactivate_scripts: write_as_xhtml
         }.merge(@selectors)
 
-        doc = extract(xml, opts)
-        @per_doc[xml_file, doc] if @per_doc
+        thread_pool.post do
+          doc = extract(xml, opts)
+          @per_doc[xml_file, doc] if @per_doc # writes files
 
-        @unknown_standoffs += doc.unknown_standoffs
-        if doc.unknown_standoffs.empty?
-          processed_files << xml_file_name
-        else
-          dirty_files += 1
-          break if @limit && dirty_files >= @limit
+          # atomic operations are not thread safe
+          @unknown_standoffs += doc.unknown_standoffs
+          if doc.unknown_standoffs.empty?
+            # atomic operations are not thread safe
+            processed_files_TS << xml_file_name
+          else
+            dirty_files += 1
+            # stop limit functionality for simplicity in multi threading environment
+            #break if @limit && dirty_files >= @limit
+          end
+
+          proc_files += 1
+          current_process = 100*proc_files/NUM_OF_FILES
+          time = (Time.now.to_f - start_time).to_f/1000.to_f
+
+          printf(
+            "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%06.3f \r",
+            current_process,
+            "=" * (current_process/2),
+            proc_files,
+            NUM_OF_FILES,
+            (time/3600),
+            (time/60)%60,
+            time%60
+          )
         end
       end
-      if processed_files.length == all_files.length
+
+      thread_pool.shutdown
+      thread_pool.wait_for_termination
+
+      print "\nProcess terminate. Cleaning up...\n"
+
+      if processed_files_TS.length == all_files.length
         progress_data.delete(:processed_files)
       else
-        progress_data[:processed_files] = processed_files
+        progress_data[:processed_files] = processed_files_TS
       end
       save_progress_file(@progress_file, progress_data) unless @all
 
@@ -154,7 +205,7 @@ module PlaneText
         [type, selector_texts]
       }
 
-      @done = processed_files.length
+      @done = processed_files_TS.length
       @total = all_files.length
       self
     end

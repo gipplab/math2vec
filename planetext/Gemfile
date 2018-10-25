@@ -9,6 +9,7 @@ gem "settingslogic"
 gem "minitar"
 gem "warden"
 gem "rack-flash3"
+gem 'concurrent-ruby', require: 'concurrent'
 
 group :development do
   gem "sass"

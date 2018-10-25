@@ -21,6 +21,7 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
+    concurrent-ruby (1.0.5)
     execjs (2.2.1)
     ffi (1.9.5)
     formatador (0.2.5)
@@ -100,6 +101,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-script
+  concurrent-ruby
   guard
   guard-bundler
   guard-coffeescript
@@ -117,3 +119,6 @@ DEPENDENCIES
   sinatra-flash
   slim
   warden
+
+BUNDLED WITH
+   1.15.1
