@@ -6,5 +6,11 @@ target/
 data-out/
 data-out-processed/
 
+# don't need to upload logs of post processors
 logs/
+
+# necessary for local installations via GEM
+# Do not need to be on git
+.bundle/
+vendor/
 
