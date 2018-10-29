@@ -31,6 +31,8 @@
   - h5
   - h6
   - abbr
+  - cite
+  - ul[@class="ltx_biblist"]
   :metainfo:
   - meta
   - footer
@@ -38,12 +40,10 @@
   - div[@class="ltx_keywords"]
   - div[@class="ltx_classification"]
   - div[@class="ltx_date ltx_role_creation"]
-  - ul[@class="ltx_biblist"]
   - figure
   - table
   - img
   - svg
-  - cite
   - section[@class="ltx_bibliography"]
   - section[@class="ltx_appendix"]
   - title
