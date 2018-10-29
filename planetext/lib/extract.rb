@@ -183,11 +183,14 @@ module PaperVu
         end
       end
 
-      def note_replacements!(node=@document, displacement_name=nil)
+      def note_replacements!(node=@document, displacement_name=nil, displacement_data=nil)
         return if node.comment?
 
         if node.text?
           @offset += node.text.length
+          if !displacement_name.nil?
+            displacement_data << node.text
+          end
         else
           name = node.name
           recurse_displaced = false
@@ -197,6 +200,9 @@ module PaperVu
               replacement = REPLACEMENT_FORMAT %
                 { node: name.upcase, count: @replacement_sequence[name] }
               @replacement_sequence[name] += 1
+              if !displacement_name.nil?
+                displacement_data << replacement
+              end
               replacement
             elsif @newline.include?(node)
               node["#{PREFIX}r"] = "\n"
@@ -206,7 +212,8 @@ module PaperVu
               displacement_name = "#{REPLACEMENT_FORMAT}" %
                 { node: "IND_#{name.upcase}", count: @replacement_sequence[name] }
               @replacement_sequence[name] += 1
-              @displacements[displacement_name] = [node, @offset]
+              displacement_data = String.new
+              @displacements[displacement_name] = [node, @offset, displacement_data]
               recurse_displaced = true
               @opts[:mark_displacement] ? displacement_name : ""
             elsif @ignored.include?(node)
@@ -215,7 +222,7 @@ module PaperVu
 
           if replacement == false # ignored
             node.children.each do |child|
-              note_replacements!(child, displacement_name)
+              note_replacements!(child, displacement_name, displacement_data)
             end
           elsif replacement # replaced
             node["#{PREFIX}r"] = replacement
@@ -224,7 +231,7 @@ module PaperVu
             if create_ann
               @ann_count += 1
               @brat_ann << "T#{@ann_count}\t#{name} #{@offset} #{replacement_end}\t#{replacement}"
-              if ["math", "abbr", "cite"].include? name
+              if ["math", "abbr", "cite", "ul"].include? name
                 text = node.to_s.gsub(/\n/, ' ')
               else
                 text = node.text.gsub(/\n/, ' ')
@@ -234,7 +241,7 @@ module PaperVu
 
             if recurse_displaced
               node.children.each do |child|
-                note_replacements!(child, displacement_name)
+                note_replacements!(child, displacement_name, displacement_data)
               end
             end
 
@@ -246,7 +253,7 @@ module PaperVu
               @offset += node.content.length
             else
               node.children.each do |child|
-                note_replacements!(child, displacement_name)
+                note_replacements!(child, displacement_name, displacement_data)
               end
             end
 
@@ -261,13 +268,13 @@ module PaperVu
       end
 
       def note_displacements!
-        @displacements.map do |displacement_name, displaced_data|
-          displaced_node, displaced_offset = *displaced_data
-          displaced_text = displaced_node.text
+        @displacements.map do |displacement_name, displaced_info|
+          displaced_node, displaced_offset, displaced_data = *displaced_info
+          displaced_text = displaced_data #displaced_node.text
           displacement_mod_name = @opts[:mark_displacement] ? displacement_name.sub('IND', 'IND_TEXT')[1..-2] + ":\n" : ''
           displaced_header = "\n\n\n#{displacement_mod_name}"
           displaced_text_all = displaced_header + displaced_text
-          displaced_data[2] = @offset + displaced_header.length - displaced_offset
+          displaced_info[2] = @offset + displaced_header.length - displaced_offset
           displaced_node["#{PREFIX}d"] = "#{@offset + displaced_header.length},#{@offset + displaced_text_all.length}"
           @offset += displaced_text.length
           displaced_header + displaced_text

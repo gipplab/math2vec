@@ -1,6 +1,8 @@
 ---
 :tags:
-  :independent: []
+  :independent:
+  - div[contains(@class, 'ltx_abstract')]
+  - div[contains(@class, 'ltx_para')]
   :decoration:
   - html
   - head
@@ -22,33 +24,40 @@
   - span
   - del
   - ins
-  :object:
-  - math
   - h1
   - h2
   - h3
   - h4
   - h5
   - h6
+  :object:
+  - math
+  - h1[contains(@class, 'ltx_title')]
+  - h2[contains(@class, 'ltx_title')]
+  - h3[contains(@class, 'ltx_title')]
+  - h4[contains(@class, 'ltx_title')]
+  - h5[contains(@class, 'ltx_title')]
+  - h6[contains(@class, 'ltx_title')]
   - abbr
   - cite
   - ul[@class="ltx_biblist"]
   :metainfo:
   - meta
   - footer
-  - div[@class="ltx_authors"]
-  - div[@class="ltx_keywords"]
-  - div[@class="ltx_classification"]
-  - div[@class="ltx_date ltx_role_creation"]
+  - div[contains(@class, 'ltx_authors')]
+  - div[contains(@class, 'ltx_keywords')]
+  - div[contains(@class, 'ltx_classification')]
+  - div[contains(@class, 'ltx_role_creation')]
   - figure
   - table
   - img
   - svg
-  - section[@class="ltx_bibliography"]
-  - section[@class="ltx_appendix"]
+  - section[contains(@class, "ltx_appendix")]
   - title
   - ul
   - pre
   - code
   - style
   - object
+  - span[contains(@class, 'ltx_tag')]
+  - span[contains(@class, 'ltx_note')]

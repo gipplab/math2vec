@@ -33,7 +33,7 @@ module PlaneText
         use_xpath: true,
         opaque_unknowns: true,
         newline: [],
-        mark_displacement: false
+        mark_displacement: true
       }.merge(conf)
       PaperVu::Extract::Document.new(doc, conf)
     end
