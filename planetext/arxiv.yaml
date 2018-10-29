@@ -30,6 +30,10 @@
   - h4
   - h5
   - h6
+  - table[contains(@class, 'ltx_eqn_table')]
+  - tbody
+  - tr
+  - td
   :object:
   - math
   - h1[contains(@class, 'ltx_title')]
@@ -49,7 +53,7 @@
   - div[contains(@class, 'ltx_classification')]
   - div[contains(@class, 'ltx_role_creation')]
   - figure
-  - table
+  - table[not(contains(@class, 'ltx_eqn_table'))]
   - img
   - svg
   - section[contains(@class, "ltx_appendix")]

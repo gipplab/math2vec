@@ -10,11 +10,11 @@ Victor J. W. Guo__MATH_1__ and Qiang-Qiang Jiang__MATH_2__ __MATH_3__School of M
 
 
 _IND_TEXT_DIV_2_:
- Abstract. The __MATH_5__-Narayana numbers __MATH_6__ and __MATH_7__-Catalan numbers __MATH_8__ are respectively defined by  where __MATH_9__. We prove that, for any positive integers __MATH_10__ and __MATH_11__, there holds  where __MATH_12__. We also propose several related conjectures.
+ Abstract. The __MATH_5__-Narayana numbers __MATH_6__ and __MATH_7__-Catalan numbers __MATH_8__ are respectively defined by  __MATH_9__  where __MATH_10__. We prove that, for any positive integers __MATH_11__ and __MATH_12__, there holds  __MATH_13__  where __MATH_14__. We also propose several related conjectures.
 
 
 _IND_TEXT_DIV_3_:
-Keywords: __MATH_13__-binomial coefficients, __MATH_14__-Narayana numbers, __MATH_15__-Catalan numbers
+Keywords: __MATH_15__-binomial coefficients, __MATH_16__-Narayana numbers, __MATH_17__-Catalan numbers
 
 
 _IND_TEXT_DIV_4_:
@@ -22,7 +22,7 @@ AMS Subject Classifications: 11A07, 05A30
 
 
 _IND_TEXT_DIV_5_:
-The Catalan numbers __MATH_16__ play an important role in combinatorics (see __CITE_0__). It is well known that for any positive integer __MATH_17__,  where __MATH_18__ are called Narayana numbers (see __CITE_1__).
+The Catalan numbers __MATH_18__ play an important role in combinatorics (see __CITE_0__). It is well known that for any positive integer __MATH_19__,  __MATH_20__  where __MATH_21__ are called Narayana numbers (see __CITE_1__).
 
 
 _IND_TEXT_DIV_6_:
@@ -34,27 +34,27 @@ In this paper, motivated mainly by Z.-W. Sun’s work, we shall prove the follow
 
 
 _IND_TEXT_DIV_8_:
-Let __MATH_19__ and __MATH_20__ be positive integers. Then 
+Let __MATH_22__ and __MATH_23__ be positive integers. Then  __MATH_24__  
 
 
 _IND_TEXT_DIV_9_:
-We know that some congruences may have nice __MATH_21__-analogues (see, for example, __CITE_4__). This is also the case for the congruence (1.1). Recall that the __MATH_22__-shifted factorials (see __CITE_5__) are defined by __MATH_23__ and __MATH_24__ for __MATH_25__ and the __MATH_26__-binomial coefficients are defined as  For convenience, we let __MATH_27__ be a __MATH_28__-integer. It is natural to define the __MATH_29__-Narayana numbers __MATH_30__ and the __MATH_31__-Catalan numbers __MATH_32__ as follows:  It is not difficult to see that both __MATH_33__-Narayana numbers and __MATH_34__-Catalan numbers are polynomials in __MATH_35__ with nonnegative integer coefficients (see __CITE_6__). Note that, the definition of __MATH_36__ here differs by a factor __MATH_37__ from that in __CITE_7__. We have the following __MATH_38__-analogue of Theorem 1.1.
+We know that some congruences may have nice __MATH_25__-analogues (see, for example, __CITE_4__). This is also the case for the congruence (1.1). Recall that the __MATH_26__-shifted factorials (see __CITE_5__) are defined by __MATH_27__ and __MATH_28__ for __MATH_29__ and the __MATH_30__-binomial coefficients are defined as  __MATH_31__  For convenience, we let __MATH_32__ be a __MATH_33__-integer. It is natural to define the __MATH_34__-Narayana numbers __MATH_35__ and the __MATH_36__-Catalan numbers __MATH_37__ as follows:  __MATH_38__  It is not difficult to see that both __MATH_39__-Narayana numbers and __MATH_40__-Catalan numbers are polynomials in __MATH_41__ with nonnegative integer coefficients (see __CITE_6__). Note that, the definition of __MATH_42__ here differs by a factor __MATH_43__ from that in __CITE_7__. We have the following __MATH_44__-analogue of Theorem 1.1.
 
 
 _IND_TEXT_DIV_10_:
-Let __MATH_39__ and __MATH_40__ be positive integers and let __MATH_41__. Then 
+Let __MATH_45__ and __MATH_46__ be positive integers and let __MATH_47__. Then  __MATH_48__  
 
 
 _IND_TEXT_DIV_11_:
-It is easily seen that when __MATH_42__ the __MATH_43__-congruence (1.2) reduces to (1.1). It seems that (1.2) also holds for __MATH_44__ (see (3.1) in Conjecture 3.4 for a more general form).
+It is easily seen that when __MATH_49__ the __MATH_50__-congruence (1.2) reduces to (1.1). It seems that (1.2) also holds for __MATH_51__ (see (3.1) in Conjecture 3.4 for a more general form).
 
 
 _IND_TEXT_DIV_12_:
-Noticing that  we can rewrite Theorem 1.2 in the following equivalent form.
+Noticing that  __MATH_52__   we can rewrite Theorem 1.2 in the following equivalent form.
 
 
 _IND_TEXT_DIV_13_:
-Let __MATH_45__ and __MATH_46__ be positive integers and let __MATH_47__. Then 
+Let __MATH_53__ and __MATH_54__ be positive integers and let __MATH_55__. Then  __MATH_56__   __MATH_57__  
 
 
 _IND_TEXT_DIV_14_:
@@ -62,7 +62,7 @@ In the paper __CITE_8__, Guo, Jouhet and Zeng proved the following result.
 
 
 _IND_TEXT_DIV_15_:
-For all positive integers __MATH_48__ and __MATH_49__, the alternating sum  where __MATH_50__, is a polynomial in __MATH_51__ with nonnegative integer coefficients.
+For all positive integers __MATH_58__ and __MATH_59__, the alternating sum  __MATH_60__  where __MATH_61__, is a polynomial in __MATH_62__ with nonnegative integer coefficients.
 
 
 _IND_TEXT_DIV_16_:
@@ -70,11 +70,11 @@ In what follows, we will show that the congruence (2.2) can be deduced from comb
 
 
 _IND_TEXT_DIV_17_:
-Denote the left-hand side of (2.2) by __MATH_52__. By the relation (2.1), it is clear that __MATH_53__ is a polynomial in __MATH_54__ with integer coefficients. Letting __MATH_55__, __MATH_56__, and __MATH_57__ in Theorem 2.2, we see that  which can also be written as  Namely, __MATH_58__, or  On the other hand, letting __MATH_59__, __MATH_60__, and __MATH_61__ in Theorem 2.2, we have  which, by the relation __MATH_62__, can be rewritten as  Namely, 
+Denote the left-hand side of (2.2) by __MATH_63__. By the relation (2.1), it is clear that __MATH_64__ is a polynomial in __MATH_65__ with integer coefficients. Letting __MATH_66__, __MATH_67__, and __MATH_68__ in Theorem 2.2, we see that  __MATH_69__  which can also be written as  __MATH_70__  Namely, __MATH_71__, or  __MATH_72__   On the other hand, letting __MATH_73__, __MATH_74__, and __MATH_75__ in Theorem 2.2, we have  __MATH_76__  which, by the relation __MATH_77__, can be rewritten as  __MATH_78__  Namely,  __MATH_79__  
 
 
 _IND_TEXT_DIV_18_:
-It is easy to see that the polynomials __MATH_63__ and __MATH_64__ are relatively prime. Therefore, by the Euclid algorithm for polynomials, there exist polynomials __MATH_65__ and __MATH_66__ in __MATH_67__ with rational coefficients such that  It follows from (2.3)–(2.5) that the congruence  holds in the ring __MATH_68__. In other words, there exists a polynomial __MATH_69__ such that  Since the polynomials __MATH_70__ and __MATH_71__ are in __MATH_72__, and the leading coefficient of the latter is one, the identity (2.6) means that __MATH_73__. This completes the proof.
+It is easy to see that the polynomials __MATH_80__ and __MATH_81__ are relatively prime. Therefore, by the Euclid algorithm for polynomials, there exist polynomials __MATH_82__ and __MATH_83__ in __MATH_84__ with rational coefficients such that  __MATH_85__   It follows from (2.3)–(2.5) that the congruence  __MATH_86__  holds in the ring __MATH_87__. In other words, there exists a polynomial __MATH_88__ such that  __MATH_89__   Since the polynomials __MATH_90__ and __MATH_91__ are in __MATH_92__, and the leading coefficient of the latter is one, the identity (2.6) means that __MATH_93__. This completes the proof.
 
 
 _IND_TEXT_DIV_19_:
@@ -82,27 +82,27 @@ It seems that Theorems 1.1 and 1.2 can be further generalized as follows.
 
 
 _IND_TEXT_DIV_20_:
-Let __MATH_74__ be positive integers. Then  where __MATH_75__.
+Let __MATH_94__ be positive integers. Then  __MATH_95__   __MATH_96__  where __MATH_97__.
 
 
 _IND_TEXT_DIV_21_:
-Let __MATH_76__ and __MATH_77__ be positive integers and let __MATH_78__. Then  is a polynomial in __MATH_79__ with nonnegative integer coefficients.
+Let __MATH_98__ and __MATH_99__ be positive integers and let __MATH_100__. Then  __MATH_101__  is a polynomial in __MATH_102__ with nonnegative integer coefficients.
 
 
 _IND_TEXT_DIV_22_:
-Note that the upper bound __MATH_80__ of __MATH_81__ in Conjecture 3.2 seems to be the best possible. Numerical calculation implies that Conjecture 3.2 does not hold when __MATH_82__. Furthermore, we have the following generalization of Conjecture 3.2.
+Note that the upper bound __MATH_103__ of __MATH_104__ in Conjecture 3.2 seems to be the best possible. Numerical calculation implies that Conjecture 3.2 does not hold when __MATH_105__. Furthermore, we have the following generalization of Conjecture 3.2.
 
 
 _IND_TEXT_DIV_23_:
-For all positive integers __MATH_83__ and __MATH_84__, the expression  where __MATH_85__, is a polynomial in __MATH_86__ with nonnegative integer coefficients.
+For all positive integers __MATH_106__ and __MATH_107__, the expression  __MATH_108__  where __MATH_109__, is a polynomial in __MATH_110__ with nonnegative integer coefficients.
 
 
 _IND_TEXT_DIV_24_:
-We end the paper with the following __MATH_87__-analogue of Conjecture 3.1.
+We end the paper with the following __MATH_111__-analogue of Conjecture 3.1.
 
 
 _IND_TEXT_DIV_25_:
-Let __MATH_88__ be positive integers, and let __MATH_89__ be a polynomial in __MATH_90__ with integer coefficients. Then  where __MATH_91__. In particular, for any positive integer __MATH_92__, we have 
+Let __MATH_112__ be positive integers, and let __MATH_113__ be a polynomial in __MATH_114__ with integer coefficients. Then  __MATH_115__   __MATH_116__  where __MATH_117__. In particular, for any positive integer __MATH_118__, we have  __MATH_119__  
 
 
 _IND_TEXT_DIV_26_:
