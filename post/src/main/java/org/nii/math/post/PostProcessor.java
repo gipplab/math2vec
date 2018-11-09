@@ -1,5 +1,9 @@
+package org.nii.math.post;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.nii.math.post.processor.ParagraphParser;
+import org.nii.math.post.processor.SentenceSplitter;
 
 import java.io.File;
 import java.io.IOException;
@@ -44,12 +48,12 @@ public class PostProcessor {
                     .walk(docsPath) // no SecurityException possible, we checked "can read" beforehand
                     .parallel()
                     .filter( p -> p.toString().endsWith(".txt") ) // only take txt and not annotation file
-                    .map( p -> new SentenceSplitter(docsPath, outputPath, p) )
+                    .map( p -> new ParagraphParser(docsPath, outputPath, p) )
                     .forEach( ss -> {
                         try {
                             ss.start();
                         } catch ( RuntimeException re ){
-                            LOG.info("Skipped " + ss.getFile().toString() + " because: " + re.getMessage());
+                            LOG.info("Skipped " + ss.getOrigIn().toString() + " because: " + re.getMessage());
                         }
                         currentlyProcessedDocs++;
                     } );
@@ -101,9 +105,9 @@ public class PostProcessor {
     }
 
     public static void main(String[] args) throws InterruptedException, IOException {
-//        String in = "/home/andreg-p/Projects/Math2Vec/planetext/data-out/";
-//        String out = "/home/andreg-p/Projects/Math2Vec/planetext/data-out-processed";
-        String in = null, out = null;
+        String in = "/home/andreg-p/Projects/Math2Vec/planetext/data-out";
+        String out = "/home/andreg-p/Projects/Math2Vec/planetext/data-out-processed";
+//        String in = null, out = null;
 
         for ( int i = 0; i < args.length; i++ ){
             if ( args[i].matches("-{1,2}(h|help)") ){

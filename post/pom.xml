@@ -41,7 +41,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        PostProcessor
+                                        org.nii.math.post.PostProcessor
                                     </mainClass>
                                 </manifest>
                             </archive>

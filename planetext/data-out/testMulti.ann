@@ -1,0 +1,10 @@
+T1	h6 0 8	__H6_0__
+#1	AnnotatorNotes T1	Abstract
+T2	abbr 17 27	__ABBR_0__
+#2	AnnotatorNotes T2	<abbr title="Nice Paper" kmcs-r="__ABBR_0__">PAP</abbr>
+T3	math 250 260	__MATH_0__
+#3	AnnotatorNotes T3	<math><annotation encoding="application/x-llamapun" id="id1.m1.1c">italic-alpha italic-b</annotation></math>
+T3	math 250 260	__MATH_1__
+#3	AnnotatorNotes T3	<math><annotation encoding="application/x-llamapun" id="id1.m1.1c">italic-beta Delta</annotation></math>
+T3	math 250 260	__MATH_2__
+#3	AnnotatorNotes T3	<math><annotation encoding="application/x-llamapun" id="id1.m1.1c">Pi</annotation></math>

@@ -129,7 +129,8 @@ module PlaneText
         removed: to_xpath(progress_data[:tags][:metainfo])
       }
 
-      thread_pool = Concurrent::FixedThreadPool.new(@max_threads)
+      thread_pool = Concurrent::FixedThreadPool.new(@max_threads-1)
+      writing_pool = Concurrent::FixedThreadPool.new(1)
 
       dirty_files = 0
       proc_files = 0
@@ -161,7 +162,10 @@ module PlaneText
 
         thread_pool.post do
           doc = extract(xml, opts)
-          @per_doc[xml_file, doc] if @per_doc # writes files
+
+          writing_pool.post do
+            @per_doc[xml_file, doc] if @per_doc # writes files
+          end
 
           # atomic operations are not thread safe
           @unknown_standoffs += doc.unknown_standoffs
@@ -193,6 +197,9 @@ module PlaneText
 
       thread_pool.shutdown
       thread_pool.wait_for_termination
+
+      writing_pool.shutdown
+      writing_pool.wait_for_termination
 
       print "\nProcess terminate. Cleaning up...\n"
 
