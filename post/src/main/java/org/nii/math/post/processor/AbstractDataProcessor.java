@@ -6,10 +6,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
@@ -31,7 +28,7 @@ public abstract class AbstractDataProcessor {
     public static final Pattern TOKEN_PATTERN =
             Pattern.compile(
                             "(__H\\d+_\\d+__)|" + // group 1
-//                            "(__MATH_\\d+__)|" + // group 2 ...
+                            "(__MATH_\\d+__)|" + // group 2 ...
                             "(__ABBR_\\d+__)|" + // 3
                             "(__CITE_\\d+__)|" + // 4
                             "(__UL_\\d+__)|" + // 5
@@ -120,11 +117,14 @@ public abstract class AbstractDataProcessor {
     }
 
     public static String tagByMath(String in){
+        Set<String> cache = new TreeSet<>();
         String[] t = in.split(" ");
         StringBuilder buf = new StringBuilder("");
         for (String aT : t) {
             if ( !IgnorableLLamapunTokens.ignore(aT) ){
                 aT = IgnoreTypes.clean(aT);
+                if ( cache.contains(aT) ) continue;
+                else cache.add(aT);
                 buf.append("math");
                 if ( aT.startsWith("-") )
                     buf.append(aT);
@@ -159,11 +159,14 @@ public abstract class AbstractDataProcessor {
             if ( tokenMatcher.group(1) != null ){ // headers such in H1, H2, ...
                 String rep = annotations.get(tokenMatcher.group(1));
                 tokenMatcher.appendReplacement(sentence, rep == null ? "" : rep);
-            } else if ( tokenMatcher.group(2) != null ){ // abbr
+            } else if ( tokenMatcher.group(2) != null ){ // math
                 String rep = annotations.get(tokenMatcher.group(2));
                 tokenMatcher.appendReplacement(sentence, rep == null ? "" : rep);
-            } else if ( tokenMatcher.group(5) != null ||
-                    tokenMatcher.group(6) != null ) {
+            } else if ( tokenMatcher.group(3) != null ){ // abbr
+                String rep = annotations.get(tokenMatcher.group(3));
+                tokenMatcher.appendReplacement(sentence, rep == null ? "" : rep);
+            } else if ( tokenMatcher.group(6) != null ||
+                    tokenMatcher.group(7) != null ) {
                 tokenMatcher.appendReplacement(sentence, " ");
             } else {
                 tokenMatcher.appendReplacement(sentence, "");
@@ -171,7 +174,7 @@ public abstract class AbstractDataProcessor {
         }
 
         tokenMatcher.appendTail(sentence);
-        return mathReplaceAndSplit(sentence.toString());
+        return sentence.toString(); //mathReplaceAndSplit(sentence.toString());
     }
 
     private String mathReplaceAndSplit( String paragraph ){
