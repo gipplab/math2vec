@@ -1,0 +1,2 @@
+("i'am", 'NN') ('word,', 'NN') ('nothing.', 'JJ') ('else:', 'JJ') ('part-', 'JJ') ('math-symbol:()', 'NN') 
+('?math-is-cool', 'JJ') (':math-is-cool', 'JJ') (':math-is-cool:', 'JJ') ('math:s-cool', 'NN') 

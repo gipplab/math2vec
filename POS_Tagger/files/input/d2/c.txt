@@ -1,0 +1,454 @@
+teste3
+
+ Trajectories for the Wave Function of the Universe from a Simple Detector Model J.J.Halliwell Theory Group Blackett Laboratory Imperial College London SW7 2BZ UK PreprintImperial/TP/99-0/37. 
+Revised version. 
+November, 2000 ABSTRACT: Inspired by Mott’s (1929) analysis of particle tracks in a cloud chamber, we consider a simple model for quantum cosmology which includes, in the total Hamiltonian, model detectors registering whether or not the system, at any stage in its entire history, passes through a series of regions in configuration space. 
+We thus derive a variety of well-defined formulas for the probabilities for trajectories associated with the solutions to the Wheeler-DeWitt equation. 
+The probability distribution is peaked about classical trajectories in configuration space. 
+The “measured” wave functions still satisfy the Wheeler-DeWitt equation, except for small corrections due to the disturbance of the measuring device. 
+With modified boundary conditions, the measurement amplitudes essentially agree with an earlier result of Hartle derived on rather different grounds. 
+In the special case where the system is a collection of harmonic oscillators, the interpretation of the results is aided by the introduction of “timeless” coherent states – eigenstates of the Hamiltonian which are concentrated about entire classical trajectories. 1. INTRODUCTION The focus of attention in quantum cosmology is the Wheeler-DeWitt equation, Here, the wave function math-Psi  is a functional of the gravitational and matter fields on a three-surface, and it describes the quantum state of a closed cosmological model [1]. 
+The most striking and conceptually problematic aspect of this equation is that it does not involve time explicitly, severely complicating efforts to extract predictions from it [2,3]. 
+Amongst the many attempts to understand this feature, one is to claim that “time”, and indeed entire histories of the universe, are already contained amongst the arguments of the wave function, hence no time label is required [4,5]. 
+Whilst these claims seem to be true at some level in simple models of quantum cosmology, it presents us with the interesting challenge of reformulating standard quantum theory without the explicit use of time, and then demonstrating the emergence of time and of classical trajectories. 
+Although the Wheeler-DeWitt equation in the form (1.1) is unlikely to be the last word in quantum gravity, it does seem likely that whatever replaces it will still be of a timeless nature. 
+The loop variables programme of Ashtekar and others, for example, certainly preserves this feature [6]. 
+It is therefore of interest to investigate this feature in simple models. 
+Many attempts to use and make sense of Eq.(1.1) have been made. 
+These attempts focus on simple (minisuperspace) models, in which one has an  math-italic-N -dimensional configuration space,  math-italic-C  with coordinates  math-bold-x , and the Hamiltonian operator has the form The signature of the metric is typically hyperbolic so the Wheeler-DeWitt equation is like a Klein-Gordon equation in curved space with a spacetime dependent mass term. 
+Associated with it is a Klein-Gordon current Like the Klein-Gordon equation, however, this does not produce a positive probability density except in very special cases (namely when there is a Killing vector associated with  math-italic-H ). 
+It also vanishes for real wave functions. 
+One might also consider the Schrödinger inner product, where  math-italic-mu math-OPEN:( math-bold-x math-CLOSE:)  is an appropriate measure, but the norm  math-OPEN:langle math-Psi math-VERTBAR:| math-Psi math-CLOSE:rangle  typically diverges. 
+In practice, most uses of the Wheeler-DeWitt equation rely on something like the “WKB interpretation”, in which in the oscillatory regime the wave function is written in the form  math-Psi math-RELOP:equals math-italic-C math-italic-e math-POSTSUPERSCRIPT:start math-italic-i math-italic-S math-POSTSUPERSCRIPT:end , where  math-italic-S  is a solution to the Hamilton-Jacobi equation. 
+It is argued that this wave function corresponds to an ensemble of classical trajectories satisfying the first integral  math-italic-p math-RELOP:equals math-OPERATOR:nabla math-italic-S , with  math-VERTBAR:| math-italic-C math-VERTBAR:| math-POSTSUPERSCRIPT:start math-NUMBER:2 math-POSTSUPERSCRIPT:end  giving a measure on the ensemble. 
+Although probably correct it is somewhat heuristic and can only be used in the oscillatory regime. 
+(See Ref.[7], for example, for a discussion of these issues). 
+Recent more successful work with the Wheeler-DeWitt or similar equations involves the induced inner product (also known as Rieffel induction or refined algebraic quantization) [8,9]. 
+Here, one considers eigenvalues of the Wheeler-DeWitt operator, where  math-italic-k  is the degeneracy label for each  math-italic-E . 
+The spectrum is typically continuous in  math-italic-E  in which case the states are normalized via Eq.(1.4) according to and one can now see why  math-OPEN:langle math-Psi math-VERTBAR:| math-Psi math-CLOSE:rangle  diverges. 
+The induced inner product is then, loosely speaking, to drop the factor  math-italic-delta math-OPEN:( math-italic-E math-ADDOP:minus math-italic-E math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end math-CLOSE:)  as  math-italic-E  and  math-italic-E math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end  are set to zero. 
+This procedure can be defined rigorously and induces an inner product on the zero energy eigenstates. 
+(This procedure is not of course necessary when the spectrum is discrete). 
+Related to these issues is the prevalent idea that any operations performed on the wave function in the computation of physically interesting probabilities should commute with  math-italic-H  [10,3,11]. 
+Mathematically, this is to respect the symmetry of the theory, reparametrization invariance, expressed by the constraint equation (1.1). 
+Physically, it is connected with the fact that the universe is a genuinely closed system, and all realistic measurements are carried out from the inside, so cannot displace the system from a zero energy eigenstate of  math-italic-H . 
+Given these preliminaries, turn now to the questions one would like to ask of the wave function of the system in order to extract useful cosmological predictions from it. 
+We are interested in the notion that the wave function corresponds in some way to a set of trajectories. 
+Let us therefore ask the question, What is the probability that the system is found in a series of regions in configuration space,  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end math-PUNCT:, math-Delta math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end math-PUNCT:, math-ID:cdots math-Delta math-POSTSUBSCRIPT:start math-italic-n math-POSTSUBSCRIPT:end ? 
+Note that the question is stated in such a way that does not involve time. 
+There is no requirement that the system enters one of the regions at a particular “time”, or that the regions are entered in a particular order. 
+We cannot ask this because the Wheeler-DeWitt equation does not know about such an ordering parameter. 
+In the classical case the corresponding situation consists of a statistical ensemble of classical trajectories with the same fixed energy. 
+The trajectories are simply curves in configuration space and it is straightforward to determine the probability that a given curve passes through a given region at any stage in its entire history. 
+The question is more involved in quantum theory, since quantum theory is somewhat resistant to the notion of a trajectory (in the non-relativistic case, it involves specifying positions at different time, which do no commute). 
+It is, nevertheless, important to develop this notion, since the timeless nature of the Wheeler-DeWitt equation cries out for an interpretation in terms of entire histories of the universe. 
+The aim of this paper is to offer one possible way of giving meaning to the above question in the quantum theory of simple cosmological models. 
+Intuitively, one would expect that the question can be formulated and answered using a simple toolbox of parts: the quantum state  math-VERTBAR:| math-Psi math-CLOSE:rangle  satisfying the constraint, projection operators onto the regions  math-Delta math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end , or maybe projections onto some class of operators which commute with the constraint  math-italic-H . 
+One might also expect to find the Green function associated with the Wheeler-DeWitt equation, which has the form, (this is the analogue of the Feynman propagator). 
+It might possibly also involve one of the other types of propagators obtained by integrating  math-italic-tau  over an infinite range in this expression [12,13,14]. 
+The question is then exactly how one stitches all these components together to make a plausible probability distribution describing trajectories passing through a series of regions. 
+The decoherent histories approach offers an approach to answering this question and it does indeed use some of the above elements [15]. 
+It is particularly adapted to this sort of situation since it directly addresses the issue of defining a quantum notion of “trajectory” and this approach is currently being investigated in this context [16] (see also Ref.[1]). 
+Other approaches involving observables – operators commuting with the constraint – have also been considered [17,18,9,19]. 
+Most importantly, Kiefer and Zeh [20] and Barbour [21,22,4] have devoted much effort to elucidating the emergence of trajectories and of time from the timeless Wheeler-DeWitt equation. 
+The approach we adopt here stems from Barbour’s observation [22] that a substantial insight into the Wheeler-DeWitt equation may be found in Mott’s 1929 analysis of alpha-particle tracks in a Wilson cloud chamber [23]. 
+Mott’s paper concerned the question of how the alpha-particle’s outgoing spherical wave state,  math-italic-e math-POSTSUPERSCRIPT:start math-italic-i math-italic-k math-italic-R math-POSTSUPERSCRIPT:end math-MULOP:divide math-italic-R , could lead to straight line tracks in a cloud chamber. 
+His explanation was to model the cloud chamber as a collection of atoms that may be ionized by the passage of the alpha-particle. 
+They therefore act as measuring devices that measure the alpha-particle’s trajectory. 
+The probability that certain atoms are ionized is indeed found to be strongly peaked when the atoms lie along a straight line through the point of origin of the alpha-particle. 
+Although Mott seems to have had in mind a time-evolving process, he actually solved the time-independent equation Here  math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end  is the alpha-particle Hamiltonian,  math-italic-H math-POSTSUBSCRIPT:start math-italic-d math-POSTSUBSCRIPT:end  is the Hamiltonian for the ionizing atoms, and  math-italic-H math-POSTSUBSCRIPT:start math-italic-i math-italic-n math-italic-t math-POSTSUBSCRIPT:end  describes the Coulomb interaction between the alpha-particle and the ionizing atoms (where  math-italic-lambda  is a small coupling constant). 
+Now the interesting point, as Barbour notes, is that Mott derived all the physics from this equation with little reference to time. 
+Mott’s calculation is therefore an excellent model for many aspects of the Wheeler-DeWitt equation. 
+Barbour has elucidated this very eloquently, showing how it sheds light on a number of different aspects [22,21,4,24]. 
+Barbour’s discussion is largely qualitative. 
+The point of the present paper, by contrast, is to extract quantitative information from the comparison between the Mott calculation and the Wheeler-DeWitt equation. 
+Mott derived the straight line tracks by looking at the wave function associated with two atoms being in the ionized state, for the special case of an outgoing wave initial state. 
+But since this is elementary quantum mechanics, it is a simple matter to generalize it to arbitrary initial states and other types of detectors models, and to derive a detailed expression for the probability distribution. 
+Therefore, Mott’s calculation points the way towards a general expression for the probability distribution for the system passing through a series of regions in configuration space without reference to time. 
+This is what we will work out in detail in this paper. 
+We consider a system in an  math-italic-N  dimensional configuration space  math-italic-R math-POSTSUPERSCRIPT:start math-italic-N math-POSTSUPERSCRIPT:end  with coordinates  math-bold-x  described by a Hamiltonan  math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end , which may be of the form (1.2), but the simplest case we consider is a free particle. 
+It is coupled to a set of detectors via an interaction  math-italic-H math-POSTSUBSCRIPT:start math-italic-i math-italic-n math-italic-t math-POSTSUBSCRIPT:end  and the state of the whole system is given by the solution to (1.8). 
+Mott used the electronic degrees of freedom of atoms as detectors. 
+However, the essence of the calculation is maintained with a much simpler detector model. 
+The detector we use consists of a two state system with  math-italic-H math-POSTSUBSCRIPT:start math-italic-d math-POSTSUBSCRIPT:end math-RELOP:equals math-NUMBER:0  and detector states  math-VERTBAR:| math-NUMBER:0 math-CLOSE:rangle  and  math-VERTBAR:| math-NUMBER:1 math-CLOSE:rangle , where, We take Here,  math-italic-f math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end math-OPEN:( math-bold-x math-CLOSE:)  is spatially localized in the region  math-Delta math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end . 
+One could, for example, take  math-italic-f math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  to be a window function which is  math-NUMBER:1  in  math-Delta math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  and  math-NUMBER:0  outside it, but we will not restrict to this choice. 
+If the detector in  math-Delta math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  is “initially” in the ground state  math-VERTBAR:| math-NUMBER:0 math-CLOSE:rangle , it will be displaced into the excited state  math-VERTBAR:| math-NUMBER:1 math-CLOSE:rangle  if the particle’s trajectory  math-bold-x math-OPEN:( math-italic-t math-CLOSE:)  enters  math-Delta math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  and stays in the ground state otherwise. 
+Of course, in the timeless context of the Wheeler-DeWitt equation, “initially” has no meaning. 
+Instead, following Mott, the appropriate condition to impose is that the detector is in the ground state in the absence of coupling to the system. 
+This detector is far from realistic, not least of all because it can return to its ground state if the particle spends too much time in the detector region. 
+We will discuss its problems and possible improvements. 
+We note however, that similarly simple detector models have been profitably used elsewhere, e.g., in the Coleman-Hepp model [25]. 
+(See also Ref.[26]). 
+It is perhaps worth noting that the question considered here bears a close resemblance to the arrival time and tunneling time questions in non-relativistic quantum mechanics [27,28]. 
+There also, time enters in a non-trivial way, and equivalent classical approaches to the problem are inequivalent at the quantum level. 
+A variety of approaches have been brought to bear on these problems, including, as here, explicit detector models. 
+In Section 2, we solve the system Eq.(1.8) using the simple two state detector model. 
+Using the results, we then ask, in Section 3, some simple questions of the detected wave function. 
+Does the detected wave function still obey the Wheeler-DeWitt equation? 
+We find that it does exactly outside the detector region, and that it does approximately (for small  math-italic-lambda ) inside the detector region. 
+We compute the probabilities for detection and see, as Mott essentially saw, that they are strongly peaked when the detectors lie along a classical trajectory. 
+We also observe that the resulting amplitude for detection bears a very close resemblance to a formula written down by Hartle [29] (without using an explicit detector model) and we discuss the connections with his result. 
+We also discuss various other aspects of the solution in relation to detection and the timelessness of the solutions. 
+The results of Section 3 indicate that the wave function of the system may, in some sense be regarded as a superposition of states each of which is peaked about an entire classical history. 
+To demonstrate this explicitly, we specialize, in Section 4, to the case of a collection of harmonic oscillators and introduce a new type of coherent state, the “timeless coherent states”. 
+These states are eigenstates of the Hamiltonian, and are therefore time-independent, but are peaked about classical trajectories. 
+Any eigenstate may be expanded in terms of theses states, and we show that a series of detections along a classical path essentially projects the state down onto a timeless coherent state. 
+Since the detector is so simple, its dynamics may be solved exactly and this is carried out in Section 5. This calculation confirms that the detector model is only physical realistic in the perturbative regime (when the particle spends only a short time in each detector region). 
+Although the solution is exact and leaves the boundary conditions general, it turns out that it is not very useful for the Mott solution, since the boundary conditions lead to a rather inelegant solution. 
+On the other hand, it is by no means clear that one is required to take the Mott boundary conditions for the analagous situation in quantum cosmology, and given the freedom to choose different conditions, an elegant alternative solution for the detector amplitude is obtained. 
+It is in fact almost the same as the amplitude Hartle proposed [29]. 
+In Section 6, we briefly describe a more elaborate detector model, in which the detector is a simple harmonic oscillator coupled to the particle with the same coupling (1.10). 
+The solution has a nice path integral representation and suffers fewer shortcomings that the two-state detector. 
+It also clearly illustrate the peak about classical paths. 
+We summarize and conclude in Section 7. 2. DETECTION AMPLITUDE FROM THE TWO-STATE DETECTOR We now solve the eigenvalue equation with  math-italic-H  given by Eq.(1.8), and the detector is the simple two state detector described in Section 1, with  math-italic-H math-POSTSUBSCRIPT:start math-italic-d math-POSTSUBSCRIPT:end math-RELOP:equals math-NUMBER:0 . 
+We will for convenience refer to this equation as the Wheeler-DeWitt equation (and it is convenient to retain a non-zero value of  math-italic-E ). 
+It now reads We initially use only two detectors, so but the generalization to a arbitrary number of detectors is straightforward. 
+We solve perturbatively by writing We require that in the absence of coupling to the detectors, the detectors are in the state of no detection,  math-VERTBAR:| math-NUMBER:0 math-CLOSE:rangle . 
+This means that and  math-VERTBAR:| math-italic-psi math-CLOSE:rangle  is the state we are trying to measure. 
+Inserting in (2.2) and equating powers of  math-italic-lambda , we get, and similarly to higher orders. 
+The first relation says that  math-VERTBAR:| math-italic-psi math-CLOSE:rangle  must obey the unperturbed eigenvalue equation, as expected. 
+Inserting (2.5) into Eq.(2.7), we get This is readily solved by writing and we discover that Eqs.(2.12), (2.13) may be solved with the assistance of the Green function  math-italic-G , defined by Eq.(1.7) (with  math-italic-H  replaced by  math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E ). 
+It obeys the equation (For convenience we use an operator notation in which  math-italic-G  is the operator with coordinate representation  math-italic-G math-OPEN:( math-bold-x math-PUNCT:, math-bold-y math-CLOSE:) math-RELOP:equals math-OPEN:langle math-bold-x math-VERTBAR:| math-italic-G math-VERTBAR:| math-bold-y math-CLOSE:rangle  and the right-hand side of (2.15) would be the delta-function  math-italic-delta math-OPEN:( math-bold-x math-PUNCT:, math-bold-y math-CLOSE:)  in the coordinate representation). 
+We then obtain where  math-VERTBAR:| math-italic-phi math-POSTSUBSCRIPT:start math-NUMBER:1 math-PUNCT:, math-NUMBER:2 math-POSTSUBSCRIPT:end math-CLOSE:rangle  are solutions to the homogeneous equation To fix some of these solutions more precisely, we need to appeal to boundary conditions. 
+This is a subtle issue and depends very much on the precise context. 
+Mott was concerned with the particular case of an outgoing spherical wave and imposed boundary conditions appropriate to this case. 
+This led him to set  math-VERTBAR:| math-italic-phi math-POSTSUBSCRIPT:start math-NUMBER:1 math-PUNCT:, math-NUMBER:2 math-POSTSUBSCRIPT:end math-CLOSE:rangle  and  math-VERTBAR:| math-Psi math-POSTSUBSCRIPT:start math-NUMBER:11 math-POSTSUBSCRIPT:end math-POSTSUPERSCRIPT:start math-OPEN:( math-NUMBER:1 math-CLOSE:) math-POSTSUPERSCRIPT:end math-CLOSE:rangle  to zero (since otherwise it represents a stream of incoming particles fired at an already excited detector) [23]. 
+We are not obviously compelled to make the same choice of boundary conditions in quantum cosmology, and we will return to a discussion of this important issue in Section 3(C). 
+But for the moment, we work with the Mott solution. 
+At first order only one detector is stimulated into the excited state. 
+The system wave function correlated with detector state  math-VERTBAR:| math-NUMBER:1 math-CLOSE:rangle  now is and the probability that the detector registers is therefore (When the spectrum of  math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end  is continuous, expressions of this type need to be regularized along the lines of Eq.(1.6), but we will carry out this explicitly only when we need to calculate it in more detail). 
+To get two detectors to register, we need to go to second order. 
+We now have, from (2.8), and the solution (2.10), where the omitted terms on the right-hand side are proportional to  math-VERTBAR:| math-NUMBER:0 math-CLOSE:rangle math-VERTBAR:| math-NUMBER:0 math-CLOSE:rangle ,  math-VERTBAR:| math-NUMBER:0 math-CLOSE:rangle math-VERTBAR:| math-NUMBER:1 math-CLOSE:rangle  and  math-VERTBAR:| math-NUMBER:1 math-CLOSE:rangle math-VERTBAR:| math-NUMBER:0 math-CLOSE:rangle , and will not be needed. 
+Again we may solve by expanding as in (2.10). 
+Here we write down only the term required, which describes two detectors being excited and it is readily seen that the solution is Again, following the spirit of the Mott solution, possible homogeneous solutions are set to zero. 
+We now have the system wave function correlated with two detectors registering: it is and the probability is  math-OPEN:langle math-italic-psi math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end math-VERTBAR:| math-italic-psi math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end math-CLOSE:rangle . 
+The analysis is readily extended to an arbitrary number of detectors, but it is easy to anticipate the result from (2.24): for  math-italic-n  detectors, the amplitude is where “symmetrizations” means add all possible permutations of  math-NUMBER:1 math-PUNCT:, math-NUMBER:2 math-PUNCT:, math-NUMBER:3 math-PUNCT:, math-ID:cdots math-italic-n . 
+It is clear that these terms are there to ensure that there is no preference in the order in which each of the detectors registers, reflecting the genuinely timeless nature of the underlying dynamics. 
+Eq.(2.25) is the main result of this Section. 3. PROPERTIES OF THE SOLUTION We have shown that the wave function for the whole system when there are, for example, two detectors, takes the form We can now ask various questions of the detected wave function  math-VERTBAR:| math-italic-psi math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end math-CLOSE:rangle , or more generally, Eq.(2.25). 3(A). 
+Does the Detected Wave Function obey the Wheeler-DeWitt Equation? 
+As stated in the Introduction, a prevalent idea in quantum gravity is that all observables should commute with the total Hamiltonian [10,3,11]. 
+Related to this is the notion that “measurements” of the wave function (whatever this may mean in general) should not displace the system from its eigenstate of the Hamiltonian. 
+Given that we have presented here an explicit model of detection, it is perhaps of interest to ask to what extent this idea holds up. 
+We have, using (2.15), and taking the simple case  math-italic-n math-RELOP:equals math-NUMBER:2 , In configuration space, the right-hand side zero, except in the detector regions  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end ,  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end , because the functions  math-italic-f math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end  and  math-italic-f math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end  are localized there. 
+In these regions, it is of order  math-italic-lambda math-POSTSUPERSCRIPT:start math-NUMBER:2 math-POSTSUPERSCRIPT:end , which we regard as small in comparison to the terms on the left. 
+Hence the measured wave function approximately obeys the Wheeler-DeWitt equation. 
+This is no surprise. 
+In standard quantum mechanics, a physically measured system does not obey the Schrödinger equation but has corrections due to the measuring device. 
+That it obeys the Wheeler-DeWitt equation only approximately is not in conflict with exact reparametrization invariance, since the wave function for the entire system always obeys the Wheeler-DeWitt equation exactly. 
+On the other hand, one wonders whether it might not be possible to devise a detection scheme in which the detected amplitude obeys the Wheeler-DeWitt equation exactly. 
+For example, given the simple toolbox of parts outlined in the Introduction (such as the Green function (1.7)), it would not be unreasonable to guess that the detection amplitude might be of the form (2.25) but with the  math-italic-G  given by Eq.(1.7) replaced by the one obtained by integrating  math-italic-tau  over an infinite range. 
+This gives a solution to the Wheeler-DeWitt equation, and as a consequence, the modified detection amplitude would also obey the Wheeler-DeWitt equation exactly. 3(B). 
+Amplitudes for Classical Paths Of greater interest is the question of the configurations about which the amplitude (2.25) (or the associated probability) is peaked. 
+The amplitude may be written in an explicit coordinate representation as (plus symmetrizations). 
+It has the form of approximate projections onto the regions  math-Delta math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  (exact projections if the  math-italic-f math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  are window functions) with evolution between regions described by the fixed energy propagator  math-italic-G math-OPEN:( math-bold-x math-POSTSUBSCRIPT:start math-italic-k math-ADDOP:plus math-NUMBER:1 math-POSTSUBSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end math-CLOSE:) . 
+It is analogous to the amplitude for a history of positions at a sequence of times in non-relativistic quantum mechanics, which is known to be peaked about classical trajectories [30]. 
+But note that here the evolution is at fixed values of the energy, and there is no reference to time. 
+We can estimate the form of (3.3) using a WKB approximation for the fixed energy propagator [31]. 
+It is given by an expression of the form, where  math-italic-C  is a slowly varying prefactor and  math-italic-S math-OPEN:( math-bold-x math-POSTSUPERSCRIPT:start math-SUPOP:prime math-SUPOP:prime math-POSTSUPERSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end math-CLOSE:)  is the fixed energy Hamilton-Jacobi function, i.e., the action of the classical solution from  math-bold-x math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end  to  math-bold-x math-POSTSUPERSCRIPT:start math-SUPOP:prime math-SUPOP:prime math-POSTSUPERSCRIPT:end  with fixed energy  math-italic-E  [32]. 
+The initial and final momenta of this classical solution are In terms of (3.4), the amplitude (3.3) may be written, where  math-bold-x math-POSTSUBSCRIPT:start math-italic-n math-ADDOP:plus math-NUMBER:1 math-POSTSUBSCRIPT:end math-RELOP:equals math-bold-x math-POSTSUBSCRIPT:start math-italic-f math-POSTSUBSCRIPT:end . 
+Consider the integrals over  math-bold-x math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end math-ID:cdots math-bold-x math-POSTSUBSCRIPT:start math-italic-n math-POSTSUBSCRIPT:end  with  math-bold-x math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end  (and  math-bold-x math-POSTSUBSCRIPT:start math-italic-n math-ADDOP:plus math-NUMBER:1 math-POSTSUBSCRIPT:end ) fixed. 
+Suppose for the moment that the functions  math-italic-f math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  are absent so the integrals are unrestricted. 
+By the stationary phase approximation, the dominant contribution to the integral comes from the values of  math-bold-x math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end math-ID:cdots math-bold-x math-POSTSUBSCRIPT:start math-italic-n math-POSTSUBSCRIPT:end  for which the phase is stationary, i.e., for which for  math-italic-j math-RELOP:equals math-NUMBER:2 math-PUNCT:, math-ID:cdots math-italic-n . 
+This equation means that Using Eq.(3.5), this implies that the final momentum of the classical path from  math-bold-x math-POSTSUBSCRIPT:start math-italic-j math-ADDOP:minus math-NUMBER:1 math-POSTSUBSCRIPT:end  to  math-bold-x math-POSTSUBSCRIPT:start math-italic-j math-POSTSUBSCRIPT:end  is equal to the initial momentum of the classical path from  math-bold-x math-POSTSUBSCRIPT:start math-italic-j math-POSTSUBSCRIPT:end  to  math-bold-x math-POSTSUBSCRIPT:start math-italic-j math-ADDOP:plus math-NUMBER:1 math-POSTSUBSCRIPT:end . 
+It is not difficult to see that this in turn implies that the point  math-bold-x math-POSTSUBSCRIPT:start math-italic-j math-POSTSUBSCRIPT:end  must lie on the classical path from  math-bold-x math-POSTSUBSCRIPT:start math-italic-j math-ADDOP:minus math-NUMBER:1 math-POSTSUBSCRIPT:end  to  math-bold-x math-POSTSUBSCRIPT:start math-italic-j math-ADDOP:plus math-NUMBER:1 math-POSTSUBSCRIPT:end . 
+Hence, the stationary phase points of the whole integral (3.6) lie on the classical path from  math-bold-x math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end  to  math-bold-x math-POSTSUBSCRIPT:start math-italic-f math-POSTSUBSCRIPT:end . 
+The approximate value of the integral is the integrand of (3.6) with the stationary phase point values inserted. 
+Now consider what happens when the restricting functions  math-italic-f math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  are present. 
+If the regions  math-Delta math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  (about which the  math-italic-f math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  are concentrated) include the stationary phase points (and if the regions are larger than the fluctuations about these points), then, since the integral takes it dominant contribution from these points, the presence of the  math-italic-f math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  makes little difference and the integral is given once again by its stationary phase value. 
+On the other hand, if one or more of the  math-italic-f math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  lie far away from the stationary phase points, then, since the integral is prevented from taking a contribution from these points, its value must be much smaller than the stationary phase value. 
+We thus see that the amplitude (3.3) will be largest when the regions  math-Delta math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  are chosen to include the stationary phase points of the integral. 
+As we have shown, the stationary phase points lie along the classical path from  math-bold-x math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end  to  math-bold-x math-POSTSUBSCRIPT:start math-italic-f math-POSTSUBSCRIPT:end . 
+It follows that the amplitude (3.2) will be largest when the regions  math-Delta math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  are chosen to lie along a classical path. 
+Mott’s argument for straightline paths in an expression analogous to (2.25) relied on the explicit from of the Green function in the free particle case, and on a special initial state [23]. 
+Here we see that the peaking about classical paths can be seen, at least heuristically, from elementary properties of path integrals, for a broad class of Hamiltonians and initial states. 
+Bell has also discussed the Mott calculation at some length [33]. 
+He notes that the first projector  math-italic-f math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end  spatially localizes Mott’s initial wave function, but in a realistic ionizing event, the resultant uncertainty in momentum can still be extremely small. 
+As a consequence the angular spread of the wave packet in its subsequent evolution can be extremely small, hence the appearance of a straight line track. 3(C). 
+Comparison with a Result of Hartle The result (2.24) is very closely related to a result of Hartle [29]. 
+He considered a simple model quantum cosmology with a Hamiltonian quadratic in the momenta, as here, and asked for the amplitude that the system passes through two regions of configuration space,  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end ,  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end . 
+Using some simple arguments about propagators and elementary principles of quantum theory, he showed that the amplitude is (in the language of the present paper) where  math-italic-psi  is a solution to the Wheeler-DeWitt equation and  math-italic-f math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end  and  math-italic-f math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end  are taken to be exact projectors onto the regions  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end ,  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end . 
+Other than the factor of  math-italic-lambda math-POSTSUPERSCRIPT:start math-NUMBER:2 math-POSTSUPERSCRIPT:end  in (2.24) which is not important, Hartle’s result differs from (2.24) by the subtraction of an identical term but with  math-italic-G  replaced by  math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end  (which is generally not the same as  math-italic-G ). 
+Hartle argues that this should be there on the grounds that, in an expression like (2.25) with  math-italic-G  represented by (1.7), the time parametrization should not have a preferred direction with  math-bold-y  the “initial” point of the parametrization and  math-bold-x  the “final” point, hence we should sum the amplitude over both possible parametrization directions. 
+To understand why this term can be there in the present calculation, let us first say a little more about the Green function. 
+ math-italic-G , as defined by Eq.(1.7), may be written more explicitly as where  math-italic-u math-POSTSUBSCRIPT:start math-italic-n math-POSTSUBSCRIPT:end math-OPEN:( math-bold-x math-CLOSE:)  are eigenfunctions of  math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end  with eigenvalue  math-italic-E math-POSTSUBSCRIPT:start math-italic-n math-POSTSUBSCRIPT:end . 
+ math-italic-G math-OPEN:( math-bold-x math-PUNCT:, math-bold-y math-PUNCT:, math-italic-E math-CLOSE:)  is real when  math-italic-E  lies in the discrete part of the spectrum and complex when  math-italic-E  lies in the continuous part (see, for example, Ref.[34]). 
+Hence in the free particle case considered by Mott,  math-italic-G math-RELOP:not-equals math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end , but for the harmonic oscillator (considered in Section 4)  math-italic-G math-RELOP:equals math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end . 
+Quantum cosmological models usually have a spectrum which is at least in part continuous, so we expect  math-italic-G math-RELOP:not-equals math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end  in general. 
+Now recall the comments after Eq.(2.18), where it was noted that we are by no means obliged in quantum cosmology to take the same boundary conditions as Mott. 
+Since  math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end  also satisfies Eq.(2.15), we may use it in place of  math-italic-G  to generate solutions to the detector amplitude. 
+Because  math-italic-G math-ADDOP:minus math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end math-RELOP:equals math-italic-i math-italic-delta math-OPEN:( math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E math-CLOSE:) , it is easily seen that the difference between using  math-italic-G  and  math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end  is a homogeneous solution in (2.16), (2.17). 
+It is also true that, in higher order perturbations, we may use  math-italic-G  or  math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end  or some combination. 
+Therefore, there is a more general class of solutions for the detection amplitude which are sums of terms of the form (2.25) with some of the  math-italic-G ’s replaced by  math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end ’s (and with a suitable overall normalization). 
+In particular, Hartle’s amplitude falls into this enlarged class of solutions, so there is no conflict with his result. 
+Mott made a particular choice of solution appropriate to the physical situation he as investigating. 
+In the case of relativistic field theory in Minkowski space, one would normally impose some sort of causality requirement to fix the solution more precisely, and so to choose between  math-italic-G  and  math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end  (since  math-italic-G  is essentially the Feynman propagator). 
+One could require, for example, that the wave function for the whole system is affected by the detector only in the future light cone of the detector region. 
+In quantum cosmology, however, although the metric has hyperbolic signature like Minkowki space, it is by no means clear that one is obliged to impose an analogous requirement, and in fact it is difficult to see exactly how to do this in general since the configuration space is usually not globally hyperbolic. 
+(See, however, Ref.[12]). 
+Instead, one might expect to fix the choice of  math-italic-G  or  math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end  by appealing to cosmological boundary conditions. 
+The no-boundary proposal of Hartle and Hawking, for example, picks out a wave function that is real [35]. 
+It is sometimes claimed that this corresponds to a “time-symmetric” wave function [36]. 
+It therefore stays most closely to the timeless nature of the Wheeler-DeWitt equation and in some sense represents a complete abandonment of any fundamental notion of causality. 
+It is now interesting to note that Hartle’s detection wave function (3.8) is in fact real if  math-italic-psi  is real. 
+In many ways this therefore seems like the most natural solution to take in the case of the Wheeler-DeWitt equation. 
+We do not, however, in this paper commit to any particular choice of boundary condition. 
+In summary, therefore, a more general solution to the detector model is a sum of terms of the form (2.25) involving both  math-italic-G  and  math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end , and this more general solution includes Hartle’s result (3.14). 
+Note also that the replacement of  math-italic-G  by  math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end  does not affect the discussion of the peaking of the amplitude about classical trajectories. 3(D). 
+On Timelessness and Detection It is perhaps worth elaborating on a feature of the detector model which appears at first sight to be incompatible with the timelessness of the Wheeler-DeWitt equation. 
+We have coupled the system to a series of detectors via the interaction Hamiltonian (1.8). 
+This Hamiltonian describes a situation in which, along a trajectory  math-bold-x math-OPEN:( math-italic-t math-CLOSE:) , the detector is in the ground state “before” the trajectory enters the detector region and in an excited state “after” it has passed through the region. 
+Along a classical trajectory  math-bold-x math-OPEN:( math-italic-t math-CLOSE:)  in which there is a notion of time, and of before and after, this is undeniably correct. 
+(The parameter  math-italic-t  simply labels the points along the curve – it may be take to be, for example, the distance along the curve from some reference point.) 
+But how are we to understand how the detector works in the genuinely timeless world described by the Wheeler-DeWitt equation? 
+There is no before and after and there is no preferred direction of time. 
+The above results effectively imply that each solution to the Wheeler-DeWitt equation may be regarded as a superposition of states each of which is concentrated along an entire classical trajectory in configuration space (and we will see this in more detail in Section 4). 
+What then seems to be happening in the present model including the detector, is that each trajectory carries a label indicating whether or not it passes through the detector region at any stage along its entire length. 
+In the (perhaps restrictive) language of time, at each point along the trajectory, the label allows the trajectory to “know” whether it passed through the detector region in the past, or will pass through it in the future. 
+But it is only on adopting this temporal language that the situation seems paradoxical. 
+The paradox vanishes when ones speaks the vocabulary of entire trajectories in configuration space, and one can see this in the solution (3.1). 
+The wave function of the entire system is written as a correlated state in which the state correlated with the detectors in the  math-VERTBAR:| math-NUMBER:1 math-CLOSE:rangle  state is the state (2.25): the detected state is indeed concentrated on trajectories that pass through  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end math-PUNCT:, math-ID:cdots math-Delta math-POSTSUBSCRIPT:start math-italic-n math-POSTSUBSCRIPT:end . 
+The issues discussed in this Section may be of relevance to the perennial debate on the question of time asymmetry in quantum cosmology [37,20]. 4. COHERENT STATES FOR TIMELESS DYNAMICS Since the peaking about classical paths is the most important property of the amplitude (2.25), it is worth exploring it in more detail for the special case of a collection of harmonic oscillators, where it is possible to show very clearly how the solutions to the Wheeler-DeWitt equation correspond to superpositions of states peaked about classical paths. 
+We will introduce a class of coherent states appropriate to the timeless theories considered here and which are natural analogues of the standard coherent states of the harmonic oscillator. 
+The Hamiltonian for a set of  math-italic-N  identical harmonic oscillators is In this case the spectrum of  math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end  is discrete and we have Since  math-italic-delta math-OPEN:( math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E math-CLOSE:)  is now in fact a true projection operator we may write  math-italic-delta math-OPEN:( math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E math-CLOSE:) math-POSTSUPERSCRIPT:start math-NUMBER:2 math-POSTSUPERSCRIPT:end math-RELOP:equals math-italic-delta math-OPEN:( math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E math-CLOSE:)  without having to worry about regularization through the induced inner product, as in the continuous case. 
+(In this expression  math-italic-E  is allowed to take only the discrete values corresponding to the spectrum of  math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end ). 
+The Green function  math-italic-G  is given as before by (1.7) with  math-italic-H  replaced by  math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E . 
+For a one-dimensional oscillator, Eq.(4.2) is equivalent to where  math-VERTBAR:| math-italic-E math-CLOSE:rangle  is the energy eigenstate. 
+In more than one dimension the energy eigenstates are degenerate, so Eq.(4.2) has the form where  math-VERTBAR:| math-italic-E math-PUNCT:, math-italic-d math-CLOSE:rangle  are the energy eigenstates with degeneracy label  math-italic-d . 
+The standard coherent states (see Ref.[38], for example) are denoted  math-VERTBAR:| math-bold-p math-PUNCT:, math-bold-x math-CLOSE:rangle  and they have the important property that they are preserved in form under unitary evolution, where  math-bold-p math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end  are the classical solutions matching  math-bold-p math-PUNCT:, math-bold-x  at  math-italic-t math-RELOP:equals math-NUMBER:0 , hence they are strongly peaked about the classical path. 
+We are interested in finding a set of states which are analogues of these states for the timeless case. 
+That is, they should be eigenstates of  math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end , and should be peaked about the classical paths of given fixed energy in phase space. 
+It is not difficult to see that a set of states doing the job are, These states are not in fact normalized to unity but we shall see that it is useful to work with them as they are. 
+Since the states  math-VERTBAR:| math-bold-p math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end math-CLOSE:rangle  are concentrated at a phase space point for each  math-italic-t , clearly integrating  math-italic-t  over a whole period produces a state which is concentrated along the entire classical trajectory. 
+Each state is labeled by a fiducial phase space point  math-bold-p math-PUNCT:, math-bold-x  which determines the classical trajectory the state is peaked about. 
+Under evolution of the fiducial point  math-bold-p math-PUNCT:, math-bold-x  to another point,  math-bold-p math-POSTSUBSCRIPT:start math-italic-s math-POSTSUBSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUBSCRIPT:start math-italic-s math-POSTSUBSCRIPT:end , say, along the same classical trajectory, the state changes by a phase, as may be seen from (4.5), (4.6). 
+We will refer to these states as timeless coherent states. 
+Their properties are in fact very similar to the usual coherent states. 
+Note that the coherent states  math-VERTBAR:| math-bold-p math-PUNCT:, math-bold-x math-CLOSE:rangle  are in fact already approximate eigenstates of  math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end , with eigenvalue  math-FRACOP:italic-divide math-ARG:start math-NUMBER:1 math-ARG:end math-ARG:start math-NUMBER:2 math-ARG:end math-OPEN:( math-bold-p math-POSTSUPERSCRIPT:start math-NUMBER:2 math-POSTSUPERSCRIPT:end math-ADDOP:plus math-bold-x math-POSTSUPERSCRIPT:start math-NUMBER:2 math-POSTSUPERSCRIPT:end math-CLOSE:) , as long as  math-VERTBAR:| math-bold-p math-VERTBAR:| math-PUNCT:, math-VERTBAR:| math-bold-x math-VERTBAR:|  are much larger than the coherent state quantum fluctuations. 
+Given  math-italic-E , it therefore seems reasonable to choose the values  math-bold-p math-PUNCT:, math-bold-x  in the fiducial coherent state so that  math-italic-E math-RELOP:equals math-FRACOP:italic-divide math-ARG:start math-NUMBER:1 math-ARG:end math-ARG:start math-NUMBER:2 math-ARG:end math-OPEN:( math-bold-p math-POSTSUPERSCRIPT:start math-NUMBER:2 math-POSTSUPERSCRIPT:end math-ADDOP:plus math-bold-x math-POSTSUPERSCRIPT:start math-NUMBER:2 math-POSTSUPERSCRIPT:end math-CLOSE:) , when constructing the timeless states (4.6). 
+Two timeless coherent states of different energy are exactly orthogonal. 
+The more interesting case is that in which they have the same energy, and then they are approximately orthogonal if they correspond to sufficiently distinct classical solutions. 
+This is because we have From the properties of the standard coherent states we know that with equality if and only if  math-bold-p math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end math-RELOP:equals math-bold-p math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end  and  math-bold-x math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end math-RELOP:equals math-bold-x math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end . 
+Moreover, the overlap of two coherent states is exponentially small if they are centered around phase space points that are sufficiently far apart. 
+It follows that if  math-bold-p math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end  does not lie on, or close to, the trajectory  math-bold-p math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end , the overlap  math-OPEN:langle math-bold-p math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end math-VERTBAR:| math-bold-p math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end math-CLOSE:rangle  will always exponentially small for all  math-italic-t . 
+The integral over  math-italic-t  in (4.8) will then give a result that is much smaller than the case in which  math-bold-p math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end  does lie on, or close to, the trajectory  math-bold-p math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end  (because in the latter case the overlap  math-OPEN:langle math-bold-p math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end math-VERTBAR:| math-bold-p math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end math-PUNCT:, math-bold-x math-POSTSUBSCRIPT:start math-italic-t math-POSTSUBSCRIPT:end math-CLOSE:rangle  becomes close to unity for some value of  math-italic-t ). 
+The timeless coherent states are therefore approximately orthogonal for sufficiently distinct classical trajectories. 
+The standard completeness relation for the coherent states is Multiplying both sides by  math-italic-delta math-OPEN:( math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E math-CLOSE:)  from the left and right, and using (4.6), we get Since  math-italic-delta math-OPEN:( math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E math-CLOSE:) math-VERTBAR:| math-italic-psi math-CLOSE:rangle math-RELOP:equals math-VERTBAR:| math-italic-psi math-CLOSE:rangle  on any solution to the eigenvalue equation  math-OPEN:( math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E math-CLOSE:) math-VERTBAR:| math-italic-psi math-CLOSE:rangle math-RELOP:equals math-NUMBER:0 , this is as good as a completeness relation on the set of solutions to the eigenvalue equation (which is all we are interested in). 
+We may therefore write any solution  math-VERTBAR:| math-italic-psi math-CLOSE:rangle  as a superposition of timeless coherent states, It is then tempting to interpret  math-OPEN:langle math-italic-phi math-POSTSUBSCRIPT:start math-bold-px math-POSTSUBSCRIPT:end math-VERTBAR:| math-italic-psi math-CLOSE:rangle  as the amplitude that a system in the state  math-VERTBAR:| math-italic-psi math-CLOSE:rangle  will be found on the classical trajectory corresponding to the timeless coherent state  math-VERTBAR:| math-italic-phi math-POSTSUBSCRIPT:start math-bold-px math-POSTSUBSCRIPT:end math-CLOSE:rangle . 
+Again using the fact that  math-italic-delta math-OPEN:( math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E math-CLOSE:) math-VERTBAR:| math-italic-psi math-CLOSE:rangle math-RELOP:equals math-VERTBAR:| math-italic-psi math-CLOSE:rangle  it is easy to see that this is in fact the same as  math-OPEN:langle math-bold-p math-PUNCT:, math-bold-x math-VERTBAR:| math-italic-psi math-CLOSE:rangle , which is the amplitude for finding the system at the phase space point  math-bold-p math-PUNCT:, math-bold-x  labeling the trajectory. 
+The probability is then simply  math-VERTBAR:| math-OPEN:langle math-bold-p math-PUNCT:, math-bold-x math-VERTBAR:| math-italic-psi math-CLOSE:rangle math-VERTBAR:| math-POSTSUPERSCRIPT:start math-NUMBER:2 math-POSTSUPERSCRIPT:end . 
+This is a simple and intuitively appealing result: the classical trajectory is completely fixed by its initial values  math-bold-x math-PUNCT:, math-bold-p , hence we expect that the probability for being found on a certain classical trajectory is the same as the probability for being found at the initial phase space point that labels it. 
+This interpretation is put forward with a small note of caution, however, since the sum over  math-bold-p math-PUNCT:, math-bold-x  in Eq.(4.12) is not only over states which are only approximately orthogonal (as with the usual coherent states), but, because of the property (4.7), includes some redundancy in the summation. 
+In particular,  math-VERTBAR:| math-italic-phi math-POSTSUBSCRIPT:start math-bold-px math-POSTSUBSCRIPT:end math-CLOSE:rangle math-OPEN:langle math-italic-phi math-POSTSUBSCRIPT:start math-bold-px math-POSTSUBSCRIPT:end math-VERTBAR:|  is invariant along the classical phase space trajectory of its fiducial point. 
+Since this only produces some sort of constant factor, it may not make any difference, and indeed, the above interpretation appears to produce sensible results. 
+Still, it would be desirable to include, if possible, some sort of “gauge fixing” which factors out this redundancy. 
+This will be explored elsewhere. 
+Given all of this background, we may now reconsider the detector amplitude (2.25). 
+We expand the initial state  math-VERTBAR:| math-italic-psi math-CLOSE:rangle  in the timeless coherent states, as in Eq.(4.12). 
+When  math-italic-f math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end  operates on the state, it has the effect of restricting the sum over timeless coherent states to only those that pass through the region  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end , but otherwise leaves the timeless coherent states preserved in form (as long as the region  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end  is larger than the width of the coherent states). 
+Next, to consider the operation of  math-italic-G , we write it as where  math-italic-H math-RELOP:equals math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E . 
+When the timeless coherent states are operated on with the exponential factor in (4.13) it has essentially no effect, since  math-italic-H math-VERTBAR:| math-italic-phi math-POSTSUBSCRIPT:start math-bold-px math-POSTSUBSCRIPT:end math-CLOSE:rangle math-RELOP:equals math-NUMBER:0 . 
+(The time integration leads to a constant factor, which may, however, need regulating along the lines of (1.6)). 
+Operating with  math-italic-f math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end  further restricts the sum to those states that pass through both  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end  and  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end , and then subsequent operation  math-italic-G  again does essentially nothing. 
+And likewise to the end of the chain. 
+We therefore find that the detector amplitude (2.25) consists of a superposition of only those timeless coherent states that pass through all the detector regions  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end ,  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:2 math-POSTSUBSCRIPT:end math-ID:cdots math-Delta math-POSTSUBSCRIPT:start math-italic-n math-POSTSUBSCRIPT:end . 
+This could be quite a large sum of states if the regions  math-Delta math-POSTSUBSCRIPT:start math-italic-k math-POSTSUBSCRIPT:end  are large. 
+However, it will consist of essentially just one timeless coherent state if the detector regions lie along a classical trajectory and if their size is just bigger than the spatial width of the wave packet. 
+The detection amplitude along this classical trajectory is then equal to  math-OPEN:langle math-italic-phi math-POSTSUBSCRIPT:start math-bold-px math-POSTSUBSCRIPT:end math-VERTBAR:| math-italic-psi math-CLOSE:rangle , in agreement with the analysis based on Eq.(4.12). 
+Rovelli has written down a coherent state of the type considered here [17] in the context of a very similar model, although its properties were not explored and exploited as they are here. 
+Klauder, in his approach to the quantization of constrained systems using coherent states, considered the projection of the standard coherent states onto the contraint subspace, hence in essence wrote down states of the form (4.6) [39]. 
+He did not, however, consider their use as an interpretational tool. 
+Wave packet solutions to the Wheeler-DeWitt equation which aproximately track the classical trajectories for more interesting cosmological models have been considered in Refs.[40,41]. 5. EXACT SOLUTION TO THE DETECTOR DYNAMICS In this Section we discuss an alternative method of solution of the eigenvalue equation (2.2). 
+As we shall see, it does not in fact give a very elegant representation of the Mott solution, which is why it was not used above. 
+If, however, one is permitted to use different boundary conditions, as may be reasonable in quantum cosmology, then it provides an alternative possible solution to the detector dynamics. 
+We consider first the case of a single detector. 
+The key observation is that solution to the eigenvalue equation (2.2) may be generated using either of the expressions, Here  math-VERTBAR:| math-italic-phi math-CLOSE:rangle  is an arbitrary fiducial state in the joint system-detector Hilbert space. 
+It is ambiguous up to the addition of a term of the form  math-OPEN:( math-italic-H math-ADDOP:minus math-italic-E math-CLOSE:) math-VERTBAR:| math-italic-phi math-POSTSUPERSCRIPT:start math-SUPOP:prime math-POSTSUPERSCRIPT:end math-CLOSE:rangle . 
+For the moment we keep  math-VERTBAR:| math-italic-phi math-CLOSE:rangle  general and take To evaluate (5.1) or (5.2) we introduce the eigenstates of  math-italic-a math-ADDOP:plus math-italic-a math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end , which are The expression (5.1) is then readily evaluated with the result where, (recalling that  math-italic-h math-RELOP:equals math-italic-H math-ADDOP:minus math-italic-E ). 
+These expressions are perhaps more easily appreciated using a path integral respresentation: Eqs.(5.8), (5.9) represent the exact solution to Eq.(2.2) with one detector in place. 
+Turn now to the question of the fiducial state. 
+The condition (2.5), suggests that we should take where  math-VERTBAR:| math-italic-psi math-CLOSE:rangle math-RELOP:equals math-italic-delta math-OPEN:( math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E math-CLOSE:) math-VERTBAR:| math-italic-chi math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-CLOSE:rangle , and hence that  math-VERTBAR:| math-italic-chi math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end math-CLOSE:rangle math-RELOP:equals math-NUMBER:0 . 
+In fact, in the induced inner product scheme, we may take  math-VERTBAR:| math-italic-chi math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-CLOSE:rangle math-RELOP:equals math-VERTBAR:| math-italic-psi math-CLOSE:rangle , since effectively  math-italic-delta math-OPEN:( math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E math-CLOSE:) math-POSTSUPERSCRIPT:start math-NUMBER:2 math-POSTSUPERSCRIPT:end math-RELOP:equals math-italic-delta math-OPEN:( math-italic-H math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-ADDOP:minus math-italic-E math-CLOSE:) . 
+This therefore yields a path integral expression for the amplitude for detection and has the property that the factoring condition (2.5) is satisfied when  math-italic-lambda math-RELOP:equals math-NUMBER:0 . 
+So let us first explore the properties of (5.8), (5.9) with  math-italic-chi math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end math-RELOP:equals math-NUMBER:0 . 
+The nature of the sums over paths  math-bold-x math-OPEN:( math-italic-t math-CLOSE:)  in Eq(5.8) and (5.9) is governed by the quantity appearing in the sine and cosine factors. 
+With  math-italic-f math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end  normalized to be dimensionless, this quantity has the dimensions of time, and is essentially the time spent by the path  math-bold-x math-OPEN:( math-italic-t math-CLOSE:)  in the region  math-Delta math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end  around the detector. 
+(This is not of course a physically measurable time. 
+The paths  math-bold-x math-OPEN:( math-italic-t math-CLOSE:)  in the path integral have a well-defined notion of time, but after summing over the total time duration of each path  math-italic-tau  the final result is time-independent). 
+Now, in the amplitude for no detection, (5.8), the factor  math-TRIGFUNCTION:cosine math-OPEN:( math-italic-lambda math-italic-tau math-POSTSUBSCRIPT:start math-italic-d math-POSTSUBSCRIPT:end math-CLOSE:)  is  math-NUMBER:1  for  math-italic-tau math-POSTSUBSCRIPT:start math-italic-d math-POSTSUBSCRIPT:end math-RELOP:equals math-NUMBER:0 , and decreasing for  math-italic-tau math-POSTSUBSCRIPT:start math-italic-d math-POSTSUBSCRIPT:end  increasing from zero. 
+In the path integral, it therefore has the effect of suppressing paths that pass close to the detector, and favours paths that stay away from it. 
+Similarly, in the detection amplitude, (5.9), the factor  math-TRIGFUNCTION:sine math-OPEN:( math-italic-lambda math-italic-tau math-POSTSUBSCRIPT:start math-italic-d math-POSTSUBSCRIPT:end math-CLOSE:)  is zero for paths that spend no time near the detector, and non-zero for paths that enter the detector region. 
+It therefore enhances the amplitude for paths entering the detector region. 
+The sine and cosine factors therefore, in a very crude way, enforce restrictions on the paths corresponding to entering or not entering the detector region, as one would expect. 
+We can also see, however, that these factors only do their job well if  math-italic-lambda math-italic-tau math-POSTSUBSCRIPT:start math-italic-d math-POSTSUBSCRIPT:end  is somewhat smaller than  math-NUMBER:1 , indicating that the detector model is only physically sensible in the perturbative regime about  math-italic-lambda math-RELOP:equals math-NUMBER:0 , as expected. 
+It is now important to check the agreement between the exact result above and the perturbative result of Section 2. It is not difficult to show that the exact solution (5.9) with  math-italic-chi math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end math-RELOP:equals math-NUMBER:0  does not in fact agree with the perturbative solution (2.19). 
+It differs by the presence of homogeneous solutions in the small  math-italic-lambda  limit of (5.9). 
+We will not go into details but it may be shown using (5.7) and the identity, (which is proved using the exponential representation (5.2)). 
+Recall that in the perturbative solution the homogeneous solutions were removed at each order in perturbation theory essentially by inspection. 
+Since no corresponding condition has been imposed here, it is not surprising that these spurious solutions crop up. 
+We can, however, get agreement if we choose  math-VERTBAR:| math-italic-chi math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end math-CLOSE:rangle math-RELOP:equals math-italic-i math-italic-lambda math-italic-f math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end math-VERTBAR:| math-italic-chi math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-CLOSE:rangle  in Eq.(5.9) (again proved using (5.12), although there is no obvious independent reason for making this choice. 
+Furthermore, the presence of the Green function  math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end  in the fiducial state rather destroys the elegance of the path integral representation compared to the case  math-italic-chi math-POSTSUBSCRIPT:start math-NUMBER:1 math-POSTSUBSCRIPT:end math-RELOP:equals math-NUMBER:0 . 
+On the other hand, although the Mott solution is not readily obtained, the removal of the homogeneous solutions in the perturbative solution is a subtle matter of boundary conditions, above and beyond the basic factoring condition (5.10). 
+As discussed in Section 3, in the case of quantum cosmology one is not obviously obliged to take the same conditions, and indeed one can argue that, beyond (5.10), the boundary conditions are up for grabs. 
+Indeed, one could effectively choose boundary conditions by proposing that the solution is given by the formula (5.1) with the factoring condition (5.10). 
+As one can see from (5.12), this proposal again produces solutions with a time symmetric flavour to them (i.e., with an equal number of  math-italic-G ’s and  math-italic-G math-POSTSUPERSCRIPT:start math-† math-POSTSUPERSCRIPT:end ’s in the solution), a feature which persists to the case of more than one detector. 
+Not surprisingly, this choice does in fact produce, in essence, the Hartle amplitude (3.8). 
+We have, therefore, in this Section produced another candidate expression for the detection amplitude, which is arguably the more appropriate one for quantum cosmology. 
+Furthermore, the means of generating it, Eqs.(5.1), (5.2), are readily generalizable to more complicated situations. 6. AN IMPROVED DETECTOR MODEL We now briefly consider a more elaborate detector model that consists of a harmonic oscillator instead of the simple two state system. 
+So we take, in the case of a single detector, The energy eigenstate of the total Hamiltonian is again calculated using (5.2), with the factored fiducial state (5.10), where  math-VERTBAR:| math-NUMBER:0 math-CLOSE:rangle  is the harmonic oscillator ground state. 
+In terms of a path integral, denoting the harmonic oscillator coordinates by  math-italic-q , where  math-italic-u math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-OPEN:( math-italic-q math-CLOSE:) math-RELOP:equals math-OPEN:langle math-italic-q math-VERTBAR:| math-NUMBER:0 math-CLOSE:rangle . 
+The integral over  math-italic-q  is conveniently rewritten as where  math-italic-T  denotes time ordering. 
+The right-hand side of (6.3) is just the unitary evolution of the vacuum state for a driven harmonic oscillator. 
+Using the properties of coherent states [38], (6.3) is equal to  math-OPEN:langle math-italic-q math-POSTSUBSCRIPT:start math-italic-f math-POSTSUBSCRIPT:end math-VERTBAR:| math-italic-z math-OPEN:( math-italic-tau math-CLOSE:) math-CLOSE:rangle , where  math-VERTBAR:| math-italic-z math-CLOSE:rangle  is a standard coherent state and To find the amplitudes for detection and no detection we expand the total state (6.2) in terms of the eigenstates of the harmonic oscillator. 
+Since all states other than the ground state correspond to detection, there is no single amplitude corresponding to detection (although there is a probability). 
+It is therefore easier to look at the amplitude for no detection, which is obtained by overlapping (6.2) with the ground state  math-italic-u math-POSTSUBSCRIPT:start math-NUMBER:0 math-POSTSUBSCRIPT:end math-OPEN:( math-italic-q math-POSTSUBSCRIPT:start math-italic-f math-POSTSUBSCRIPT:end math-CLOSE:) , yielding, From the properties of coherent states [38], we have The probability for no detection is  math-OPEN:langle math-italic-psi math-POSTSUBSCRIPT:start math-italic-n math-italic-d math-POSTSUBSCRIPT:end math-VERTBAR:| math-italic-psi math-POSTSUBSCRIPT:start math-italic-n math-italic-d math-POSTSUBSCRIPT:end math-CLOSE:rangle  and the probability for detection is simply  math-NUMBER:1 math-ADDOP:minus math-OPEN:langle math-italic-psi math-POSTSUBSCRIPT:start math-italic-n math-italic-d math-POSTSUBSCRIPT:end math-VERTBAR:| math-italic-psi math-POSTSUBSCRIPT:start math-italic-n math-italic-d math-POSTSUBSCRIPT:end math-CLOSE:rangle . 
+The result (6.5) clearly has the desired properties. 
+For paths  math-bold-x math-OPEN:( math-italic-t math-CLOSE:)  which never enter the detection region,  math-italic-z math-OPEN:( math-italic-tau math-CLOSE:) math-RELOP:equals math-NUMBER:0  and the path integral is unaffected. 
+Paths that enter the region, on the other hand, generally have  math-italic-z math-OPEN:( math-italic-tau math-CLOSE:) math-RELOP:not-equals math-NUMBER:0 , and they are exponentially suppressed. 
+This is therefore a much improved detector model in comparison to Eq.(5.8). 
+Its validity is not restricted to the perturbative regime. 
+The generalization to many detectors is trivial and essentially the same result concerning peaking about classical trajectories is the obtained. 
+Of course, this detector is still not fully satisfactory because it can happen that  math-italic-z math-OPEN:( math-italic-tau math-CLOSE:) math-RELOP:equals math-NUMBER:0  even for paths that enter the region, because of the oscillatory nature of  math-italic-z math-OPEN:( math-italic-tau math-CLOSE:) , hence we again encounter the issue of detector recurrences. 
+Again this will be avoided if the time the trajectory spends in the detector region is short (less than  math-italic-omega math-POSTSUPERSCRIPT:start math-ADDOP:minus math-NUMBER:1 math-POSTSUPERSCRIPT:end ). 
+A more challenging detector improvement avoiding the recurrence problem would be to construct one that, were it used in standard unitary quantum mechanics, would be irreversible, i.e., involves an essentially infinite number of degrees of freedom. 
+Such a detector was introduced in the related context of measuring arrival times in Ref.[42] and it would be interesting to incorporate it into the situation considered here. 7. SUMMARY The aim of this paper was to give substance to the appealing intuitive notion that solutions to the Wheeler-DeWitt equation (1.1) correspond to entire histories of the universe with time emerging as a parameter along each trajectory. 
+The concrete technical results – the detection amplitude and the introduction of a set of timeless coherent states – are compatible with this notion. 
+There are, however, many subtle aspects to this notion [4], and we do not claim to have an exhaustive demonstration of the emergence of trajectories from the Wheeler-DeWitt equation. 
+ACKNOWLEDGEMENTS I am very grateful to Julian Barbour, Jim Hartle, John Klauder and Dieter Zeh for their comments on the first draft of this paper. 
+REFERENCES 1. 
+J.B.Hartle, in Proceedings of the 1992 Les Houches School, Gravity and its Quantizations, edited by B.Julia and J.Zinn-Justin (Elsevier Science B.V. 1995) 2. 
+C.J.Isham, gr-qc/9210011. 3. 
+K.Kuchar, in Conceptual Problems of Quantum Gravity, edited by A.Ashtekar and J.Stachel (Boston, Birkhauser, 1991); and in Proceedings of the 4th Canadian Conference on General Relativty and Relativistic Astrophysics, edited by G.Kunstatter, D.E.Vincent and J.G.Williams (World Scientific, New Jersey, 1992). 
+See also the e-print gr-qc/9304012, Canonical quantum gravity. 4. 
+J.Barbour, The End of Time: The Next Revolution in our Understanding of the Universe (Weidenfeld and Nicholson, 1999). 5. 
+J.Butterfield and C.J.Isham, gr-qc/9901024. 6. 
+For a nice review see, C.Rovelli, gr-qc/9710008, Loop quantum gravity. 7. 
+J.J.Halliwell, in, Proceedings of the 13th International Conference on General Relativity and Gravitation, edited by R.J.Gleiser, C.N.Kozameh, O.M.Moreschi (IOP Publishers, Bristol,1992). 
+(Also available as the e-print gr-qc/9208001). 8. 
+A.Ashtekar, J.Lewandowski, D.Marolf, J.Mourao and T.Thiemann, J.Math.Phys. 36, 6456 (1995); A.Higuchi, Class. 
+Quant. 
+Grav. 8, 1983 (1991). 
+D.Giulini and D.Marolf, Class. 
+Quant. 
+Grav. 16, 2489 (1999); Class. 
+Quant. 
+Grav. 16, 2479 (1999). 
+F.Embacher, Hadronic J. 21, 337 (1998); N.Landsmann, J.Geom.Phys. 15, 285 (1995). 9. 
+D.Marolf, Class. 
+Quant. 
+Grav. 12, 1199 (1995). 10. 
+B.DeWitt, in Gravitation: An Introduction to Current Research, edited by L.Witten (John WIley and Sons, New York, 1962). 11. 
+C.Rovelli, Class. 
+Quant. 
+Grav. 8, 297 (1991); 8, 317 (1991). 12. 
+C.Teitelboim, Phys. 
+Rev. 
+D25, 3159 (1983); 28, 297 (1983); 28, 310 (1983). 13. 
+J.J.Halliwell, Phys. 
+Rev. 
+D38, 2468 (1988). 14. 
+J.J.Halliwell and M.E.Ortiz, Phys.Rev. 
+D48, 748 (1993). 15. 
+M.Gell-Mann and J.B.Hartle, in Complexity, Entropy and the Physics of Information, SFI Studies in the Sciences of Complexity, Vol. 
+VIII, W. Zurek (ed.) 
+(Addison Wesley, Reading, 1990); and in Proceedings of the Third International Symposium on the Foundations of Quantum Mechanics in the Light of New Technology, S. Kobayashi, H. Ezawa, Y. Murayama and S. Nomura (eds.) 
+(Physical Society of Japan, Tokyo, 1990); Phys.Rev. 
+D47, 3345 (1993); R.B.Griffiths, J.Stat.Phys. 36, 219 (1984); Phys.Rev.Lett. 70, 2201 (1993); Am.J.Phys. 55, 11 (1987); R.Omnès, J.Stat.Phys. 53, 893 (1988); 53, 933 (1988); 53, 957 (1988); 57, 357 (1989); 62, 841 (1991); Ann.Phys. 201, 354 (1990); Rev.Mod.Phys. 64, 339 (1992); J.B.Hartle, in Quantum Cosmology and Baby Universes, S. Coleman, J. Hartle, T. Piran and S. Weinberg (eds.) 
+(World Scientific, Singapore, 1991); J.J.Halliwell, in Fundamental Problems in Quantum Theory, edited by D.Greenberger and A.Zeilinger, Annals of the New York Academy of Sciences, Vol 775, 726 (1994). 
+For further developments in the decoherent histories approach, particularly adpated to the problem of spacetime coarse grainings, see C. Isham, J. Math. 
+Phys. 23, 2157 (1994); C. Isham and N. Linden, J. Math. 
+Phys. 35, 5452 (1994); 36, 5392 (1995). 16. 
+J.J.Halliwell and J.Thorwart, in preparation. 
+See also the related works, J.Whelan, Phys. 
+Rev. 
+D50, 6344 (1994); J.B.Hartle and D.Marolf, Phys. 
+Rev. 
+D56, 6247 (1997). 17. 
+C.Rovelli, Phys. 
+Rev. 42, 2638 (1990). 18. 
+C.Rovelli, Phys. 
+Rev. 43, 442 (1991). 19. 
+D.Marolf, Phys. 
+Rev. 
+D53, 6979(1996); Class. 
+Quant. 
+Grav. 12, 2469 (1995); Class. 
+Quant. 
+Grav. 12, 1441 (1995). 20. 
+H.D.Zeh, The Physical Basis of the Direction of Time, third edition (Springer-Verlag, 1999) (and the associated webpage www.time-direction.de); Phys.Lett. 
+A116, 9 (1986); A126, 311 (1988); C.Kiefer and H.Zeh, Phys.Rev. 
+D51, 4145 (1995). 21. 
+J.Barbour, Class. 
+Quant. 
+Grav. 11, 2853 (1994). 22. 
+J.Barbour, Class. 
+Quant. 
+Grav. 11, 2875 (1994). 23. 
+N.F.Mott, Proc.Roy.Soc A124, 375 (1929), reprinted in Quantum Theory and Measurement, edited by J.Wheeler and W.Zurek (Princeton University Press, Princeton, New Jersey, 1983). 24. 
+See also, A.A.Broyles, Phys. 
+Rev. 
+A48, 1055 (1993), and M.Castagnino and R.Laura, gr-qc/0006012, for further discussions of the Mott calculation. 25. 
+K.Hepp, Helv.Phys.Acta 45, 237 (1972). 26. 
+This detector model was used in a simple non-relativistic context by J.J.Halliwell, Phys. 
+Rev. 
+D60, 105031 (1999). 
+Some subsequent developments of the Coleman-Hepp model are H.Nakazato and S.Pascazio, Phys. 
+Rev. 
+Lett. 70, 1 (1993); Phys. 
+Rev. 
+A48, 1066 (1993); R.Blasi, S.Pascazio, S.Takagi, Phys. 
+Rev. 
+A250, 230 (1998). 27. 
+Y.Aharanov and D.Bohm, Phys. 
+Rev. 122, 1649 (1961); Y.Aharanov, J.Oppenheim, S.Popescu, B.Reznik and W.Unruh, quant-ph/9709031 (1997); G.R.Allcock, Ann. 
+Phys. 
+(N.Y.) 53, 253 (1969); 53, 286 (1969); 53, 311 (1969); Ph.Blanchard and A.Jadczyk, Helv.Phys.Acta. 69, 613 (1996); I.Bloch and D.A.Burba, Phys. 
+Rev. 10, 3206 (1974); V.Delgado, preprint quant-ph/9709037 (1997); R.Giannitrapani, preprint quant-ph/9611015 (1998); N.Grot, C.Rovelli and R.S.Tate, Phys. 
+Rev. 
+A54, 46 (1996); E.Gurjoy and D.Coon, Superlattices and Microsctructures 5, 305 (1989); A.S.Holevo, Probabilistic and Statistical Aspects of Quantum Theory (North Holland, Amsterdam, 1982), pages 130–197; A.Jadcyk, Prog.Theor.Phys. 93, 631 (1995); D.H.Kobe and V.C.Aguilera–Navarro, Phys. 
+Rev. 
+A50, 933 (1994); N.Kumar, Pramana J.Phys. 25, 363 (1985); J.León, preprint quant-ph/9608013 (1996); D.Marolf, Phys. 
+Rev. 
+A50, 939 (1994); L.Mandelstamm and I.Tamm, J.Phys. 9, 249 (1945); J.G.Muga, S.Brouard and D.Macías, Ann. 
+Phys. 
+(N.Y.) 240, 351 (1995); J.G.Muga, J.P.Palao and C.R.Leavens, preprint quant-ph/9803087 (1987); J.G.Muga, R.Sala and J.P.Palao, preprint quant-ph/9801043, Superlattices and Microstructures 23 833 (1998); C.Piron, in Interpretation and Foundations of Quantum Theory, edited by H.Newmann (Bibliographisches Institute, Mannheim, 1979); M.Toller, preprint quant-ph/9805030 (1998); H.Salecker and E.P.Wigner, Phys. 
+Rev. 109, 571 (1958); F.T.Smith, Phys. 
+Rev. 118, 349 (1960); E.P.Wigner, Phys. 
+Rev. 98, 145 (1955). 28. 
+N.Yamada and S.Takagi, Prog.Theor.Phys. 85, 985 (1991); 86, 599 (1991); 87, 77 (1992); N. Yamada, Sci. 
+Rep. 
+Tôhoku Uni., Series 8, 12, 177 (1992); Phys. 
+Rev. 
+A54, 182 (1996); J.J.Halliwell and E.Zafiris, Phys.Rev. 
+D57, 3351-3364 (1998); J.B.Hartle, Phys.Rev. 
+D44, 3173 (1991); R.J.Micanek and J.B.Hartle, Phys.Rev. 
+A54, 3795 (1996). 29. 
+J.B.Hartle, Phys. 
+Rev. 
+D38, 2985 (1988). 30. 
+J.J.Halliwell, Phys. 
+Rev. 
+D48, 4785 (1993). 31. 
+L.Schulman, Techniques and Applications of Path Integrals (Wiley, New York, 1981). 32. 
+H.Goldstein, Classical Mechanics (Addison-Wesley, Reading MA, 1980). 33. 
+J.S.Bell, Speakable and Unspeakable in Quantum Mechanics (Cambridge University Press, Cambridge, 1987). 34. 
+A.Auerbach and S.Kivelson, Nucl. 
+Phys. 
+B257, 799 (1985). 35. 
+J.B.Hartle and S.W.Hawking, Phys. 
+Rev. 28, 2960 (1983). 36. 
+S.W.Hawking, Phys. 
+Rev. 
+D32, 2489 (1985). 37. 
+See, for example, the collection of articles in Physical Origins of Time Asymmetry, edited by J.J.Halliwell, J.Perez-Mercader and W.Zurek (Cambridge University Press, Cambridge, 1994). 
+A recent discussion is K.Ridderbos, Studies in History and Philosophy of Modern Physics 30, 41(1999). 38. 
+C.W.Gardiner, Quantum Noise (Springer-Verlag, Berlin, 1991). 39. 
+J.Klauder, Ann. 
+Phys. 
+(NY) 254, 419 (1997), (quant-ph/9604033) ; Nucl.Phys. 
+B547,397, 1999, (hep-th/9901010); hep-th/0003297. 40. 
+C.Kiefer, Phys. 
+Rev. 
+D38, 1761 (1988). 41. 
+Y.Kazama and R.Nakayama, Phys. 
+Rev. 32, 2500 (1985). 42. 
+J.J.Halliwell, Prog.Theor.Phys. 102, 707 (1999). 
