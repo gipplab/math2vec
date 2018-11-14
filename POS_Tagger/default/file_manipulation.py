@@ -5,6 +5,7 @@ Created on Oct 26, 2018
 '''
 import os
 import nltk
+import re
 
 from stop_words import get_stop_words
 en_stop = get_stop_words('en') # list of stopwords/english
@@ -40,8 +41,8 @@ def cleanText(fname, input_file_abs, output_path):
             words = str(lines) #stream into string
             #cleaning each line
             words = words.lower() #everything in lower case
-            #words = nltk.tokenize.word_tokenize(words)
             words = words.split() #split by whitespace #comment if tokenize is performed
+            words = cleanString(words)
             words = [i for i in words[:] if not i in en_stop] #get rid of stop words
             #words = nltk.pos_tag(words) #POS-tagger via NLTK
             outputFile(words, ops)
@@ -58,3 +59,14 @@ def outputFile(text, writer):
         #print('Empty line !!!')
         pass # nothing to save
 #writes sentence into a file
+
+#===============================================================================
+# Filter and Manipulation of Strings
+#===============================================================================
+def cleanString(words):
+    tokens = []
+    for word in words:
+        tokens.append(word.translate({ord(c): None for c in '()[]{}\'\".;:,!@#$'}))
+    return(tokens)
+#returns a list of clean tokens - gets rid of anything between ' ' by  replacing for None
+#2018-11-14 at this point we are not sure what other chars we want to keep
