@@ -35,12 +35,13 @@ def fname_splitter(docslist):
 # Document Reading/Writing
 #===============================================================================
 def cleanText(fname, input_file_abs, output_path):
-    ops = open(output_path+'/'+fname,'w+') #file where we are writing (same name it was read)
+    ops = open(output_path+'/'+fname,'w', encoding='utf-8') #file where we are writing (same name it was read)
     with open(input_file_abs, 'r', encoding='utf-8') as fin:
         for lines in fin.readlines():
             words = str(lines) #stream into string
+            words = words.encode('ascii', 'ignore').decode("utf-8")
             #cleaning each line
-            words = words.lower() #everything in lower case
+            words = words.lower()#everything in lower case
             words = words.split() #split by whitespace #comment if tokenize is performed
             words = cleanString(words)
             words = [i for i in words[:] if not i in en_stop] #get rid of stop words
