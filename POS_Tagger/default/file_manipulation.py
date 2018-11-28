@@ -7,6 +7,8 @@ import os
 import nltk
 import re
 
+from nltk.stem.lancaster import LancasterStemmer
+
 from stop_words import get_stop_words
 en_stop = get_stop_words('en') # list of stopwords/english
 
@@ -39,17 +41,19 @@ def cleanText(fname, input_file_abs, output_path):
     with open(input_file_abs, 'r', encoding='utf-8') as fin:
         for lines in fin.readlines():
             words = str(lines) #stream into string
-            words = words.encode('ascii', 'ignore').decode("utf-8")
-            #cleaning each line
-            words = words.lower()#everything in lower case
+            words = removeASCIItrash(words)
+            words = makeLowerCase(words)
             words = words.split() #split by whitespace #comment if tokenize is performed
+            #list operations
             words = cleanString(words)
-            words = [i for i in words[:] if not i in en_stop] #get rid of stop words
-            #words = nltk.pos_tag(words) #POS-tagger via NLTK
+            words = removeStopWords(words) #get rid of stop words
+            words = applyStemmer(words) #LancasterStemming
+            words = applyPOStag(words) #POS-tagger via NLTK
             outputFile(words, ops)
         ops.close()
         fin.close()
 #reads file line by line and clean it
+
 
 def outputFile(text, writer):  
     if text:
@@ -64,10 +68,43 @@ def outputFile(text, writer):
 #===============================================================================
 # Filter and Manipulation of Strings
 #===============================================================================
+def applyStemmer(words):
+    st = LancasterStemmer()
+    ste_words = []
+    for word in words:
+        ste_words.append(st.stem(word))
+    return (ste_words)
+ #Applies Lancaster Stemmer to list of words   
+
+def applyPOStag(words):
+    tg = nltk.pos_tag(words)
+    for t in tg:
+        print(type(t))
+    return (tg)
+#apply POS tag via NLTK to list of words
+
+def removeASCIItrash(words):
+    cwords = words.encode('ascii', 'ignore').decode("utf-8")
+    return (cwords)
+#removing unwanted chars/trash from sentences as strings
+
+def makeLowerCase(words):
+    return(words.lower())
+#everything in lower case from string
+
+def removeStopWords(words):
+    no_sw_words = [i for i in words[:] if not i in en_stop]
+    return(no_sw_words)
+#removes stopwords from list of words
+
 def cleanString(words):
     tokens = []
     for word in words:
-        tokens.append(word.translate({ord(c): None for c in '()[]{}\'\".;:,!@#$'}))
+        clean_word = word.translate({ord(c): None for c in '()[]{}\'\".;:,!@#$'})
+        if(clean_word): 
+            tokens.append(clean_word) #only keep valid items
+        else:
+            pass # we don't want a empty space in the list
     return(tokens)
 #returns a list of clean tokens - gets rid of anything between ' ' by  replacing for None
-#2018-11-14 at this point we are not sure what other chars we want to keep
+#it also removes the entry for that empty token in our list
