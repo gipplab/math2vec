@@ -41,11 +41,11 @@ def cleanText(fname, input_file_abs, output_path):
     with open(input_file_abs, 'r', encoding='utf-8') as fin:
         for lines in fin.readlines():
             words = str(lines) #stream into string
-            words = removeASCIItrash(words)
+            words = removeASCIItrash(words)#just in case there is any trash
             words = makeLowerCase(words)
-            words = words.split() #split by whitespace #comment if tokenize is performed
-            #list operations
-            words = cleanString(words)
+            #words = words.split() #if LowerCase is not used split the words
+            #[list] operations
+            words = cleanStringPunctuation(words) #remove punctuation and weird chars
             words = removeStopWords(words) #get rid of stop words
             words = applyStemmer(words) #LancasterStemming
             words = applyPOStag(words) #POS-tagger via NLTK
@@ -72,14 +72,15 @@ def applyStemmer(words):
     st = LancasterStemmer()
     ste_words = []
     for word in words:
-        ste_words.append(st.stem(word))
+        if(word.startswith('math')):
+            ste_words.append(word)
+        else:
+            ste_words.append(st.stem(word))
     return (ste_words)
- #Applies Lancaster Stemmer to list of words   
+ #Applies Lancaster Stemmer to list of words   - lowercase words
 
-def applyPOStag(words):
+def applyPOStag(words): #WORK HERE
     tg = nltk.pos_tag(words)
-    for t in tg:
-        print(type(t))
     return (tg)
 #apply POS tag via NLTK to list of words
 
@@ -89,7 +90,14 @@ def removeASCIItrash(words):
 #removing unwanted chars/trash from sentences as strings
 
 def makeLowerCase(words):
-    return(words.lower())
+    many_words = words.split() #split by whitespace #comment if tokenize is performed
+    lower_case = []
+    for word in many_words:
+        if(word.startswith('math')):
+            lower_case.append(word)
+        else:
+            lower_case.append(word.lower())
+    return(lower_case)
 #everything in lower case from string
 
 def removeStopWords(words):
@@ -97,7 +105,7 @@ def removeStopWords(words):
     return(no_sw_words)
 #removes stopwords from list of words
 
-def cleanString(words):
+def cleanStringPunctuation(words):
     tokens = []
     for word in words:
         clean_word = word.translate({ord(c): None for c in '()[]{}\'\".;:,!@#$'})
