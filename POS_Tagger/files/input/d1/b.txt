@@ -1,6 +1,6 @@
 teste2
 
- Trajectories for the Wave Function of the Universe from a Simple Detector Model J.J.Halliwell Theory Group Blackett Laboratory Imperial College London SW7 2BZ UK PreprintImperial/TP/99-0/37. 
+Trajectories for the Wave Function of the Universe from a Simple Detector Model J.J.Halliwell Theory Group Blackett Laboratory Imperial College London SW7 2BZ UK PreprintImperial/TP/99-0/37. 
 Revised version. 
 November, 2000 ABSTRACT: Inspired by Mott’s (1929) analysis of particle tracks in a cloud chamber, we consider a simple model for quantum cosmology which includes, in the total Hamiltonian, model detectors registering whether or not the system, at any stage in its entire history, passes through a series of regions in configuration space. 
 We thus derive a variety of well-defined formulas for the probabilities for trajectories associated with the solutions to the Wheeler-DeWitt equation. 

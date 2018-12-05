@@ -1,2 +1,2 @@
-("i'am", 'NN') ('word,', 'NN') ('nothing.', 'JJ') ('else:', 'JJ') ('part-', 'JJ') ('math-symbol:()', 'NN') 
-('?math-is-cool', 'JJ') (':math-is-cool', 'JJ') (':math-is-cool:', 'JJ') ('math:s-cool', 'NN') 
+iam word_nothing nothing_else else_part- part-_math-symbol math-symbol 
+? math-is-cool_math-is-cool math-is-cool_math-is-cool math-is-cool_math math_s-cool s-cool 
