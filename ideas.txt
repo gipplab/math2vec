@@ -1,0 +1,8 @@
+1) merge all together
+2) skip sentence/paragraph if it contains too long Math
+3) cut off too long math (trim it to 4 symbols max, for example)
+4) cut out groups (in sums for example), merge groups (subscripts for example) etc.
+
+wait until see the results:
+* other thing, user _ instead of -
+* math problems above
