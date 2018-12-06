@@ -63,11 +63,18 @@ class DefinienIdentifier:
             id = gold_entry['formula']['qID']
             title = gold_entry['formula']['title']
             for identifier in gold_entry['definitions']:
-                translated = forward_translation(identifier)
-                closest_vecs = method(translated)
-                for result in closest_vecs:
-                    if result[1] >= self.accuracy_threshold:
-                        results.append([id, title, identifier, result[0]])
+                try:
+                    translated = forward_translation(identifier)
+                    closest_vecs = method(translated)
+                    for result in closest_vecs:
+                        if result[1] >= self.accuracy_threshold:
+                            results.append([id, title, identifier, result[0]])
+                except KeyError:
+                    print(
+                        "KeyError for identifier %s in Gold-ID %s. Skip it..." % (identifier, id)
+                    )
+                except Exception as err:
+                    print("Unknown error raised: %s" % str(err))
         return results
 
     def get_enhanced_context_vectors(self, context, identifier):

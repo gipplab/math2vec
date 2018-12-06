@@ -17,12 +17,12 @@ from gensim.models.keyedvectors import KeyedVectors
 from tools import translations as trans
 
 # paths:
-base_path = '/home/truas/arxiv_andre_models/nptrain_round2/'
-w2v_model_path = base_path + 'nptrain-dbow-400d-20w-05mc-05ns-50e-w2v.vector'
-d2v_model_path = base_path + 'nptrain-dbow-400d-25w-10mc-05ns-30e-d2v.model'
+base_path = "/home/truas/arxiv_andre_models/nptrain_round2/"
+w2v_model_path = base_path + "nptrain-dbow-400d-20w-05mc-05ns-50e-w2v.vector"
+d2v_model_path = base_path + "nptrain-dbow-400d-25w-10mc-05ns-30e-d2v.model"
 
-gold_file = 'gold.json'
-csv_file  = 'results.csv'
+gold_file = "gold.json"
+csv_file  = "results.csv"
 
 threshold = 0.7
 
