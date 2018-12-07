@@ -9,22 +9,29 @@ Created on Oct 26, 2018
 
 @author: terry
 '''
+#imports
 import re
 import os
 import nltk
+import time
 
+#froms
+from datetime import timedelta
 from stop_words import get_stop_words
 en_stop = get_stop_words('en') # list of stopwords/english
+
+#overall runtime start
+start_time = time.monotonic()
 
 #===============================================================================
 # Document Reading/Writing
 #===============================================================================
-def oneBigFileOutput(files, output_folder, ofname):
-    big_document = open(output_folder+'/'+ofname, 'w+')    
-    for file in files:
+def oneBigFileOutput(files, ofname):
+    big_document = open(ofname, 'w+',encoding='utf-8')    
+    for index,file in enumerate(files):
         logs = file.split('/')
         if(os.stat(file).st_size!=0):#only for files with content
-            print('Processing:: %s' %logs[len(logs)-1])
+            if (index % 2000 ==0): print('Processing:: %s' %logs[len(logs)-1])
             with open(file, 'r', encoding='utf-8') as fin:
                 for line in fin.readlines():
                     big_document.write(line)

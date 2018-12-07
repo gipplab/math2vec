@@ -5,8 +5,6 @@ Created on Oct 30, 2018
 '''
 #import
 import logging
-import time
-import nltk
 import sys
 import argparse #for command line arguments
 import os
@@ -17,14 +15,17 @@ ppydir_name = os.path.dirname(pydir_name)
 #python path definition
 sys.path.append(os.path.join(os.path.dirname(__file__),os.path.pardir))
 
-from datetime import timedelta
-from stop_words import get_stop_words
-from default import combiner as cb
+
+from default.combiner import doclist_multifolder
+from default.combiner import fname_splitter
+from default.combiner import oneBigFileOutput
 
 #show logs
 logging.basicConfig(
     format='%(asctime)s : %(levelname)s : %(message)s',
     level=logging.INFO)
+
+
 
 #main program
 if __name__ == '__main__':  
@@ -33,28 +34,30 @@ if __name__ == '__main__':
     parser.add_argument('--info', type=str, help='<files/> folder should be at the same level as default package')
     parser.add_argument('--input', type=str, action='store', dest='inf', metavar='<folder>', required=True, help='input folder to read document(s)')
     parser.add_argument('--output', type=str, action='store', dest='ouf', metavar='<folder>', required=True, help='output folder to write document(s)')
-    parser.add_argument('--ofname', type=str, action='store', dest='ofname', metavar='<file>', required=True, help='output filename')
-    
+
     args = parser.parse_args()   
-      
+       
     #COMMAND LINE  folder paths
     input_folder = args.inf #dest=inf
     output_folder = args.ouf #dest=ouf
-    ofname = args.ofname #dest='ofname'  
-    
+ 
+     
     #in/ou relative location - #input/output/model folders are under synset/module/
     in_foname = os.path.join(ppydir_name, input_folder) 
     ou_foname = os.path.join(ppydir_name, output_folder)
     
     #===========================================================================
-    # IDE - Path Definitions
+    # #===========================================================================
+    # # IDE - Path Definitions
+    # #===========================================================================
+    # in_foname = 'C:/Users/terry/Documents/Datasets/ArXiv/output'
+    # ou_foname = 'C:/Users/terry/Documents/Datasets/ArXiv/result.txt'
     #===========================================================================
-    #in_foname = 'C:/Users/terry/Documents/Programming/eclipse-workspace/POS_Tagger/files/input'
-    #ou_foname = 'C:/Users/terry/Documents/Programming/eclipse-workspace/POS_Tagger/files/output'
+    
     
     #Doc and File list
-    doc_paths =  cb.doclist_multifolder(in_foname)
-    doc_names = cb.fname_splitter(doc_paths)
+    doc_paths =  doclist_multifolder(in_foname)
+    doc_names = fname_splitter(doc_paths)
     
-    cb.oneBigFileOutput(doc_paths, ou_foname, ofname)
+    oneBigFileOutput(doc_paths, ou_foname)
    
