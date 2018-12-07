@@ -200,7 +200,7 @@ RBR adverb, comparative better
 RBS adverb, superlative best
 RP particle give up
 TO, to go to the store.
-UH interjection, errrrrrrrm
+UH interjection, errrrrrrm
 VB verb, base form take
 VBD verb, past tense took
 VBG verb, gerund/present participle taking
