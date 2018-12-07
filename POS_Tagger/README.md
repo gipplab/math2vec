@@ -9,6 +9,11 @@ Folder used to read/write should be in the same level at 'default' package
 
 UPDATES:
 ==========
+[2018-12-07]
+1. removePlurals() using `pattern.en` and `inflection` (install them to use)
+2. Included all POS tag from NLTK in the end od `file_manipulation.py`
+3. Simple refactoring
+
 [2018-12-04]
 1. Major changes in the code to work with (word,pos_tag)
 2. All functions (major) refactor

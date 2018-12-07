@@ -6,8 +6,12 @@ Created on Oct 26, 2018
 import os
 import nltk
 import re
+import inflection
 
 from nltk.stem.lancaster import LancasterStemmer
+from pattern.text.en import singularize
+
+#from en import singular
 
 from stop_words import get_stop_words
 en_stop = get_stop_words('en') # list of stopwords/english
@@ -27,27 +31,6 @@ NNPS proper noun, plural Americans
 keep_tags = ['JJ','JJR','JJS','NN','NNS','NNP','NNPS']
 
 #===============================================================================
-# Folder manipulation
-#===============================================================================
-def doclist_multifolder(folder_name):
-    input_file_list = []
-    for roots, dir, files in os.walk(folder_name):
-        for file in files:
-            file_uri = os.path.join(roots, file)
-            file_uri = file_uri.replace("\\","/") #uncoment if running on windows           
-            if file_uri.endswith('txt'): input_file_list.append(file_uri)
-    return input_file_list
-#creates list of documents in many folders
-
-def fname_splitter(docslist):
-    fnames = []
-    for doc in docslist:
-        blocks = doc.split('/')
-        fnames.append(blocks[len(blocks)-1])
-    return(fnames)
-#getting the filenames from uri of whatever documents were processed in the input folder   
-
-#===============================================================================
 # Document Reading/Writing
 #===============================================================================
 def cleanText(fname, input_file_abs, output_path):
@@ -62,7 +45,7 @@ def cleanText(fname, input_file_abs, output_path):
             words = makeLowerCase(words)
             words = removeStopWords(words) #get rid of stop words     
             words = cleanStringPunctuation(words) #remove punctuation and weird chars
-            
+            words = removePluras(words)
             if not words:continue #in case after all pre-processing cleans all words we skip this sentence
             words = concatenateTAG(words)
             outputFile(words, ops)
@@ -102,7 +85,7 @@ def concatenateTAG(words):
     no_tag_words.append(last_word)
     return(no_tag_words)    
 #concatenate words that share a common POS_TAG in keep_tags - only working for 2 consecutive words
-
+#Todo (maybe) improve concatenatio of tokens
 def applyPOStag(words):
     tagged_words = nltk.pos_tag(words) #uses the Penn Treebank Tag Set.
     return (tagged_words)
@@ -121,6 +104,15 @@ def makeLowerCase(words):
             lower_case.append((word.lower(),tag))
     return(lower_case)
 #everything in lower case from string
+
+def removePluras(words):
+    singles=[]
+    for word,tag in words:
+        singles.append((inflection.singularize(word),tag)) #using infletcion library
+        #singles.append((singularize(word),tag)) #using pattern.en
+    return (singles)
+#gets rid of plurals
+
 
 def removeStopWords(words):
     #no_sw_words = [i for i in words[:] if not i in en_stop] #Simple - use this if you do not have tags
@@ -141,6 +133,27 @@ def cleanStringPunctuation(words):
 #it also removes the entry for that empty token in our list
 
 #===============================================================================
+# Folder manipulation
+#===============================================================================
+def doclist_multifolder(folder_name):
+    input_file_list = []
+    for roots, dir, files in os.walk(folder_name):
+        for file in files:
+            file_uri = os.path.join(roots, file)
+            file_uri = file_uri.replace("\\","/") #uncoment if running on windows           
+            if file_uri.endswith('txt'): input_file_list.append(file_uri)
+    return input_file_list
+#creates list of documents in many folders
+
+def fname_splitter(docslist):
+    fnames = []
+    for doc in docslist:
+        blocks = doc.split('/')
+        fnames.append(blocks[len(blocks)-1])
+    return(fnames)
+#getting the filenames from uri of whatever documents were processed in the input folder   
+
+#===============================================================================
 # Not Used: 2018-12-04
 #===============================================================================
 def applyStemmer(words):
@@ -158,3 +171,43 @@ def removeASCIItrash(words):
     cwords = words.encode('ascii', 'ignore').decode("utf-8")
     return (cwords)
 #removing unwanted chars/trash from sentences as strings
+
+#List of NLTK POS tags
+'''
+TAGs on NLTK POS :
+CC coordinating conjunction
+CD cardinal digit
+DT determiner
+EX existential there (like: “there is” … think of it like “there exists”)
+FW foreign word
+IN preposition/subordinating conjunction
+JJ adjective ‘big’
+JJR adjective, comparative ‘bigger’
+JJS adjective, superlative ‘biggest’
+LS list marker 1)
+MD modal could, will
+NN noun, singular ‘desk’
+NNS noun plural ‘desks’
+NNP proper noun, singular ‘Harrison’
+NNPS proper noun, plural ‘Americans’
+PDT predeterminer ‘all the kids’
+POS possessive ending parent’s
+PRP personal pronoun I, he, she
+PRP$ possessive pronoun my, his, hers
+RB adverb very, silently,
+RBR adverb, comparative better
+RBS adverb, superlative best
+RP particle give up
+TO, to go ‘to’ the store.
+UH interjection, errrrrrrrm
+VB verb, base form take
+VBD verb, past tense took
+VBG verb, gerund/present participle taking
+VBN verb, past participle taken
+VBP verb, sing. present, non-3d take
+VBZ verb, 3rd person sing. present takes
+WDT wh-determiner which
+WP wh-pronoun who, what
+WP$ possessive wh-pronoun whose
+WRB wh-abverb where, when
+'''
