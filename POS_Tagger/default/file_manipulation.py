@@ -9,12 +9,13 @@ import re
 import inflection
 
 from nltk.stem.lancaster import LancasterStemmer
-from pattern.text.en import singularize
+#from pattern.text.en import singularize
 
 #from en import singular
-
 from stop_words import get_stop_words
 en_stop = get_stop_words('en') # list of stopwords/english
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 
 '''
 Important TAGS to keep/combine
@@ -178,27 +179,27 @@ TAGs on NLTK POS :
 CC coordinating conjunction
 CD cardinal digit
 DT determiner
-EX existential there (like: “there is” … think of it like “there exists”)
+EX existential there (like: there is ... think of it like there exists)
 FW foreign word
 IN preposition/subordinating conjunction
-JJ adjective ‘big’
-JJR adjective, comparative ‘bigger’
-JJS adjective, superlative ‘biggest’
+JJ adjective big
+JJR adjective, comparative bigger
+JJS adjective, superlative biggest
 LS list marker 1)
 MD modal could, will
-NN noun, singular ‘desk’
-NNS noun plural ‘desks’
-NNP proper noun, singular ‘Harrison’
-NNPS proper noun, plural ‘Americans’
-PDT predeterminer ‘all the kids’
-POS possessive ending parent’s
+NN noun, singular desk
+NNS noun plural desks
+NNP proper noun, singular Harrison
+NNPS proper noun, plural Americans
+PDT predeterminer all the kids
+POS possessive ending parent's
 PRP personal pronoun I, he, she
-PRP$ possessive pronoun my, his, hers
+PRP $ possessive pronoun my, his, hers
 RB adverb very, silently,
 RBR adverb, comparative better
 RBS adverb, superlative best
 RP particle give up
-TO, to go ‘to’ the store.
+TO, to go to the store.
 UH interjection, errrrrrrrm
 VB verb, base form take
 VBD verb, past tense took

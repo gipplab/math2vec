@@ -18,16 +18,21 @@ sys.path.append(os.path.join(os.path.dirname(__file__),os.path.pardir))
 
 from datetime import timedelta
 from stop_words import get_stop_words
-from default import file_manipulation as fm
+from default.file_manipulation import doclist_multifolder
+from default.file_manipulation import fname_splitter
+from default.file_manipulation import cleanText
 
 #show logs
 logging.basicConfig(
     format='%(asctime)s : %(levelname)s : %(message)s',
     level=logging.INFO)
 
+#overall runtime start
+start_time = time.monotonic()
+
 #main program
 if __name__ == '__main__': 
-     
+    
     #IF you want to use COMMAND LINE for folder path
     parser = argparse.ArgumentParser(description="POS_Tagger - Generic Tagger for Text Documents")
     parser.add_argument('--info', type=str, help='<files/> folder should be at the same level as default package')
@@ -52,10 +57,10 @@ if __name__ == '__main__':
      
     
     #Doc and File list
-    doc_paths =  fm.doclist_multifolder(in_foname)
-    doc_names = fm.fname_splitter(doc_paths)
+    doc_paths =  doclist_multifolder(in_foname)
+    doc_names = fname_splitter(doc_paths)
     
     for index, fname in enumerate(doc_paths):
-        fm.cleanText(doc_names[index], fname, ou_foname)
-        if(index%2000 == 0): print("Checkpoint: %s saved" %fname)
-   
+        cleanText(doc_names[index], fname, ou_foname)
+        if(index%2000 == 0): print("Checkpoint: %s saved - Time: %s" %(fname,(timedelta(seconds= time.monotonic() - start_time))))
+    print('Running Time: %s' (timedelta(seconds= time.monotonic() - start_time)))
