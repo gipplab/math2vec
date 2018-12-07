@@ -102,6 +102,7 @@ module PlaneText
       else
         puts "Initialize parallel working on #{@max_threads} threads."
       end
+      @bulk_size = @max_threads
     end
 
     def per_doc(&block)
@@ -129,9 +130,6 @@ module PlaneText
         removed: to_xpath(progress_data[:tags][:metainfo])
       }
 
-      thread_pool = Concurrent::FixedThreadPool.new(@max_threads-1)
-      writing_pool = Concurrent::FixedThreadPool.new(1)
-
       dirty_files = 0
       proc_files = 0
       current_process = 0
@@ -148,24 +146,73 @@ module PlaneText
         0
       )
 
-      unprocessed_files.each do |xml_file_name|
-        xml_file = File.absolute_path(xml_file_name, @dataset_dir)
-        xml = File.read(xml_file)
-        read_as_html = xml_file_name[-5..-1] == '.html'
-        write_as_xhtml = xml_file_name[-5..-1] != '.xml'
-        opts = {
-          file_name: xml_file_name,
-          read_as_html: read_as_html,
-          write_as_xhtml: write_as_xhtml,
-          deactivate_scripts: write_as_xhtml
-        }.merge(@selectors)
+      # let's try bulk operations
+      unprocessed_files.each_slice(@bulk_size) do |xml_file_bulk|
+        loaded_xml_files = Concurrent::Array.new
+        loaded_xml_opts = Concurrent::Array.new
+        xml_file_paths = Concurrent::Array.new
 
-        thread_pool.post do
-          doc = extract(xml, opts)
+        time = (Time.now.to_f - start_time)
+        printf(
+          "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%02d [reading]\r",
+          current_process,
+          "=" * (current_process/2),
+          proc_files,
+          NUM_OF_FILES,
+          (time/3600),
+          (time/60)%60,
+          time%60
+        )
 
-          writing_pool.post do
-            @per_doc[xml_file, doc] if @per_doc # writes files
+        # read bulk of files to cache
+        xml_file_bulk.each do |xml_file_name|
+          xml_file = File.absolute_path(xml_file_name, @dataset_dir)
+          xml_file_paths.push(xml_file)
+          loaded_xml_files.push(File.read(xml_file))
+          read_as_html = xml_file_name[-5..-1] == '.html'
+          write_as_xhtml = xml_file_name[-5..-1] != '.xml'
+          opts = {
+            file_name: xml_file_name,
+            read_as_html: read_as_html,
+            write_as_xhtml: write_as_xhtml,
+            deactivate_scripts: write_as_xhtml
+          }.merge(@selectors)
+          loaded_xml_opts.push(opts)
+        end
+
+        time = (Time.now.to_f - start_time)
+        printf(
+          "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%02d [processing]\r",
+          current_process,
+          "=" * (current_process/2),
+          proc_files,
+          NUM_OF_FILES,
+          (time/3600),
+          (time/60)%60,
+          time%60
+        )
+
+        thread_pool = Concurrent::FixedThreadPool.new(@max_threads-1)
+        processed_xml_files = Concurrent::Array.new
+
+        # parallel processing of bulk of cached files
+        while !loaded_xml_opts.empty? do
+          thread_pool.post do
+            processed_xml_files.push(
+              extract(loaded_xml_files.pop,loaded_xml_opts.pop)
+            )
           end
+        end
+
+        thread_pool.shutdown
+        thread_pool.wait_for_termination
+
+        # writing files
+        while !processed_xml_files.empty? do
+          doc = processed_xml_files.pop
+          xml_file_name = xml_file_bulk.pop
+
+          @per_doc[xml_file_paths.pop, doc] if @per_doc # writes files
 
           # atomic operations are not thread safe
           @unknown_standoffs += doc.unknown_standoffs
@@ -183,23 +230,18 @@ module PlaneText
           time = (Time.now.to_f - start_time)
 
           printf(
-            "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%02d \r",
+            "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%02d [write %d]\r",
             current_process,
             "=" * (current_process/2),
             proc_files,
             NUM_OF_FILES,
             (time/3600),
             (time/60)%60,
-            time%60
+            time%60,
+            proc_files
           )
         end
       end
-
-      thread_pool.shutdown
-      thread_pool.wait_for_termination
-
-      writing_pool.shutdown
-      writing_pool.wait_for_termination
 
       print "\nProcess terminate. Cleaning up...\n"
 

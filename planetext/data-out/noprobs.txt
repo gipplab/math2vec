@@ -1,153 +1,109 @@
-   __H1_0__  __IND_DIV_0__  __H2_0__ __IND_DIV_1__ __IND_DIV_2__ __H2_1__ __IND_DIV_3__ __IND_DIV_4__ __IND_DIV_5__ __H2_2__ __H3_0__ __IND_DIV_6__ __IND_DIV_7__ __H4_0__ __IND_DIV_8__ __H4_1__ __IND_DIV_9__ __IND_DIV_10__ __IND_DIV_11__ __H3_1__ __IND_DIV_12__ __H4_2__ __IND_DIV_13__ __H4_3__ __IND_DIV_14__ __IND_DIV_15__ __H3_2__ __IND_DIV_16__ __IND_DIV_17__ __H3_3__ __IND_DIV_18__ __IND_DIV_19__ __H3_4__ __IND_DIV_20__ __IND_DIV_21__ __H2_3__ __H3_5__ __IND_DIV_22__ __IND_DIV_23__ __H3_6__ __IND_DIV_24__ __IND_DIV_25__ __IND_DIV_26__ __IND_DIV_27__ __IND_DIV_28__ __H3_7__ __IND_DIV_29__ __IND_DIV_30__ __IND_DIV_31__ __IND_DIV_32__ __H2_4__ __IND_DIV_33__ __IND_DIV_34__ __IND_DIV_35__ __IND_DIV_36__ __H2_5__ __IND_DIV_37__ __H2_6__ __UL_0__            
+   __IND_DIV_0__ __IND_DIV_1__ __IND_DIV_2__ __IND_DIV_3__ __IND_DIV_4__ __H2_0__ __IND_DIV_5__ __IND_DIV_6__ __IND_DIV_7__ __H6_0__ __IND_DIV_8__ __IND_DIV_9__ __H6_1__ __IND_DIV_10__ __IND_DIV_11__ __H2_1__ __IND_DIV_12__ __H6_2__ __IND_DIV_13__ __IND_DIV_14__ __H6_3__ __IND_DIV_15__ __IND_DIV_16__ __IND_DIV_17__ __IND_DIV_18__ __H2_2__ __IND_DIV_19__ __H6_4__ __IND_DIV_20__ __H6_5__ __IND_DIV_21__ __IND_DIV_22__ __H6_6__ __IND_DIV_23__ __IND_DIV_24__ __H6_7__ __IND_DIV_25__ __IND_DIV_26__ __H2_3__ __UL_0__ 
 
 
 _IND_TEXT_DIV_0_:
-__H6_0__ In this paper we report on the first five out of eleven observations in our programme of Hubble Space Telescope (HST) imaging of old nova shells. We present new WFPC2 images of the shells around FH Ser and V533 Her taken in the F656N (H__MATH_0__+[N II]) filter. We also show long-slit spectra taken using the William Herschel Telescope (WHT) in La Palma for these objects in the same spectral range. The shell around FH Ser is found to be a prolate ellipsoid of ellipticity 1.3__MATH_1__0.1 inclined at 62__MATH_2__4__MATH_3__ to the line of sight. The shell has an equatorial ring which is found to be due to increased emission in the two [N II] lines rather than H__MATH_4__. The expansion velocity is best modelled by a true equatorial expansion rate of 490__MATH_5__20 km s__MATH_6__. The best-fitting systemic velocity is __MATH_7__45 km s__MATH_8__. A synthetic image and synthetic spectra are also presented for this model for comparison with our observations. We derive a distance to FH Ser of 950__MATH_9__50 pc. The origin of the [N II] equatorial ring is discussed in the context of a photoionization feature resulting from aspherical illumination by the central source rather than a simple density enhancement. It is possible however that the ring is also in part due to an extremely localised increase in the nitrogen abundance. The brightest part of the shell was found to have a surface brightness of __MATH_10__ erg cm__MATH_11__ s__MATH_12__ arcsec__MATH_13__. Similar imaging and spectroscopy of the nova V533 Her reveal a shell of radius __MATH_14__ arcsec with an axial ratio of __MATH_15__ and peak surface brightness __MATH_16__ erg cm__MATH_17__ s__MATH_18__ arcsec__MATH_19__. The expansion velocity of this shell is __MATH_20__ km s__MATH_21__ and the distance is estimated to be __MATH_22__ pc. The shells around BT Mon, DK Lac and V476 Cyg were not detected with HST implying 3__MATH_23__ upper limits to the surface brightness in H__MATH_24__+[N II] of 5.3–6.3__MATH_25__ erg cm__MATH_26__ s__MATH_27__ arcsec__MATH_28__.
+Factors of alternating sums of powers of [5pt] __MATH_0__-Narayana numbers
 
 
 _IND_TEXT_DIV_1_:
-Every classical nova outburst should result in the ejection of __MATH_29__ to __MATH_30__ of material at velocities of the order of hundreds to thousands of kilometres per second (Bode & Evans 1989). Study of these expanding shells of nova ejecta has importance for a range of astrophysical areas including the physics of thermonuclear reactions, mixing mechanisms, nebular shaping, radiation-driven winds, clumping mechanisms, astrophysical chemistry and the formation of dust. Novae provide a real-time laboratory in which these processes can be investigated. The work presented in this series of papers builds on our ground-based imaging survey of the ejecta of old novae using 4-m class telescopes (Slavin, O’Brien & Dunlop 1995, Gill & O’Brien 1998) in two ways. Firstly we present high-resolution imaging obtained with the Wide Field Planetary Camera 2 (WFPC2) on the Hubble Space Telescope (HST). This is then complemented by kinematical information obtained from spatially-resolved spectroscopy using the William Herschel and Anglo-Australian Telescopes (WHT & AAT respectively).
+Victor J. W. Guo__MATH_1__ and Qiang-Qiang Jiang__MATH_2__ __MATH_3__School of Mathematical Sciences, Huaiyin Normal University, Huai’an, Jiangsu 223300, People’s Republic of China jwguo@hytc.edu.cn [10pt] __MATH_4__Department of Mathematics, East China Normal University, Shanghai 200241, People’s Republic of China 972126862@qq.com 
 
 
 _IND_TEXT_DIV_2_:
-This first paper presents the HST images and medium-resolution long-slit WHT spectra of the shells of FH Ser and V533 Her in the region of H__MATH_31__. We also present non-detections in the HST imaging of BT Mon, DK Lac and V476 Cyg. §2 describes the observations and §3 presents the results. The data are interpreted and discussed in §4. The corresponding observations of HR Del, RR Pic, T Aur, V1500 Cyg and V842 Cen will be presented in papers to follow.
+ Abstract. The __MATH_5__-Narayana numbers __MATH_6__ and __MATH_7__-Catalan numbers __MATH_8__ are respectively defined by  __MATH_9__  where __MATH_10__. We prove that, for any positive integers __MATH_11__ and __MATH_12__, there holds  __MATH_13__  where __MATH_14__. We also propose several related conjectures.
 
 
 _IND_TEXT_DIV_3_:
-Hubble Space Telescope (HST) observations of the novae were made during 1997/98 – see Table 1. In each case the nova was positioned on the Planetary Camera chip of WFPC2. The pixel scale is 46 mas with a complex point spread function distributing 60% of the flux from a point source over the 3__MATH_32__3 pixel region centred on the source.
+Keywords: __MATH_15__-binomial coefficients, __MATH_16__-Narayana numbers, __MATH_17__-Catalan numbers
 
 
 _IND_TEXT_DIV_4_:
-The standard pipeline data processing was used (Leitherer 1995) and the images combined eliminating cosmic rays and bad pixels using standard tasks in STSDAS/IRAF. Narrow band photometry was performed using the prescription described by Dudziak and Walsh (1997). For the images where there was no immediately obvious detection of an ejected shell we applied a 7__MATH_33__7 sliding-box median-filter to the images to reduce the effects of noise and contamination from low level cosmic rays. This process enhanced the slower varying underlying background which is more consistent with an extended nova shell and thus allowed visual detection of shells to be investigated.
+AMS Subject Classifications: 11A07, 05A30
 
 
 _IND_TEXT_DIV_5_:
-Long-slit spectra of the shells of FH Ser and V533 Her were taken on the 4.2m WHT in La Palma, Canary Islands using the ISIS spectrometer on 1996 Aug 3 – see Table 1. This instrument has the advantage of having both a blue and red arm which allows simultaneous observations of two wavelength ranges with a suitable dichroic. Using the TEK-1 and TEK-2 chips with the R1200B and R1200R gratings this instrument has a spectral range of 420Å  and a dispersion of 0.41Å/pixel in both arms. Observations were taken with central wavelengths of __MATH_34__ 4950 and 6600Å  for the blue and red arms respectively to allow primarily the lines of H__MATH_35__ and H__MATH_36__ (__MATH_37__ 6562.8 and 4861.3Å respectively) to be examined as well as [O III] (__MATH_38__ 4959 and 5007Å), [N II] (__MATH_39__ 6549 and 6583Å) and He I (__MATH_40__ 4921, 5015 and 6677Å). The dispersion along the slit was 0.36 arcsec per pixel. Slits of width 1 arcsec were used at position angles chosen to investigate features revealed in previous imaging. The spectra were reduced using standard techniques.
+The Catalan numbers __MATH_18__ play an important role in combinatorics (see __CITE_0__). It is well known that for any positive integer __MATH_19__,  __MATH_20__  where __MATH_21__ are called Narayana numbers (see __CITE_1__).
 
 
 _IND_TEXT_DIV_6_:
-FH Ser (Nova Ser 1970) erupted in 1970 and was discovered by Honda (1970). It reached a peak visual magnitude of 4.4 on Feb 18 (Burkhead et al. 1970, Borra & Andersen 1970). The lightcurve shows a significant DQ-Her-type dip (e.g. Fig. 2 of Rosino et al. 1986) and is characterized by a __MATH_41__ time of 62 days (Duerbeck 1987). Recently it has been classifed as a ‘slow’ nova belonging to the Fe II spectroscopic class (Della Valle & Livio 1998, Williams 1992). Duerbeck (1992) produced the first image of the shell from which he measured a radius of 2.7 arcsec and described an equatorial band of enhanced emission. He derived an orbital inclination of 58__MATH_42__ and a distance of 850 pc. Later images were taken by Slavin at al. (1995) in 1993 September. Their images were deeper and in several narrow wavebands covering approximately __MATH_43__ 6530 to 6608Å. They also resolved the equatorial enhancement and derived an inclination angle of __MATH_44__. They suggested that the equatorial band is due to H__MATH_45__ emission from a density enhancement.
+In the past few years, many congruences on sums or alternating sums of binomial coefficients and combinatorial numbers, such as Catalan numbers, Apéry numbers, central Delannoy numbers, Schröder numbers, Franel numbers, have been obtained by Z.-W. Sun __CITE_2__ and other authors __CITE_3__.
 
 
 _IND_TEXT_DIV_7_:
-Della Valle et al. (1997) imaged this nova shell in 1996 March with a H__MATH_46__+[N II] filter. They showed the shell to be elliptical with outer diameters of 7.6 and 9 arcsec with a peak-to-peak minor axis of 5.4 arcsec. No peak-to-peak major axis was given. They also showed that the shell had an equatorial ring. They derived an inclination angle of 60__MATH_47__ and a distance of 870__MATH_48__90 pc.
+In this paper, motivated mainly by Z.-W. Sun’s work, we shall prove the following congruence on alternating sums of powers of Narayana numbers.
 
 
 _IND_TEXT_DIV_8_:
-The FH Ser remnant was imaged with HST on 1997 May 11 with two 1200s integrations, Fig. 1. The maximum pixel value attributable to the shell is 10.9 counts (a 7-__MATH_49__ detection corresponding to a surface brightness of 9.1__MATH_50__ erg cm__MATH_51__ s__MATH_52__ arcsec__MATH_53__). The shell takes the form of a very clumpy limb-brightened prolate ellipsoid. There is a clear equatorial ring which is brighter in the western half compared to the eastern. If we assume this equatorial enhancement is an inclined circular ring then the derived inclination angle is 62__MATH_54__1__MATH_55__. The apparent major axis is 7.0__MATH_56__0.3 arcsec and the minor axis 5.8__MATH_57__0.1 arcsec (measured peak to peak). When this ellipsoid is de-projected the true axial ratio of the shell is found to be 1.26__MATH_58__0.08.
+Let __MATH_22__ and __MATH_23__ be positive integers. Then  __MATH_24__  
 
 
 _IND_TEXT_DIV_9_:
-The long-slit spectra for both slit positions for the region of 6520–6610Å  are shown in Fig. 2. Both slits show velocity ellipses of the shell in the lines of H__MATH_59__ (__MATH_60__ 6562.8Å) and [N II] (__MATH_61__ 6549Å and __MATH_62__ 6583Å). The only other detection of emission was from H__MATH_63__ which has the same appearance as that of the H__MATH_64__ ring. The two slit positions have been displayed using the same high and low levels to allow relative comparison of fluxes (it should be noted that the run was not photometric but a first order comparison is possible).
+We know that some congruences may have nice __MATH_25__-analogues (see, for example, __CITE_4__). This is also the case for the congruence (1.1). Recall that the __MATH_26__-shifted factorials (see __CITE_5__) are defined by __MATH_27__ and __MATH_28__ for __MATH_29__ and the __MATH_30__-binomial coefficients are defined as  __MATH_31__  For convenience, we let __MATH_32__ be a __MATH_33__-integer. It is natural to define the __MATH_34__-Narayana numbers __MATH_35__ and the __MATH_36__-Catalan numbers __MATH_37__ as follows:  __MATH_38__  It is not difficult to see that both __MATH_39__-Narayana numbers and __MATH_40__-Catalan numbers are polynomials in __MATH_41__ with nonnegative integer coefficients (see __CITE_6__). Note that, the definition of __MATH_42__ here differs by a factor __MATH_43__ from that in __CITE_7__. We have the following __MATH_44__-analogue of Theorem 1.1.
 
 
 _IND_TEXT_DIV_10_:
-In slit position 1 the velocity ellipse in H__MATH_65__ of the shell can clearly be seen between the two fainter [N II] ellipses. The H__MATH_66__ ellipse shows clumpiness on small scales super-imposed on a well defined velocity ellipse. The [N II] ellipses are both barely detected apart from a feature above (blue-shifted) and below (red-shifted) the central continuum source corresponding to the equatorial ring seen in the HST image. For the __MATH_67__ 6549Å  line these features appear at __MATH_68____MATH_69__6538Å  and 6555Å (within the H__MATH_70__ ellipse), and for the __MATH_71__ 6583Å line they appear at __MATH_72____MATH_73__6573Å (co-incident with the red-shifted H__MATH_74__ ellipse) and 6591Å. The fact that the equatorial ring feature above the stellar continuum (the west) is blue-shifted and the feature below is red-shifted indicates that the shell is inclined so that the western part of the shell is tilted away from the observer.
+Let __MATH_45__ and __MATH_46__ be positive integers and let __MATH_47__. Then  __MATH_48__  
 
 
 _IND_TEXT_DIV_11_:
-In slit position 2 the velocity ellipses are quite different to those in slit 1. The northern and southern halves look the same and the brightness of the [N II] __MATH_75__ 6583Å ellipse is comparable to that from the H__MATH_76__ ellipse. The H__MATH_77__ ellipse seems to be of fairly uniform intensity whereas the [N II] ellipse is brighter near the extremities of the shell (top and bottom of the slit). By inspection of the image in Fig. 1 it can be seen that the edges of the shell correspond with the region where the equatorial ring is fully within the slit. The brightest region in the [N II] __MATH_78__ 6583Å ellipse is brighter than any region in the H__MATH_79__ ellipse.
+It is easily seen that when __MATH_49__ the __MATH_50__-congruence (1.2) reduces to (1.1). It seems that (1.2) also holds for __MATH_51__ (see (3.1) in Conjecture 3.4 for a more general form).
 
 
 _IND_TEXT_DIV_12_:
-V533 Her (Nova Herculis 1963) was discovered by Dahlgren (1963) and extensively studied by Chincarini & Rosino (1964). It declined with a __MATH_80__ time of 44d (see Duerbeck 1981 using AAVSO light curves). However combining the V light curve presented by Chincarini (1964) which shows that it declined to 6th magnitude sometime between March 4 and 8 with the post-discovery results (see Haddock et al. 1963) that it actually reached magnitude 3 on Jan 30 shows it may be more accurate to quote a __MATH_81__ time of around 35d. It has been classified as a ‘slow’ nova belonging to the Fe II spectroscopic class (Della Valle & Livio 1997). The nebulosity around V533 Her was first detected by Cohen & Rosenthal (1983) by comparison with a point spread function. The first clear image was provided by Slavin at al. (1995) who detected a smooth circular shell, radius __MATH_82__4.5 arcsec, with a thick equatorial band. This image is reproduced at the left of Figure 3.
+Noticing that  __MATH_52__   we can rewrite Theorem 1.2 in the following equivalent form.
 
 
 _IND_TEXT_DIV_13_:
-V533 Her was imaged with HST for a total of 2600s with 2 cosmic ray split observations on 1997 September 3. The median smoothed image of V533 Her is shown at the right of Figure 3. An approximately circular shell has been detected with radius __MATH_83__5 arcsec, consistent with unifirm expansion since the Slavin et al. epoch. The brightest knot at the bottom of the median-smoothed image of the shell has a maximum value of 1.8 counts per pixel corresponding to a 7__MATH_84__ detection at a surface brightness of 1.3__MATH_85__ erg cm__MATH_86__ s__MATH_87__ arcsec__MATH_88__. The signal to noise in the HST image is however not sufficient to provide any more information than was already apparent from the earlier ground-based image.
+Let __MATH_53__ and __MATH_54__ be positive integers and let __MATH_55__. Then  __MATH_56__   __MATH_57__  
 
 
 _IND_TEXT_DIV_14_:
-WHT ISIS spectra were obtained on 1996 Aug 3. Two slit positions were used; slit 1 at PA 160__MATH_89__ along the equatorial ring and slit 2 at PA 70__MATH_90__ orthogonal to the equatorial ring. Both used a slit of width 1 arcsec. The two positions are indicated on the WHT image in Figure 3 reproduced from Slavin et al. (1995) but rotated to correspond to the orientation of the HST image shown alongside.
+In the paper __CITE_8__, Guo, Jouhet and Zeng proved the following result.
 
 
 _IND_TEXT_DIV_15_:
-The spectra in the region of H__MATH_91__ are shown in Figure 4 (the H__MATH_92__ range is not reproduced here as, although the shell is just visible, the signal to noise is very poor). From these spectra we see that the radius of the shell at the first slit position is __MATH_93__ arcsec whilst at the second slit position this increases to __MATH_94__ arcsec. Hence there is some evidence that the shell is elliptical with an apparent axial ratio of __MATH_95__. The major axis is orthogonal to the equatorial band which is consistent with a prolate ellipsoidal shell as observed in other novae e.g. FH Ser. We are unable to estimate an inclination and hence a true axial ratio as the equatorial band is not clearly detected in the HST image. The maximum line of sight velocity (obtained from the points where the slits cross at the centre of the nebula) is estimated to be __MATH_96__ km s__MATH_97__. Expansion parallax, taking into account the estimated errors in the shell diameter and expansion velocity, leads to a distance estimate of __MATH_98__ pc.
+For all positive integers __MATH_58__ and __MATH_59__, the alternating sum  __MATH_60__  where __MATH_61__, is a polynomial in __MATH_62__ with nonnegative integer coefficients.
 
 
 _IND_TEXT_DIV_16_:
-BT Mon reached maximum in 1939 September. The __MATH_99__ time is disputed in the literature due to the exact date of maximum light being missed. Payne-Gaposchkin (1964) quotes a __MATH_100__ of 36 days calculated from spectral data whereas Schaefer & Patterson (1983) quote a __MATH_101__ of 190 days from the light curve after maximum. The shell has been detected around this nova in spectroscopic observations by Marsh et al. (1983). The only image of the shell is that by Gill & O’Brien (1998). They claimed detection of a ring of emission of diameter __MATH_102__7 arcsec after deconvolution of the image with various techniques.
+In what follows, we will show that the congruence (2.2) can be deduced from combining two special cases of Theorem 2.2.
 
 
 _IND_TEXT_DIV_17_:
-BT Mon was imaged with HST in two observations for a total of 2500s. The median-smoothed image of BT Mon is shown in Fig. 5. No shell is detected putting a 3__MATH_103__ upper limit on the surface brightness of the shell at 6__MATH_104__ erg cm__MATH_105__ s__MATH_106__ arcsec__MATH_107__.
+Denote the left-hand side of (2.2) by __MATH_63__. By the relation (2.1), it is clear that __MATH_64__ is a polynomial in __MATH_65__ with integer coefficients. Letting __MATH_66__, __MATH_67__, and __MATH_68__ in Theorem 2.2, we see that  __MATH_69__  which can also be written as  __MATH_70__  Namely, __MATH_71__, or  __MATH_72__   On the other hand, letting __MATH_73__, __MATH_74__, and __MATH_75__ in Theorem 2.2, we have  __MATH_76__  which, by the relation __MATH_77__, can be rewritten as  __MATH_78__  Namely,  __MATH_79__  
 
 
 _IND_TEXT_DIV_18_:
-V476 Cyg (Nova Cygni 1920) reached maximum on 1920 August 24. The measured __MATH_108__ time for its decline was 16.5d (Duerbeck 1987) classifying it as a very fast nova. A diffuse shell of radius __MATH_109__ arcsec was detected by Slavin et al. (1995). With their integration time of 900s it was barely detected above the 3 sigma level.
+It is easy to see that the polynomials __MATH_80__ and __MATH_81__ are relatively prime. Therefore, by the Euclid algorithm for polynomials, there exist polynomials __MATH_82__ and __MATH_83__ in __MATH_84__ with rational coefficients such that  __MATH_85__   It follows from (2.3)–(2.5) that the congruence  __MATH_86__  holds in the ring __MATH_87__. In other words, there exists a polynomial __MATH_88__ such that  __MATH_89__   Since the polynomials __MATH_90__ and __MATH_91__ are in __MATH_92__, and the leading coefficient of the latter is one, the identity (2.6) means that __MATH_93__. This completes the proof.
 
 
 _IND_TEXT_DIV_19_:
-V476 Cyg was imaged with the HST for a total of 2600s (cosmic ray split by a factor 2). The median-smoothed image of V476 Cyg is shown at the top left of Fig. 5 where no nova shell is detected. This provides a 3__MATH_110__ upper limit to the shell surface brightness of 5__MATH_111__10__MATH_112__ erg cm__MATH_113__ s__MATH_114__ arcsec__MATH_115__.
+It seems that Theorems 1.1 and 1.2 can be further generalized as follows.
 
 
 _IND_TEXT_DIV_20_:
-DK Lac (Nova Lacertae 1950) was discovered during its rise in 1950 January. The nova declined at a moderately fast rate with a __MATH_116__ of 32d, accompanied by large variations of brightness. Slavin et al. (1995) detected the shell around DK Lac, measuring is radius as 2.0 to 2.5 arcsec, although the shell is poorly distinguished from the central source.
+Let __MATH_94__ be positive integers. Then  __MATH_95__   __MATH_96__  where __MATH_97__.
 
 
 _IND_TEXT_DIV_21_:
-The median-smoothed HST image of DK Lac (total integration time 2500s) is shown at the bottom left of Fig. 5. No shell is detected providing a 3__MATH_117__ upper limit on the shell surface brightness of 6__MATH_118__ erg cm__MATH_119__ s__MATH_120__ arcsec__MATH_121__.
+Let __MATH_98__ and __MATH_99__ be positive integers and let __MATH_100__. Then  __MATH_101__  is a polynomial in __MATH_102__ with nonnegative integer coefficients.
 
 
 _IND_TEXT_DIV_22_:
-The [N II] features seen in the spectrum from the first slit position (S1) directly above and below the central source and the [N II] features at the extremities of the shell in the spectrum from the second slit position (S2) are associated with the equatorial ring clearly seen in the image. We would expect H__MATH_122__ to mirror this behaviour if the ring results from an enhancement in density. However it can clearly be seen in S2 that H__MATH_123__ is not greatly enhanced in the ring at all. The [N II] ring features in S1 are approximately 40 times greater than the typical [N II] flux in the rest of the shell; although the H__MATH_124__ ellipse is rather clumpy in S1, there is no obvious comparative increase in brightness in the corresponding regions for the ring. Therefore the equatorial ring is dominated by enhanced emission in [N II].
+Note that the upper bound __MATH_103__ of __MATH_104__ in Conjecture 3.2 seems to be the best possible. Numerical calculation implies that Conjecture 3.2 does not hold when __MATH_105__. Furthermore, we have the following generalization of Conjecture 3.2.
 
 
 _IND_TEXT_DIV_23_:
-This picture is supported by the images in Slavin et al. (1995). In their figure 3c they show an image of the FH Ser remnant taken with a filter central wavelength __MATH_125__ 6560Å, FWHM 17Å. From examining the long slit spectra shown in this paper we can see that this will include almost all light in H__MATH_126__ apart from the parts of the shell moving directly towards or away from us. There should be no [N II] contamination. This image shows only a smooth ring of emission resembling a simple limb-brightened shell. There is no evidence in this image for an equatorial enhancement. Slavin et al. also show an image with filter central wavelength __MATH_127__ 6537Å, FWHM __MATH_128__ 17Å (their figure 3a). From our spectra we can see that this corresponds primarily to blue-shifted [N II] __MATH_129__ 6549Å. This image shows a half-crescent of emission with very little emission in the rest of the shell which again implies the equatorial enhancement is an [N II] feature. This crescent of emission is to the west of the central source which agrees with our suggestion that the eastern pole is tilted towards us.
+For all positive integers __MATH_106__ and __MATH_107__, the expression  __MATH_108__  where __MATH_109__, is a polynomial in __MATH_110__ with nonnegative integer coefficients.
 
 
 _IND_TEXT_DIV_24_:
-Using the code described in Gill & O’Brien (1999) it is possible to produce synthetic images and spectra for simple models of the FH Ser nova shell. The code calculates emission as a function of density and therefore separate models needed to be produced for the H__MATH_130__ and [N II] emission lines. The lines can be scaled relative to one another by arbitrary factors and then combined, taking into account the rest wavelengths of the lines and the Doppler shifting of each element, to produce a spectral cube for a given wavelength range.
+We end the paper with the following __MATH_111__-analogue of Conjecture 3.1.
 
 
 _IND_TEXT_DIV_25_:
-To generate the synthetic spectra the spectral cube was then smoothed in the spatial directions with the equivalent of a 0.5 arcsec FWHM Gaussian to simulate the seeing of the ground-based observations. A ‘slit’ was then positioned on the cube at positions and widths to correspond with the observations. Smoothing must be performed before the slit is positioned onto the cube to allow light to be scattered into and out of the slit. The possibility of correction for a systemic velocity for any model was incorporated to allow a best fit to the data.
+Let __MATH_112__ be positive integers, and let __MATH_113__ be a polynomial in __MATH_114__ with integer coefficients. Then  __MATH_115__   __MATH_116__  where __MATH_117__. In particular, for any positive integer __MATH_118__, we have  __MATH_119__  
 
 
 _IND_TEXT_DIV_26_:
-Synthetic images were generated by convolving the unsmoothed spectral cubes with the system throughput of the HST with the F656N filter (Leitherer 1995). This was approximated by a profile starting with zero throughput at __MATH_131__ 6545Å, rising linearly to peak at __MATH_132__ 6554Å, remaining constant to __MATH_133__ 6576Å, then falling linearly back to zero at __MATH_134__ 6582Å. The images were then generated by collapsing the filtered spectral cube in the spectral direction.
-
-
-_IND_TEXT_DIV_27_:
-We have generated models corresponding to a thin prolate ellipsoidal shell with ellipticity 1.3 and inclination 62__MATH_135__. For the [N II] components an equatorial enhancement by a factor of 40 in intensity was also added in a thin ring. The light from H__MATH_136__ was increased by a factor of 8.6 relative to the typical (i.e. not the enhanced value appropriate to the ring) [N II] __MATH_137__ 6583Å  line (to best fit the observations), and the [N II] __MATH_138__ 6549Å  scaled by a factor 0.34 relative to the [N II] __MATH_139__ 6583Å  line. Velocities were set proportional to the distance from the centre of the ellipsoid and the maximum line of sight velocity was set to be 530 km/s. For the model spectra to best fit the observations it was found that a systemic velocity of __MATH_140__45 km/s was required. The resulting synthetic spectra for positions S1 and S2 can be seen in Fig. 7 and the synthetic image in Fig. 6. The model agrees closely with the observations shown in Fig. 2. This also allows us to derive a distance to FH Ser of 950__MATH_141__50 pc which takes full account of the asphericity of the shell.
-
-
-_IND_TEXT_DIV_28_:
-If we examine the observed image in Fig. 1 we see that the equatorial ring is brighter in one half than the other, behaviour replicated in our synthetic image in Fig. 6. Our model shows that this is because the system throughput of the HST with the F656N filter lets through the red-shifted __MATH_142__ 6549Å light and the blue-shifted __MATH_143__ 6583Å light. Therefore the ring seen in the image isn’t actually a whole ring from one line but two halves of the ring each from a different line. The ratio of the lines in this doublet is always __MATH_144__, so the half of the ring visible in the image which is produced by the __MATH_145__ 6583Å line is 3 times brighter than the __MATH_146__ 6549Å half.
-
-
-_IND_TEXT_DIV_29_:
-For the equatorial ring to be enhanced in [N II] relative to the rest of the shell requires either a density, ionization or metallicity effect.
-
-
-_IND_TEXT_DIV_30_:
-A simple density increase would produce more [N II] (providing that the level did not start to become collisionally de-excited) but also more H__MATH_147__ and is therefore presumably not the solution.
-
-
-_IND_TEXT_DIV_31_:
-An increase in the amount of nitrogen in the equatorial plane of the FH Ser shell could explain the [N II] enhancement. There is the possibility of a metallicity variation across the surface of the white dwarf before eruption due to rotation of the white dwarf although it is difficult to see how a thin enhancement of nitrogen could be produced rather than a more wide-spread variation around the shell.
-
-
-_IND_TEXT_DIV_32_:
-The final possibility is an ionization effect which would require either an increase or decrease in ionization in the equatorial region. A good candidate for providing such an effect is the accretion disc around the central source. An explanation could be that the main shell is very highly ionized, doubly ionized or above, by the central parts of the accretion disk. The equatorial region is then shadowed from this hot central UV source, causing the relative abundance of nitrogen in the singly ionized state to be increased. This would then produce an increase in [N II] emission in a thin equatorial region with no increase in H__MATH_148__. This proposal needs testing by further observation and modelling. A similar suggestion was made by Petitjean et al. (1990) for the shell of DQ Her.
-
-
-_IND_TEXT_DIV_33_:
-HST WFPC2 images and WHT spectroscopy of FH Ser have allowed us to derive a consistent model for its shell as an ellipsoid with ellipticity 1.3__MATH_149__0.1, and inclination 62__MATH_150__4__MATH_151__. The equatorial expansion rate is found to be 490__MATH_152__20 km s__MATH_153__ and the systemic velocity __MATH_154__ km s__MATH_155__. This gives a distance to FH Ser of 950__MATH_156__50 pc. These values agree within the errors with the results presented in previous papers (Della Valle et al. 1997, Slavin et al. 1995, Duerbeck 1992). The equatorial ring seen in the HST images and previous ground-based images is found to be due to a 40__MATH_157__ increase in emission from [N II] rather than H__MATH_158__+[N II]. It is suggested that the origin of this ring lies either in abundance gradients in the shell or in aspherical illumination of the shell by the central photoionizing source. This latter suggestion will be developed in a paper to follow.
-
-
-_IND_TEXT_DIV_34_:
-Similar imaging and spectroscopy of the nova V533 Her reveal a shell of radius __MATH_159__5 arcsec with an axial ratio of __MATH_160__. The expansion velocity of this shell is __MATH_161__ km s__MATH_162__ and the distance is estimated to be __MATH_163__ pc. The quality of the data is however not sufficient for us to examine the structure of the shell in as much detail as was possible for the shell of FH Ser.
-
-
-_IND_TEXT_DIV_35_:
-Our HST images of BT Mon, V476 Cyg and DK Lac provided only upper limits on the surface brightness of their shells. This may seem surprising given that these shells had been previously detected from the ground (Gill & O’Brien 1998, Slavin et al. 1995). However it should be noted that the ground-based images were taken using the large aperture 4.2m WHT and 3.9m Anglo-Australian Telescope. Although the improved spatial resolution of HST helps overcome its reduced collecting area when the nebula is clumpy and these clumps are unresolved from the ground this does not apply when the emission is more smoothly distributed. These nova shells were not particularly well-detected in the ground-based survey (BT Mon requiring image deconvolution) so it is perhaps not too surprising that we did not detect them here.
-
-
-_IND_TEXT_DIV_36_:
-Other novae to be investigated in the following papers of this series include HR Del, RR Pic, T Aur, V842 Cen and V1500 Cyg.
-
-
-_IND_TEXT_DIV_37_:
-We would like to thank Dr M. Della Valle for valuable comments at the refereeing stage. CDG would like to thank PPARC for his studentship, and Nial Tanvir and Rachel Johnson for their help with the reduction of the HST images. This work is based on observations with the NASA/ESA Hubble Space Telescope (obtained at the Space Telescope Science Institute, which is operated by the Association of Universities for Research in Astronomy, Inc. under NASA contract No. NAS5-26555) and the William Herschel Telescope (operated on the island of La Palma by the Isaac Newton Group in the Spanish Observatorio del Roque de Los Muchachos of the Instituto de Astrofisica de Canarias).
+ Acknowledgments. This work was partially supported by the National Natural Science Foundation of China (grant 11371144), the Natural Science Foundation of Jiangsu Province (grant BK20161304), and the Qing Lan Project of Education Committee of Jiangsu Province.
