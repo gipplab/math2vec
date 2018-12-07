@@ -10,8 +10,8 @@ from .translations import forward_trans as forward_translation
 
 class DefinienIdentifier:
     # weights (semantic+distance must be 1)
-    weight_semantic = 0.7
-    weight_distance = 0.3
+    weight_semantic = 0.9
+    weight_distance = 0.1
     weight_sentences = 0.8
 
     # what's the minimum distance to take the result for
@@ -66,8 +66,12 @@ class DefinienIdentifier:
                 try:
                     translated = forward_translation(identifier)
                     closest_vecs = method(translated)
+                    is_first = True
                     for result in closest_vecs:
-                        if result[1] >= self.accuracy_threshold:
+                        if is_first:
+                            results.append([id, title, identifier, result[0]])
+                            is_first = False
+                        elif result[1] >= self.accuracy_threshold:
                             results.append([id, title, identifier, result[0]])
                 except KeyError:
                     print(

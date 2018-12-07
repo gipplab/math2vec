@@ -1,0 +1,2515 @@
+[
+  {
+    "definitions": {
+      "W": [
+        {
+          "Q7913892": "Van der Waerden number"
+        }
+      ],
+      "k": [
+        {
+          "Q12503": "integer (number that can be written without a fractional or decimal component)"
+        }
+      ],
+      "\\varepsilon": [
+        {
+          "Q3176558": "positive number (real number strictly greater than zero)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "1",
+      "oldId": "2459",
+      "fid": "3",
+      "math_inputtex": "W(2, k) > 2^k/k^\\varepsilon",
+      "title": "Van_der_Waerden's_theorem"
+    }
+  },
+  {
+    "definitions": {
+      "X": [
+        {
+          "Q36161": "set (fundamental mathematical concept related to the notions of belonging or inclusion)"
+        }
+      ],
+      "\\Sigma": [
+        {
+          "Q739925": "Family of sets (a collection of some of the subsets of a set)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "2",
+      "oldId": "4050",
+      "fid": "189",
+      "math_inputtex": "(X,\\Sigma)",
+      "title": "Bounded_variation"
+    }
+  },
+  {
+    "definitions": {
+      "p": [
+        {
+          "Q49008": " prime number (natural number greater than 1 that has no positive divisors other than 1 and itsel)"
+        }
+      ],
+      "n": [
+        {
+          "Q12503": "integer (number that can be written without a fractional or decimal component)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "3",
+      "oldId": "4189",
+      "fid": "50",
+      "math_inputtex": "(p-1)!^n",
+      "title": "Lindemann–Weierstrass_theorem"
+    }
+  },
+  {
+    "definitions": {
+      "f_{c}": [
+        {
+          "Q5156597": "Complex quadratic polynomial"
+        }
+      ],
+      "z": [
+        {
+          "Q11567": "complex number (number that can be put in the form a + bi, where a and b are real numbers and i is called the imaginary unit )"
+        }
+      ],
+      "c": [
+        {
+          "Q1413083": "parameter"
+        },
+        {
+          "Q50700": "coefficient (number just before a variable)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "4",
+      "oldId": "15332",
+      "fid": "68",
+      "math_inputtex": "f_c(z) = z^2 + c",
+      "title": "Orbit_portrait"
+    }
+  },
+  {
+    "definitions": {
+      "x": [
+        {
+          "Q50701": "variable (a value that can change, usually with a context of an equation or operation)"
+        },
+        {
+          "Q935944": "Free variables and bound variables"
+        }
+      ],
+      "y": [
+        {
+          "Q50701": "variable (a value that can change, usually with a context of an equation or operation)"
+        },
+        {
+          "Q935944": "Free variables and bound variables"
+        }
+      ],
+      "P": [
+        {
+          "Q1144319": "Predicate"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "5",
+      "oldId": "391",
+      "fid": "114",
+      "math_inputtex": "\\forall x \\, \\forall y \\, P(x,y) \\Leftrightarrow \\forall y \\, \\forall x \\, P(x,y)",
+      "title": "First-order_logic"
+    }
+  },
+  {
+    "definitions": {
+      "\\alpha": [
+        {
+          "Q50700": "coefficient (number just before a variable)"
+        }
+      ],
+      "x": [
+        {
+          "Q3150667": "Indeterminate "
+        }
+      ]
+    },
+    "formula": {
+      "qID": "6",
+      "oldId": "6937",
+      "fid": "5",
+      "math_inputtex": "\\alpha(x)",
+      "title": "Clenshaw_algorithm"
+    }
+  },
+  {
+    "definitions": {
+      "\\alpha": [
+        {
+          "Q2256802": "Schwellenwert",
+          "Q729113": "Weighted mean"
+        }
+      ],
+      "x": [
+        {
+          "Q21199": "natural number (numbers used for counting and ordering)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "7",
+      "oldId": "25610",
+      "fid": "24",
+      "math_inputtex": "\\alpha(x)",
+      "title": "Isolation_lemma"
+    }
+  },
+  {
+    "definitions": {
+      "\\alpha": [
+        "exponent (of the Hölder condition)",
+        {
+          "Q33456": "exponentiation (mathematical operation)"
+        }
+      ],
+      "x": [
+        {
+          "Q44946": "point (fundamental object of Euclidean geometry)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "8",
+      "oldId": "27419",
+      "fid": "4",
+      "math_inputtex": "\\alpha(x)",
+      "title": "Singularity_spectrum"
+    }
+  },
+  {
+    "definitions": {
+      "\\Psi": [
+        {
+          "Q230883": "quantum state (state of a quantum system )"
+        }
+      ],
+      "i_{1}": [
+        {
+          "Q21199": "natural number (numbers used for counting and ordering)"
+        }
+      ],
+      "i_{2}": [
+        {
+          "Q21199": "natural number (numbers used for counting and ordering)"
+        }
+      ],
+      "\\alpha_{1}": [
+        {
+          "Q50700": "coefficient (number just before a variable)"
+        }
+      ],
+      "\\alpha_{2}": [
+        {
+          "Q50700": "coefficient (number just before a variable)"
+        }
+      ],
+      "\\Gamma": [
+        {
+          "Q50700": "coefficient (number just before a variable)"
+        }
+      ],
+      "\\lambda": [
+        {
+          "Q50700": "coefficient (number just before a variable)"
+        }
+      ],
+      "\\Phi": [
+        "Schmidt vectors"
+      ],
+      "N": [
+        {
+          "Q378201": "Qubit (unit of information)",
+          "Q302462": "Count"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "9",
+      "oldId": "14488",
+      "fid": "36",
+      "math_inputtex": "|{\\Psi}\\rangle=\\sum_{i_1,i_2,\\alpha_1,\\alpha_2}\\Gamma^{[1]i_1}_{\\alpha_1}\\lambda^{[1]}_{\\alpha_1}\\Gamma^{[2]i_2}_{\\alpha_1\\alpha_2}\\lambda^{[2]}_{{\\alpha}_2}|{i_1i_2}\\rangle|{\\Phi^{[3..N]}_{\\alpha_2}}\\rangle",
+      "title": "Time-evolving_block_decimation"
+    }
+  },
+  {
+    "definitions": {
+      "z": [
+        {
+          "Q3913": "binary number (a system that represents numeric values using two symbols; 0 and 1)"
+        }
+      ],
+      "x": [
+        {
+          "Q3913": "binary number (a system that represents numeric values using two symbols; 0 and 1)"
+        }
+      ],
+      "y": [
+        {
+          "Q3913": "binary number (a system that represents numeric values using two symbols; 0 and 1)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "10",
+      "oldId": "16784",
+      "fid": "38",
+      "math_inputtex": "z*x\\le y",
+      "title": "Monoidal_t-norm_logic"
+    }
+  },
+  {
+    "definitions": {
+      "x": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "c": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "11",
+      "oldId": "16716",
+      "fid": "20",
+      "math_inputtex": " \\frac{d}{dx}\\left( \\log_c x\\right) = {1 \\over x \\ln c} , \\qquad c > 0, c \\ne 1",
+      "title": "Differentiation_rules"
+    }
+  },
+  {
+    "definitions": {
+      "\\theta": [
+        {
+          "Q11352": "angle ( figure formed by two rays)"
+        }
+      ],
+      "n": [
+        {
+          "Q2303886": "index (the numbering of various objects within the mathematical notation)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "12",
+      "oldId": "2875",
+      "fid": "2",
+      "math_inputtex": "\\theta = n \\times 137.508^\\circ,",
+      "title": "Fermat's_spiral"
+    }
+  },
+  {
+    "definitions": {
+      "s_{V}": [
+        "Kemeny-Young score"
+      ],
+      "\\mathcal{R}": [
+        {
+          "Q526719": "ranking (relationship between items in a set)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "13",
+      "oldId": "9319",
+      "fid": "2",
+      "math_inputtex": "s_V(\\mathcal{R})",
+      "title": "Consistency_criterion"
+    }
+  },
+  {
+    "definitions": {
+      "\\ell": [
+        {
+          "Q11348": "function (binary relation, which is left-total and right-unique)"
+        }
+      ],
+      "m": [
+        {
+          "Q1027788": "Argument of a function (independent variable of math function)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "14",
+      "oldId": "21982",
+      "fid": "43",
+      "math_inputtex": "\\ell(m)",
+      "title": "Basis_(universal_algebra)"
+    }
+  },
+  {
+    "definitions": {
+      "b": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "x": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "15",
+      "oldId": "26321",
+      "fid": "4",
+      "math_inputtex": "bx-x^2",
+      "title": "Adequality"
+    }
+  },
+  {
+    "definitions": {
+      "\\omega_{k}": [
+        {
+          "Q946764": "Natural frequency"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "16",
+      "oldId": "13492",
+      "fid": "85",
+      "math_inputtex": "\\omega_{k}",
+      "title": "Mason–Weaver_equation"
+    }
+  },
+  {
+    "definitions": {
+      "\\mathbf{m}_{1}": [
+        "class mean",
+        {
+          "Q19033": "arithmetic mean (sum of a collection of numbers divided by the number of numbers in the collection)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "17",
+      "oldId": "27275",
+      "fid": "2",
+      "math_inputtex": "\\mathbf{m}_1",
+      "title": "Kernel_Fisher_discriminant_analysis"
+    }
+  },
+  {
+    "definitions": {
+      "r_{ij}": [
+        {
+          "Q126017": "distance (straight line that connects two points)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "18",
+      "oldId": "15283",
+      "fid": "17",
+      "math_inputtex": "r_{ij}",
+      "title": "Implicit_solvation"
+    }
+  },
+  {
+    "definitions": {
+      "Z": [
+        "canonical partition function",
+        {
+          "Q230963": "Partition function (statistical mechanics) "
+        }
+      ],
+      "j": [
+        {
+          "Q2303886": "index (the numbering of various objects within the mathematical notation )"
+        }
+      ],
+      "g_{j}": [
+        "degeneracy factor"
+      ],
+      "\\mathrm{e}": [
+        {
+          "Q168698": "exponential function (unique function which is its own derivative and equals one at zero)"
+        }
+      ],
+      "\\beta": [
+        "inverse temperature",
+        {
+          "Q917476": "Thermodynamic beta"
+        }
+      ],
+      "E_{j}": [
+        "energy level"
+      ]
+    },
+    "formula": {
+      "qID": "19",
+      "oldId": "3897",
+      "fid": "2",
+      "math_inputtex": " Z = \\sum_{j} g_j \\cdot \\mathrm{e}^{- \\beta E_j}",
+      "title": "Partition_function_(statistical_mechanics)"
+    }
+  },
+  {
+    "definitions": {
+      "S'": [
+        "tristimulus values"
+      ]
+    },
+    "formula": {
+      "qID": "20",
+      "oldId": "8808",
+      "fid": "39",
+      "math_inputtex": "S'",
+      "title": "Color_balance"
+    }
+  },
+  {
+    "definitions": {
+      "S'": [
+        {
+          "Q17285": "plane (flat, two-dimensional surface)"
+        },
+        "plane",
+        "geometric surface",
+        "area",
+        "2-dimensional manifold"
+      ]
+    },
+    "formula": {
+      "qID": "21",
+      "oldId": "17336",
+      "fid": "30",
+      "math_inputtex": "S'",
+      "title": "Hilbert's_theorem_(differential_geometry)"
+    }
+  },
+  {
+    "definitions": {
+      "k": [
+        {
+          "Q1663694": "inclusion map"
+        }
+      ],
+      "l": [
+        {
+          "Q1663694": "inclusion map"
+        }
+      ],
+      "i": [
+        {
+          "Q1663694": "inclusion map"
+        }
+      ],
+      "j": [
+        {
+          "Q1663694": "inclusion map"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "22",
+      "oldId": "4416",
+      "fid": "4",
+      "math_inputtex": "\\text{Ker} (k_* - l_*) \\cong \\text{Im} (i_*, j_*).",
+      "title": "Mayer–Vietoris_sequence"
+    }
+  },
+  {
+    "definitions": {
+      "D": [
+        "relative graphlet frequency distance"
+      ],
+      "G": [
+        "graphlets",
+        "graphs",
+        "graph",
+        {
+          "Q5597315": "Graphlets"
+        }
+      ],
+      "H": [
+        "graphlets",
+        "graphs",
+        "graph",
+        {
+          "Q5597315": "Graphlets"
+        }
+      ],
+      "i": [
+        "number",
+        {
+          "Q2303886": "index (the numbering of various objects within the mathematical notation)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "23",
+      "oldId": "25343",
+      "fid": "3",
+      "math_inputtex": "D(G,H) = \\sum_{i=1}^{29} | F_i(G) - F_i(H) |",
+      "comments": "F_i is a substitution",
+      "title": "Graphlets"
+    }
+  },
+  {
+    "definitions": {
+      "E_{\\mathrm{k}}": [
+        "total kinetic energy",
+        {
+          "Q46276": "kinetic energy"
+        }
+      ],
+      "E_{\\mathrm{r}}": [
+        "rotational energy",
+        "angular kinetic energy",
+        {
+          "Q2140940": "Rotational energy"
+        }
+      ],
+      "E_{\\mathrm{t}}": [
+        "translational kinetic energy"
+      ]
+    },
+    "formula": {
+      "qID": "24",
+      "oldId": "566",
+      "fid": "28",
+      "math_inputtex": " E_\\text{k} = E_t + E_\\text{r} \\, ",
+      "title": "Kinetic_energy"
+    }
+  },
+  {
+    "definitions": {
+      "\\lambda": [
+        "length",
+        {
+          "Q36253": "length (measured dimension of an object)"
+        }
+      ],
+      "L": [
+        {
+          "Q1096885": "lattice (subgroup of a real vector space or a Lie group)"
+        },
+        "lattice"
+      ],
+      "B": [
+        {
+          "Q189569": "basis"
+        }
+      ],
+      "d": [
+        "number",
+        {
+          "Q3176558": "positive number (real number strictly greater than zero)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "25",
+      "oldId": "22618",
+      "fid": "22",
+      "math_inputtex": "\\lambda(L(B)) \\leq d",
+      "title": "Lattice_problem"
+    }
+  },
+  {
+    "definitions": {
+      "L": [
+        "weighted path length"
+      ],
+      "C": [
+        {
+          "Q188889": "code (system of rules to convert information (codification))"
+        }
+      ],
+      "T": [
+        {
+          "Q188889": "code (system of rules to convert information (codification))"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "26",
+      "oldId": "485",
+      "fid": "10",
+      "math_inputtex": "L\\left(C\\right) \\leq L\\left(T\\right)",
+      "title": "Huffman_coding"
+    }
+  },
+  {
+    "definitions": {
+      "v": [
+        {
+          "Q13824": "phase velocity (rate at which the phase of the wave propagates in space)"
+        }
+      ],
+      "c": [
+        {
+          "Q2111": "speed of light (speed at which all massless particles and associated fields travel in vacuum)"
+        }
+      ],
+      "n": [
+        {
+          "Q174102": "Refractive index (optical characteristic of a material)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "27",
+      "oldId": "2623",
+      "fid": "0",
+      "math_inputtex": "v = \\frac{c}{n}",
+      "title": "Dispersion_(optics)"
+    }
+  },
+  {
+    "definitions": {
+      "\\sigma_{y}": [
+        "Allan deviation",
+        {
+          "Q1440227": "Allan variance"
+        }
+      ],
+      "\\tau": [
+        "observation time"
+      ],
+      "\\pi": [
+        {
+          "Q167": "pi (ratio of the circumference of a circle to its diameter)"
+        }
+      ],
+      "h_{-2}": [
+        "Power coefficient"
+      ]
+    },
+    "formula": {
+      "qID": "28",
+      "oldId": "1227",
+      "fid": "93",
+      "math_inputtex": "\\sigma_y^2(\\tau) = \\frac{2\\pi^2\\tau}{3}h_{-2}",
+      "title": "Allan_variance"
+    }
+  },
+  {
+    "definitions": {
+      "R_{\\text{s normal}}": [
+        "surface resistance"
+      ],
+      "\\omega": [
+        "resonant frequency"
+      ],
+      "\\mu_{0}": [
+        {
+          "Q1515261": "vacuum permeability (physical constant)"
+        }
+      ],
+      "\\sigma": [
+        "electrical conductivity"
+      ]
+    },
+    "formula": {
+      "qID": "29",
+      "oldId": "21692",
+      "fid": "5",
+      "math_inputtex": " R_{s\\ normal} = \\sqrt{ \\frac{\\omega \\mu_0} {2 \\sigma} }",
+      "title": "Superconducting_radio_frequency"
+    }
+  },
+  {
+    "definitions": {
+      "\\phi_{1}": [
+        "phase-range"
+      ]
+    },
+    "formula": {
+      "qID": "30",
+      "oldId": "24277",
+      "fid": "5",
+      "math_inputtex": " \\phi_1 = -30^\\circ...+30^\\circ",
+      "title": "Vienna_rectifier"
+    }
+  },
+  {
+    "definitions": {
+      "T_{c}": [
+        {
+          "Q1128317": "tax rate (ratio (usually expressed as a percentage) at which a business or person is taxed)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "31",
+      "oldId": "3625",
+      "fid": "19",
+      "math_inputtex": "T_c",
+      "title": "Modigliani–Miller_theorem"
+    }
+  },
+  {
+    "definitions": {
+      "T_{c}": [
+        "critical Temperature",
+        {
+          "Q111059": "critical point (critical point where phase boundaries disappear)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "32",
+      "oldId": "17517",
+      "fid": "2",
+      "math_inputtex": "T_c",
+      "title": "Proximity_effect_(superconductivity)"
+    }
+  },
+  {
+    "definitions": {
+      "T_{c}": [
+        "critical surface",
+        {
+          "Q111059": "critical point (critical point where phase boundaries disappear)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "33",
+      "oldId": "22538",
+      "fid": "9",
+      "math_inputtex": "T_c",
+      "title": "Multicritical_point"
+    }
+  },
+  {
+    "definitions": {
+      "P_{1}": [
+        {
+          "Q43260": "polynomial (mathematical expression consisting of variables and coefficients)"
+        }
+      ],
+      "X": [
+        {
+          "Q3150667": "Indeterminate "
+        }
+      ],
+      "P": [
+        {
+          "Q43260": "polynomial (mathematical expression consisting of variables and coefficients)"
+        }
+      ],
+      "\\alpha_{1}": [
+        {
+          "Q11567": "complex number (number that can be put in the form a + bi, where a and b are real numbers and i is called the imaginary unit )"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "34",
+      "oldId": "17497",
+      "fid": "55",
+      "math_inputtex": "P_1(X)=P(X)/(X-\\alpha_1)",
+      "title": "Jenkins–Traub_algorithm"
+    }
+  },
+  {
+    "definitions": {
+      "k": [
+        {
+          "Q2095069": "normalizing constant"
+        }
+      ],
+      "n": [
+        {
+          "Q21199": "natural number (numbers used for counting and ordering)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "35",
+      "oldId": "5626",
+      "fid": "4",
+      "math_inputtex": "= \\frac{k}{n}.",
+      "title": "Doomsday_argument"
+    }
+  },
+  {
+    "definitions": {
+      "n": [
+        {
+          "Q21199": "natural number (numbers used for counting and ordering)"
+        }
+      ],
+      "i": [
+        {
+          "Q2303886": "index (the numbering of various objects within the mathematical notation)"
+        }
+      ],
+      "r": [
+        {
+          "Q2303886": "index (the numbering of various objects within the mathematical notation)"
+        }
+      ],
+      "p_{i}": [
+        {
+          "Q1137759": " prime factor ( prime number dividing an integer )"
+        }
+      ],
+      "a_{i}": [
+        "maximum power"
+      ]
+    },
+    "formula": {
+      "qID": "36",
+      "oldId": "4630",
+      "fid": "12",
+      "math_inputtex": "n = \\prod_{i=1}^r p_i^{a_i}",
+      "title": "Divisor_function"
+    }
+  },
+  {
+    "definitions": {
+      "H": [
+        "system function",
+        "system response",
+        "transfer function"
+      ],
+      "j": [
+        {
+          "Q193796": "imaginary unit (square root of negative one, used to define complex numbers)"
+        }
+      ],
+      "\\omega": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "\\mathcal{F}": [
+        {
+          "Q6520159": "Fourier transform (mathematical transform that expresses a mathematical function of time as a function of frequency)"
+        }
+      ],
+      "h": [
+        "impulse response"
+      ],
+      "t": [
+        {
+          "Q11471": "time (dimension in which events can be ordered from the past through the present into the future)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "37",
+      "oldId": "8338",
+      "fid": "87",
+      "math_inputtex": "H(j \\omega) = \\mathcal{F}\\{h(t)\\}",
+      "title": "LTI_system_theory"
+    }
+  },
+  {
+    "definitions": {
+      "\\pi": [
+        {
+          "Q167": "pi (ratio of the circumference of a circle to its diameter)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "38",
+      "oldId": "1320",
+      "fid": "31",
+      "math_inputtex": "\\pi/4",
+      "title": "Phase-shift_keying"
+    }
+  },
+  {
+    "definitions": {
+      "x": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "y": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "n": [
+        {
+          "Q21199": "natural number (numbers used for counting and ordering)"
+        }
+      ],
+      "k": [
+        {
+          "Q21199": "natural number (numbers used for counting and ordering)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "39",
+      "oldId": "133",
+      "fid": "6",
+      "math_inputtex": "(x+y)^n = \\sum_{k=0}^n {n \\choose k}x^{n-k}y^k = \\sum_{k=0}^n {n \\choose k}x^{k}y^{n-k}.\n",
+      "title": "Binomial_theorem"
+    }
+  },
+  {
+    "definitions": {
+      "A": [
+        {
+          "Q3686031": "concentration (type of physical property)"
+        }
+      ],
+      "t": [
+        {
+          "Q11471": "time (dimension in which events can be ordered from the past through the present into the future)"
+        }
+      ],
+      "k": [
+        "reaction rate coefficient"
+      ]
+    },
+    "formula": {
+      "qID": "40",
+      "oldId": "9082",
+      "fid": "33",
+      "math_inputtex": "\\ [A]_t = -kt + [A]_0",
+      "title": "Rate_equation"
+    }
+  },
+  {
+    "definitions": {
+      "q": [
+        {
+          "Q9492": "probability (measure of the expectation that an event will occur or a statement is true)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "41",
+      "oldId": "3545",
+      "fid": "1",
+      "math_inputtex": "q^{42}",
+      "title": "Martingale_(betting_system)"
+    }
+  },
+  {
+    "definitions": {
+      "\\alpha": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "d": [
+        {
+          "Q4440864": "dimension (minimum number of coordinates within a space needed to specify any point)"
+        }
+      ],
+      "\\varepsilon": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "42",
+      "oldId": "15433",
+      "fid": "5",
+      "math_inputtex": "\\alpha(d) \\le \\left(\\sqrt{3/2} + \\varepsilon\\right)^d",
+      "title": "Borsuk's_conjecture"
+    }
+  },
+  {
+    "definitions": {
+      "f^{\\mu}": [
+        "4-acceleration"
+      ],
+      "G": [
+        {
+          "Q18373": " gravitational constant (empirical physical constant)"
+        }
+      ],
+      "c": [
+        {
+          "Q2111": "speed of light (speed at which all massless particles and associated fields travel in vacuum)"
+        }
+      ],
+      "A": [
+        {
+          "Q1289248": "scalar (real numbers in the context auf linear algebra)"
+        }
+      ],
+      "T_{\\alpha\\beta}": [
+        {
+          "Q876346": "Stress–energy tensor"
+        }
+      ],
+      "B": [
+        {
+          "Q1289248": "scalar (real numbers in the context auf linear algebra)"
+        }
+      ],
+      "T": [
+        "trace of the stress energy tensor"
+      ],
+      "\\eta_{\\alpha\\beta}": [
+        "Minkowski metric",
+        {
+          "Q464794": "Minkowski spacetime (mathematical space setting which eases explanation of special relativity)"
+        }
+      ],
+      "\\delta _{\\nu}^{\\mu}": [
+        {
+          "Q193794": "identity matrix (n × n square matrix with ones on the main diagonal and zeros elsewhere)"
+        },
+        {
+          "Q192826": "Kronecker delta (function)"
+        }
+      ],
+      "u^{\\mu}": [
+        "4-velocity"
+      ],
+      "u_{\\nu}": [
+        "4-velocity"
+      ],
+      "u^{\\alpha}": [
+        "4-velocity"
+      ],
+      "x^{\\nu}": [
+        "4-position"
+      ],
+      "u^{\\beta}": [
+        "4-velocity"
+      ]
+    },
+    "formula": {
+      "qID": "43",
+      "oldId": "12471",
+      "fid": "96",
+      "math_inputtex": "   f^{\\mu} = - 8\\pi  { G \\over { 3 c^4   }   } \\left (  {A \\over 2} T_{\\alpha \\beta}  + {B \\over 2} T \\eta_{\\alpha \\beta} \\right ) \\left ( \\delta^{\\mu}_{\\nu} + u^{\\mu} u_{\\nu} \\right )  u^{\\alpha} x^{\\nu} u^{\\beta} ",
+      "comment": "einstein notation",
+      "title": "Theoretical_motivation_for_general_relativity"
+    }
+  },
+  {
+    "definitions": {
+      "u_{g}": [
+        "velocity field"
+      ],
+      "t": [
+        {
+          "Q11471": "time (dimension in which events can be ordered from the past through the present into the future)"
+        }
+      ],
+      "f_{0}": [
+        "Coriolis parameter"
+      ],
+      "v_{a}": [
+        "velocity"
+      ],
+      "\\beta": [
+        "latitudinal change"
+      ],
+      "y": [
+        "y component"
+      ],
+      "v_{g}": [
+        "geostrophic velocity",
+        {
+          "Q929043": "Geostrophic wind"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "44",
+      "oldId": "27611",
+      "fid": "0",
+      "math_inputtex": " \\frac{D_g u_g}{Dt} - f_{0}v_a - \\beta y v_g = 0 ",
+      "title": "Q-Vectors"
+    }
+  },
+  {
+    "definitions": {
+      "I_{c}": [
+        "neighbors indices"
+      ]
+    },
+    "formula": {
+      "qID": "45",
+      "oldId": "22412",
+      "fid": "10",
+      "math_inputtex": "I_c",
+      "title": "Stencil_code"
+    }
+  },
+  {
+    "definitions": {
+      "A": [
+        "general multivector"
+      ],
+      "M": [
+        "reflection versor",
+        {
+          "Q2518235": "Versor"
+        }
+      ],
+      "\\alpha": [
+        {
+          "Q782566": "automorphism (isomorphism from a mathematical object to itself)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "46",
+      "oldId": "460",
+      "fid": "81",
+      "math_inputtex": "\\, A \\mapsto M\\alpha(A)M^{-1} ,",
+      "title": "Geometric_algebra"
+    }
+  },
+  {
+    "definitions": {
+      "\\Gamma_{\\infty}": [
+        "undiscounted game",
+        {
+          "Q1074380": "stochastic game"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "47",
+      "oldId": "16803",
+      "fid": "53",
+      "math_inputtex": "\\Gamma_{\\infty}",
+      "title": "Stochastic_game"
+    }
+  },
+  {
+    "definitions": {
+      "Y": [
+        "hypercharge"
+      ],
+      "\\beta": [
+        {
+          "Q1413083": "parameter"
+        }
+      ],
+      "I": [
+        {
+          "Q1413083": "parameter"
+        }
+      ],
+      "T_{8}": [
+        {
+          "Q1008943": "Gell-Mann matrices "
+        }
+      ],
+      "X": [
+        "charge"
+      ]
+    },
+    "formula": {
+      "qID": "48",
+      "oldId": "15858",
+      "fid": "3",
+      "math_inputtex": "Y = \\beta T_8 + I X",
+      "title": "331_model"
+    }
+  },
+  {
+    "definitions": {
+      "\\mu": [
+        "function"
+      ],
+      "A": [
+        "sets of real numbers"
+      ]
+    },
+    "formula": {
+      "qID": "49",
+      "oldId": "7473",
+      "fid": "12",
+      "math_inputtex": " \\mu (A)= \\begin{cases} 1 & \\mbox{ if } 0 \\in A \\\\ \n                               0 & \\mbox{ if } 0 \\notin A.\n\\end{cases}",
+      "title": "Sigma_additivity"
+    }
+  },
+  {
+    "definitions": {
+      "\\lambda_{in}": [
+        "inner sphere reorganisation energy"
+      ]
+    },
+    "formula": {
+      "qID": "50",
+      "oldId": "12130",
+      "fid": "56",
+      "math_inputtex": "\\lambda_{in}",
+      "title": "Marcus_theory"
+    }
+  },
+  {
+    "definitions": {
+      "\\mathrm{rpm}_{\\text{motor}}": [
+        {
+          "Q1256787": "rotational speed  (physical quantity)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "51",
+      "oldId": "16788",
+      "fid": "2",
+      "math_inputtex": "rpm_{motor}",
+      "title": "Centrifugal_fan"
+    }
+  },
+  {
+    "definitions": {
+      "u_{1}": [
+        "control"
+      ],
+      "\\mathbf{x}": [
+        {
+          "Q13471665": "vector"
+        }
+      ],
+      "z_{1}": [
+        {
+          "Q1289248": "scalar (real numbers in the context auf linear algebra)"
+        }
+      ],
+      "v_{1}": [
+        "control"
+      ],
+      "\\dot{u}_{x}": [
+        "control law"
+      ],
+      "V_{x}": [
+        {
+          "Q2337858": "Lyapunov function"
+        }
+      ],
+      "g_{x}": [
+        {
+          "Q11348": "function (binary relation, which is left-total and right-unique)"
+        }
+      ],
+      "k_{1}": [
+        "gain parameter"
+      ],
+      "u_{x}": [
+        {
+          "Q11348": "function (binary relation, which is left-total and right-unique)"
+        }
+      ],
+      "e_{1}": [
+        "control"
+      ],
+      "f_{x}": [
+        {
+          "Q11348": "function (binary relation, which is left-total and right-unique)"
+        }
+      ],
+      "\\dot{\\mathbf{x}}": [
+        "subsystem"
+      ],
+      "t": [
+        {
+          "Q11471": "time (dimension in which events can be ordered from the past through the present into the future)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "52",
+      "oldId": "21960",
+      "fid": "157",
+      "math_inputtex": "\\underbrace{u_1(\\mathbf{x},z_1)=v_1+\\dot{u}_x}_{\\text{By definition of }v_1}=\\overbrace{-\\frac{\\partial V_x}{\\partial \\mathbf{x}}g_x(\\mathbf{x})-k_1(\\underbrace{z_1-u_x(\\mathbf{x})}_{e_1})}^{v_1} \\, + \\, \\overbrace{\\frac{\\partial u_x}{\\partial \\mathbf{x}}(\\underbrace{f_x(\\mathbf{x})+g_x(\\mathbf{x})z_1}_{\\dot{\\mathbf{x}} \\text{ (i.e., } \\frac{\\operatorname{d}\\mathbf{x}}{\\operatorname{d}t} \\text{)}})}^{\\dot{u}_x \\text{ (i.e., } \\frac{ \\operatorname{d}u_x }{\\operatorname{d}t} \\text{)}}",
+      "title": "Backstepping"
+    }
+  },
+  {
+    "definitions": {
+      "E": [
+        {
+          "Q2918589": "Expectation value"
+        }
+      ],
+      "\\hat{\\sigma}": [
+        {
+          "Q1045555": "maximum likelihood"
+        }
+      ],
+      "n": [
+        {
+          "Q21199": "natural number (numbers used for counting and ordering)"
+        }
+      ],
+      "\\sigma": [
+        "constant volatility"
+      ]
+    },
+    "formula": {
+      "qID": "53",
+      "oldId": "14318",
+      "fid": "10",
+      "math_inputtex": "E \\left[ \\hat{\\sigma}^2\\right]= \\frac{n-1}{n} \\sigma^2",
+      "title": "Stochastic_volatility"
+    }
+  },
+  {
+    "definitions": {
+      "\\mathsf{fv}": [
+        "free variable set"
+      ]
+    },
+    "formula": {
+      "qID": "54",
+      "oldId": "13072",
+      "fid": "63",
+      "math_inputtex": "\\mathsf{fv}",
+      "title": "Separation_logic"
+    }
+  },
+  {
+    "definitions": {
+      "x": [
+        "x coordinate"
+      ],
+      "y": [
+        "y coordinate"
+      ],
+      "I": [
+        "pixel intensities"
+      ]
+    },
+    "formula": {
+      "qID": "55",
+      "oldId": "10050",
+      "fid": "2",
+      "math_inputtex": "\\sum_x \\sum_y I(x,y) \\,\\!",
+      "title": "Image_moment"
+    }
+  },
+  {
+    "definitions": {
+      "\\boldsymbol{F}_{r}": [
+        {
+          "Q82580": "friction"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "56",
+      "oldId": "5363",
+      "fid": "5",
+      "math_inputtex": "\\boldsymbol{F}_r",
+      "title": "Geostrophic_wind"
+    }
+  },
+  {
+    "definitions": {
+      "B": [
+        "R-module",
+        {
+          "Q18848": "module"
+        }
+      ],
+      "A": [
+        "R-module",
+        {
+          "Q18848": "module"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "57",
+      "oldId": "6693",
+      "fid": "9",
+      "math_inputtex": "0\\rightarrow B\\rightarrow A\\oplus B\\rightarrow A\\rightarrow0.",
+      "title": "Ext_functor"
+    }
+  },
+  {
+    "definitions": {
+      "Y": [
+        "direction"
+      ],
+      "T": [
+        {
+          "Q1952404": "Multilinear map"
+        }
+      ],
+      "\\alpha_{1}": [
+        {
+          "Q11703678": "section (right inverse of a fiber bundle map)"
+        }
+      ],
+      "\\alpha_{2}": [
+        {
+          "Q11703678": "section (right inverse of a fiber bundle map)"
+        }
+      ],
+      "X_{1}": [
+        "section"
+      ],
+      "X_{2}": [
+        "section"
+      ]
+    },
+    "formula": {
+      "qID": "58",
+      "oldId": "4787",
+      "fid": "50",
+      "math_inputtex": "(\\nabla_Y T)(\\alpha_1, \\alpha_2, \\ldots, X_1, X_2, \\ldots) =Y(T(\\alpha_1,\\alpha_2,\\ldots,X_1,X_2,\\ldots))",
+      "title": "Covariant_derivative"
+    }
+  },
+  {
+    "definitions": {
+      "n": [
+        {
+          "Q2303886": "index (the numbering of various objects within the mathematical notation)"
+        }
+      ],
+      "\\mathbb{Z}": [
+        {
+          "Q1096885": "lattice (subgroup of a real vector space or a Lie group )"
+        }
+      ],
+      "d": [
+        {
+          "Q4440864": "dimension (minimum number of coordinates within a space needed to specify any point)"
+        }
+      ],
+      "\\psi": [
+        "probability distribution",
+        {
+          "Q2362761": "wave function"
+        }
+      ],
+      "t": [
+        {
+          "Q11471": "time (dimension in which events can be ordered from the past through the present into the future)"
+        }
+      ],
+      "C": [
+        {
+          "Q3176558": "positive number (real number strictly greater than zero)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "59",
+      "oldId": "10209",
+      "fid": "4",
+      "math_inputtex": " \\sum_{n \\in \\mathbb{Z}^d} |\\psi(t,n)|^2 |n| \\leq C ",
+      "title": "Anderson_localization"
+    }
+  },
+  {
+    "definitions": {
+      "x": [
+        "distance",
+        "x coordinate"
+      ],
+      "g": [
+        {
+          "Q30006": "gravitational acceleration (acceleration on an object caused by gravity)"
+        }
+      ],
+      "v": [
+        "velocity"
+      ],
+      "y": [
+        "height",
+        "y coordinate",
+        "altitude"
+      ]
+    },
+    "formula": {
+      "qID": "60",
+      "oldId": "9833",
+      "fid": "26",
+      "math_inputtex": " p = {\\frac{-x\\pm\\sqrt{x^2-4(\\frac{-gx^2}{2v^2})(\\frac{-gx^2}{2v^2}-y)}}{2(\\frac{-gx^2}{2v^2}) }}",
+      "comment": "p is a substitution",
+      "title": "Trajectory_of_a_projectile"
+    }
+  },
+  {
+    "definitions": {
+      "z": [
+        {
+          "Q11567": "complex number (number that can be put in the form a + bi, where a and b are real numbers and i is called the imaginary unit )"
+        }
+      ],
+      "H": [
+        {
+          "Q3258885": "Upper half-plane"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "61",
+      "oldId": "8877",
+      "fid": "7",
+      "math_inputtex": "\\left\\{ z \\in H: \\left| z \\right| > 1,\\, \\left| \\,\\mbox{Re}(z) \\,\\right| < \\frac{1}{2} \\right\\}",
+      "title": "Cusp_neighborhood"
+    }
+  },
+  {
+    "definitions": {
+      "T": [
+        {
+          "Q131030": "operator (mapping from one vector space or module to another in mathematics)"
+        }
+      ],
+      "\\lambda": [
+        {
+          "Q21406831": "eigenvalue"
+        }
+      ],
+      "I": [
+        "identity operator",
+        {
+          "Q131030": "operator (mapping from one vector space or module to another in mathematics)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "62",
+      "oldId": "2951",
+      "fid": "17",
+      "math_inputtex": "T-\\lambda I",
+      "title": "Spectrum_(functional_analysis)"
+    }
+  },
+  {
+    "definitions": {
+      "y": [
+        "y dimension"
+      ],
+      "x": [
+        "x dimension"
+      ],
+      "\\rho": [
+        {
+          "Q186290": "correlation (concept)"
+        }
+      ],
+      "\\sigma_{y}": [
+        "standard deviation in y direction"
+      ],
+      "\\sigma_{x}": [
+        "standard deviation in x direction"
+      ],
+      "\\mu_{x}": [
+        "x component of mean"
+      ],
+      "\\mu_{y}": [
+        "y combonent of mean"
+      ]
+    },
+    "formula": {
+      "qID": "63",
+      "oldId": "1588",
+      "fid": "20",
+      "math_inputtex": "\n    y\\left( x \\right) = {\\mathop{\\rm sgn}} \\left( {{\\rho }} \\right)\\frac{{{\\sigma _y}}}{{{\\sigma _x}}}\\left( {x - {\\mu _x}} \\right) + {\\mu _y}.\n  ",
+      "comments": "sgn is an operator",
+      "title": "Multivariate_normal_distribution"
+    }
+  },
+  {
+    "definitions": {
+      "x": [
+        "variable"
+      ],
+      "b": [
+        "element of a group"
+      ]
+    },
+    "formula": {
+      "qID": "64",
+      "oldId": "15120",
+      "fid": "56",
+      "math_inputtex": "x=b \\ ",
+      "title": "Algebraically_closed_group"
+    }
+  },
+  {
+    "definitions": {
+      "H": [
+        {
+          "Q1591095": "Hausdorff measure"
+        }
+      ],
+      "K": [
+        "compact"
+      ]
+    },
+    "formula": {
+      "qID": "65",
+      "oldId": "6392",
+      "fid": "10",
+      "math_inputtex": "H^1(K)=\\sqrt{2}",
+      "title": "Analytic_capacity"
+    }
+  },
+  {
+    "definitions": {
+      "P_{i}": [
+        "Plain text"
+      ],
+      "E_{K}": [
+        "Encryption"
+      ],
+      "S_{i-1}": [
+        "state of the shift register"
+      ],
+      "x": [
+        "number of bits"
+      ],
+      "C_{i}": [
+        "Chip text"
+      ]
+    },
+    "formula": {
+      "qID": "66",
+      "oldId": "2482",
+      "fid": "8",
+      "math_inputtex": "P_i = \\mbox{head}(E_K (S_{i-1}), x) \\oplus C_i",
+      "title": "Block_cipher_mode_of_operation"
+    }
+  },
+  {
+    "definitions": {
+      "f": [
+        {
+          "Q11348": "function (binary relation, which is left-total and right-unique)"
+        }
+      ],
+      "x": [
+        {
+          "Q3150667": "Indeterminate"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "67",
+      "oldId": "1666",
+      "fid": "30",
+      "math_inputtex": "\\frac{ \\partial f}{ \\partial x} = f_x = \\partial_x f.",
+      "comments": "in that context subscript is not a part of a variable but a notational element",
+      "title": "Partial_derivative"
+    }
+  },
+  {
+    "definitions": {
+      "P_{x}": [
+        "poset"
+      ],
+      "P": [
+        {
+          "Q474715": "partially ordered set (a set ordered by a transitive, antisymmetric, and reflexive binary relation)"
+        }
+      ],
+      "a": [
+        {
+          "Q379825": "element (any one of the distinct objects that make up a set in set theory)"
+        }
+      ],
+      "x": [
+        "point",
+        {
+          "Q379825": "element (any one of the distinct objects that make up a set in set theory)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "68",
+      "oldId": "27027",
+      "fid": "0",
+      "math_inputtex": " P_x = P - \\{ a\\mid a \\geq x\\} ",
+      "comment": "P_{x} is a substitution",
+      "title": "Poset_game"
+    }
+  },
+  {
+    "definitions": {
+      "\\eta": [
+        {
+          "Q192704": "energy efficiency"
+        }
+      ],
+      "Q_{1}": [
+        {
+          "Q44432": "heat (energy)"
+        }
+      ],
+      "Q_{2}": [
+        {
+          "Q44432": "heat (energy)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "69",
+      "oldId": "15167",
+      "fid": "0",
+      "math_inputtex": "\\eta = \\frac{ work\\ done } {heat\\ absorbed}  = \\frac{ Q1-Q2 }{ Q1}",
+      "title": "Engine_efficiency"
+    }
+  },
+  {
+    "definitions": {
+      "f": [
+        {
+          "Q319913": "convex function"
+        }
+      ],
+      "x": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "y": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "p": [
+        {
+          "Q2627460": "Conjugate variables"
+        }
+      ],
+      "v": [
+        {
+          "Q2627460": "Conjugate variables"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "70",
+      "oldId": "4480",
+      "fid": "29",
+      "math_inputtex": "df = {\\partial f \\over \\partial x}dx + {\\partial f \\over \\partial y}dy = pdx + vdy",
+      "title": "Legendre_transformation"
+    }
+  },
+  {
+    "definitions": {
+      "h_{r,s}": [
+        "channel from the source to the relay node"
+      ]
+    },
+    "formula": {
+      "qID": "71",
+      "oldId": "17690",
+      "fid": "4",
+      "math_inputtex": "h_{r,s}",
+      "title": "Cooperative_diversity"
+    }
+  },
+  {
+    "definitions": {
+      "k": [
+        {
+          "Q190109": "field (algebraic structure)"
+        }
+      ],
+      "K": [
+        {
+          "Q83478": "group (set with an invertible, associative internal operation admitting a neutral element)"
+        }
+      ],
+      "T": [
+        "Tensor field"
+      ],
+      "M": [
+        {
+          "Q18848": "module (algebraic structure)"
+        }
+      ],
+      "a": [
+        {
+          "Q379825": "element (any one of the distinct objects that make up a set in set theory)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "72",
+      "oldId": "5763",
+      "fid": "20",
+      "math_inputtex": " K^M_*(k) := T^*(k^\\times)/(a\\otimes (1-a)) ",
+      "title": "Algebraic_K-theory"
+    }
+  },
+  {
+    "definitions": {
+      "C": [
+        "1-cycles"
+      ],
+      "K_{X}": [
+        {
+          "Q844128": "Canonical bundle"
+        },
+        "canonical divisor"
+      ]
+    },
+    "formula": {
+      "qID": "73",
+      "oldId": "21482",
+      "fid": "45",
+      "math_inputtex": "\\{C : K_X \\cdot C = 0\\}",
+      "title": "Cone_of_curves"
+    }
+  },
+  {
+    "definitions": {
+      "\\Theta": [
+        {
+          "Q2608202": "One-form"
+        }
+      ],
+      "n": [
+        "number of thermodynamic degrees of freedom"
+      ]
+    },
+    "formula": {
+      "qID": "74",
+      "oldId": "28602",
+      "fid": "8",
+      "math_inputtex": "\\Theta \\wedge\n(d\\Theta)^n \\neq 0",
+      "title": "Geometrothermodynamics"
+    }
+  },
+  {
+    "definitions": {
+      "\\rho": [
+        {
+          "Q29539": "density (mass per unit volume)"
+        }
+      ],
+      "u_{i}": [
+        {
+          "Q11465": "velocity (rate of change of the position of an object as a function of time, and the direction of that change)"
+        }
+      ],
+      "t": [
+        "time"
+      ]
+    },
+    "formula": {
+      "qID": "75",
+      "oldId": "6724",
+      "fid": "5",
+      "math_inputtex": "D\\left(\\rho u_i\\right)/Dt\\approx0",
+      "title": "Darcy's_law"
+    }
+  },
+  {
+    "definitions": {
+      "z_{t}": [
+        {
+          "Q176737": "stochastic process (collection of random variables)"
+        }
+      ],
+      "\\lambda_{1}": [
+        "slope coefficient"
+      ],
+      "z_{t-1}": [
+        {
+          "Q176737": "stochastic process (collection of random variables)"
+        }
+      ],
+      "\\varepsilon_{t}": [
+        {
+          "Q176737": "stochastic process (collection of random variables)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "76",
+      "oldId": "10488",
+      "fid": "25",
+      "math_inputtex": " z_{t} = \\lambda_{1}z_{t-1} + \\varepsilon_{t} ",
+      "title": "Unit_root"
+    }
+  },
+  {
+    "definitions": {
+      "b_{3}": [
+        {
+          "Q1413083": "parameter"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "77",
+      "oldId": "22206",
+      "fid": "83",
+      "math_inputtex": "b_3",
+      "title": "Drucker–Prager_yield_criterion"
+    }
+  },
+  {
+    "definitions": {
+      "b_{3}": [
+        {
+          "Q1759756": "Body force"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "78",
+      "oldId": "23061",
+      "fid": "9",
+      "math_inputtex": "b_3",
+      "title": "Antiplane_shear"
+    }
+  },
+  {
+    "definitions": {
+      "W": [
+        {
+          "Q900231": "work (term in thermodynamics)"
+        }
+      ],
+      "V_{1}": [
+        {
+          "Q39297": "volume (quantity of three-dimensional space)"
+        }
+      ],
+      "V_{2}": [
+        {
+          "Q39297": "volume (quantity of three-dimensional space)"
+        }
+      ],
+      "p": [
+        {
+          "Q39552": "pressure"
+        }
+      ],
+      "V": [
+        {
+          "Q39297": "volume (quantity of three-dimensional space)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "79",
+      "oldId": "15872",
+      "fid": "32",
+      "math_inputtex": " \\Delta W = \\int_{V_1}^{V_2} p \\mathrm{d}V \\,\\!",
+      "title": "Table_of_thermodynamic_equations"
+    }
+  },
+  {
+    "definitions": {
+      "f": [
+        {
+          "Q1948412": "morphism (mathematics)"
+        }
+      ],
+      "Z": [
+        {
+          "Q3554818": "projective variety"
+        }
+      ],
+      "n": [
+        {
+          "Q21199": "natural number (numbers used for counting and ordering)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "80",
+      "oldId": "13966",
+      "fid": "2",
+      "math_inputtex": "\\dim f(Z) > n",
+      "title": "Fulton–Hansen_connectedness_theorem"
+    }
+  },
+  {
+    "definitions": {
+      "t": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "e": [
+        {
+          "Q168698": "exponential function (unique function which is its own derivative and equals one at zero)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "81",
+      "oldId": "335",
+      "fid": "16",
+      "math_inputtex": "\\frac{d}{dt} \\log_e t = \\frac{1}{t}.",
+      "title": "E_(mathematical_constant)"
+    }
+  },
+  {
+    "definitions": {
+      "h_{i}": [
+        "classifier"
+      ],
+      "X": [
+        {
+          "Q50701": "variable (a value that can change, usually with a context of an equation or operation)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "82",
+      "oldId": "17232",
+      "fid": "32",
+      "math_inputtex": "h_i : X \\to \\{-1,+1\\}",
+      "title": "BrownBoost"
+    }
+  },
+  {
+    "definitions": {
+      "\\mathrm{seqs}": [
+        "Number of sequences",
+        {
+          "Q11053": "RNA (family of large biological molecules)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "83",
+      "oldId": "21545",
+      "fid": "2",
+      "math_inputtex": "2\\le seqs \\le6",
+      "title": "List_of_RNA_structure_prediction_software"
+    }
+  },
+  {
+    "definitions": {
+      "F": [
+        "set"
+      ],
+      "x": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "y": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "\\mathcal{R}": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "b": [
+        {
+          "Q12503": "integer (number that can be written without a fractional or decimal component)"
+        }
+      ],
+      "n": [
+        {
+          "Q12503": "integer (number that can be written without a fractional or decimal component)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "84",
+      "oldId": "28184",
+      "fid": "6",
+      "math_inputtex": " F = \\{ (x,y) : x \\in \\mathcal{R}^b,\\, y \\in \\mathcal{R}^n,\\; x=y \\}.",
+      "title": "Projections_onto_convex_sets"
+    }
+  },
+  {
+    "definitions": {
+      "X_{i}": [
+        {
+          "Q176623": "random variable (variable whose value is subject to variations due to chance)"
+        }
+      ],
+      "\\omega": [
+        {
+          "Q10290214": "event (in statistics, a set of outcomes to which a probability is assigned)"
+        }
+      ],
+      "\\omega_{i}": [
+        {
+          "Q10290214": "event (in statistics, a set of outcomes to which a probability is assigned)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "85",
+      "oldId": "4212",
+      "fid": "21",
+      "math_inputtex": "X_i(\\omega)=\\omega_i",
+      "title": "Almost_surely"
+    }
+  },
+  {
+    "definitions": {
+      "L": [
+        {
+          "Q505735": "Lagrangian"
+        },
+        "Lagrange function"
+      ],
+      "q_{i}": [
+        {
+          "Q1057607": "Generalized coordinates"
+        }
+      ],
+      "t": [
+        {
+          "Q11471": "time (dimension in which events can be ordered from the past through the present into the future)"
+        }
+      ],
+      "\\dot{q_{i}}": [
+        "generalized velocities",
+        {
+          "Q1057607": "Generalized coordinates"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "86",
+      "oldId": "24328",
+      "fid": "67",
+      "math_inputtex": "\n{\\partial{L}\\over \\partial q_i} = {\\mathrm{d} \\over \\mathrm{d}t}{\\partial{L}\\over \\partial{\\dot{q_i}}}.\n",
+      "title": "Lagrangian_mechanics"
+    }
+  },
+  {
+    "definitions": {
+      "x_{7}": [
+        {
+          "Q5227327": "Data point"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "87",
+      "oldId": "24263",
+      "fid": "100",
+      "math_inputtex": "x_7",
+      "title": "Near_sets"
+    }
+  },
+  {
+    "definitions": {
+      "\\Pi_{n}": [
+        {
+          "Q6901742": "Monomial basis"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "88",
+      "oldId": "2926",
+      "fid": "30",
+      "math_inputtex": "\\Pi_n",
+      "title": "Polynomial_interpolation"
+    }
+  },
+  {
+    "definitions": {
+      "\\sigma": [
+        {
+          "Q159375": "standard deviation  (dispersion of the values ​​of a random variable around its expected value)"
+        }
+      ],
+      "X": [
+        "available assets"
+      ],
+      "T": [
+        {
+          "Q2858846": "Transpose of a linear map"
+        }
+      ],
+      "V": [
+        {
+          "Q1134404": "Covariance matrix"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "89",
+      "oldId": "26177",
+      "fid": "10",
+      "math_inputtex": "\\sigma^2 = X^TVX,",
+      "title": "Mutual_fund_separation_theorem"
+    }
+  },
+  {
+    "definitions": {
+      "\\mathbb{R}": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "n": [
+        {
+          "Q4440864": "dimension (minimum number of coordinates within a space needed to specify any point)"
+        }
+      ],
+      "f": [
+        "integrable function"
+      ],
+      "x": [
+        "variable"
+      ],
+      "B": [
+        {
+          "Q838611": "ball (in mathematics, space inside a sphere)"
+        }
+      ],
+      "x_{0}": [
+        {
+          "Q44946": "point (fundamental object of Euclidean geometry)"
+        }
+      ],
+      "r": [
+        {
+          "Q173817": "radius (segment in a circle and its length)"
+        }
+      ],
+      "S": [
+        "surface"
+      ]
+    },
+    "formula": {
+      "qID": "90",
+      "oldId": "22382",
+      "fid": "3",
+      "math_inputtex": "\\int_{\\mathbb{R}^n}f\\,dx = \\int_0^\\infty\\left\\{\\int_{\\partial B(x_0;r)} f\\,dS\\right\\}\\,dr.",
+      "title": "Coarea_formula"
+    }
+  },
+  {
+    "definitions": {
+      "x": [
+        "x coordinate"
+      ],
+      "p_{x}": [
+        "x momentum"
+      ],
+      "y": [
+        "y coordinate"
+      ],
+      "p_{y}": [
+        "y momentum"
+      ]
+    },
+    "formula": {
+      "qID": "91",
+      "oldId": "18056",
+      "fid": "74",
+      "math_inputtex": "\n\\{x, p_x\\}_{DB} = \\{y, p_y\\}_{DB} = \\frac{1}{2}\n",
+      "title": "Dirac_bracket"
+    }
+  },
+  {
+    "definitions": {
+      "G_{k,\\sigma}": [
+        "substitution"
+      ],
+      "y": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ],
+      "k": [
+        {
+          "Q21199": "natural number (numbers used for counting and ordering)"
+        }
+      ],
+      "\\sigma": [
+        {
+          "Q12916": "real number (quantity along a continuous line)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "92",
+      "oldId": "26815",
+      "fid": "17",
+      "math_inputtex": "G_{k, \\sigma} (y)= 1-(1+ky/\\sigma)^{-1/k} ",
+      "title": "Pickands–Balkema–de_Haan_theorem"
+    }
+  },
+  {
+    "definitions": {
+      "L": [
+        "spaces of operators"
+      ],
+      "H_{B}": [
+        {
+          "Q190056": "Hilbert space"
+        },
+        "state spaces"
+      ],
+      "C": [
+        "space of continuous functions"
+      ],
+      "X": [
+        "some set"
+      ]
+    },
+    "formula": {
+      "qID": "93",
+      "oldId": "7260",
+      "fid": "15",
+      "math_inputtex": "L(H_B) \\otimes C(X)",
+      "title": "Quantum_channel"
+    }
+  },
+  {
+    "definitions": {
+      "\\pi_{i}": [
+        "equilibrium distribution"
+      ],
+      "N": [
+        "Number of particles"
+      ],
+      "i": [
+        "index"
+      ]
+    },
+    "formula": {
+      "qID": "94",
+      "oldId": "22755",
+      "fid": "2",
+      "math_inputtex": "\\pi_i = 2^{-N} \\tbinom Ni",
+      "title": "Ehrenfest_model"
+    }
+  },
+  {
+    "definitions": {
+      "p_{1}": [
+        {
+          "Q10290214": "event (in statistics, a set of outcomes to which a probability is assigned)"
+        }
+      ],
+      "p_{n}": [
+        {
+          "Q10290214": "event (in statistics, a set of outcomes to which a probability is assigned)"
+        }
+      ]
+    },
+    "formula": {
+      "qID": "95",
+      "oldId": "14285",
+      "fid": "1",
+      "math_inputtex": "(\\sqrt{p_1}, \\cdots ,\\sqrt{p_n})",
+      "title": "Fidelity_of_quantum_states"
+    }
+  },
+  {
+    "definitions": {
+      "\\boldsymbol{s}": [
+        "deviatoric part"
+      ]
+    },
+    "formula": {
+      "qID": "96",
+      "oldId": "15596",
+      "fid": "27",
+      "math_inputtex": "\\boldsymbol{s}",
+      "title": "Yield_surface"
+    }
+  },
+  {
+    "definitions": {
+      "J": [
+        {
+          "Q506041": "Jacobian matrix and determinant"
+        }
+      ],
+      "T": [
+        {
+          "Q2858846": "Transpose of a linear map"
+        }
+      ],
+      "W": [
+        "diagonal weight matrix"
+      ],
+      "y": [
+        "residuals"
+      ]
+    },
+    "formula": {
+      "qID": "97",
+      "oldId": "21658",
+      "fid": "67",
+      "math_inputtex": "\\mathbf{J^TW\\  \\Delta y}",
+      "title": "Non-linear_least_squares"
+    }
+  },
+  {
+    "definitions": {
+      "\\bar{V}": [
+        "smallest g"
+      ]
+    },
+    "formula": {
+      "qID": "98",
+      "oldId": "7629",
+      "fid": "87",
+      "math_inputtex": "\\bar V^*",
+      "title": "Markov_decision_process"
+    }
+  },
+  {
+    "definitions": {
+      "n": [
+        "integer"
+      ],
+      "\\delta": [
+        "integer"
+      ]
+    },
+    "formula": {
+      "qID": "99",
+      "oldId": "14812",
+      "fid": "9",
+      "math_inputtex": "\\;\\frac{(n+\\delta-1)(n+\\delta-2)\\cdots n}{(\\delta-1)!}\\;",
+      "title": "Hilbert_series_and_Hilbert_polynomial"
+    }
+  },
+  {
+    "definitions": {
+      "y_{k}": [
+        "convolution"
+      ],
+      "n": [
+        "integer"
+      ]
+    },
+    "formula": {
+      "qID": "100",
+      "oldId": "17319",
+      "fid": "15",
+      "math_inputtex": "y_k[n]",
+      "title": "Overlap–add_method"
+    }
+  }
+]

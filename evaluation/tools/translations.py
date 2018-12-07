@@ -52,7 +52,7 @@ forward_translation_dict = {
     'g_{j}': 'math-g',
     'E_{\\mathrm{r}}': 'math-e',
     '\\lambda': 'math-lambda',
-    'x^{\\nu}': '',
+    'x^{\\nu}': 'math-x',
     'V_{x}': 'math-v',
     'C_{i}': 'math-c',
     '\\pi': 'math-pi',
