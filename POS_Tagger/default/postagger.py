@@ -63,4 +63,4 @@ if __name__ == '__main__':
     for index, fname in enumerate(doc_paths):
         cleanText(doc_names[index], fname, ou_foname)
         if(index%2000 == 0): print("Checkpoint: %s saved - Time: %s" %(fname,(timedelta(seconds= time.monotonic() - start_time))))
-    print('Running-Time: %s' (timedelta(seconds= time.monotonic() - start_time)))
+    print('Running-Time: %s' %(timedelta(seconds= time.monotonic() - start_time)))
