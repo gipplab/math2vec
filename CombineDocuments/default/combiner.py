@@ -29,16 +29,12 @@ start_time = time.monotonic()
 def oneBigFileOutput(files, ofname):
     big_document = open(ofname, 'w+',encoding='utf-8')    
     for index,file in enumerate(files):
-        logs = file.split('/')
-        if(os.stat(file).st_size!=0):#only for files with content
-            if (index % 2000 ==0): print('Processing:: %s' %logs[len(logs)-1])
+            logs = file.split('/')
+            if (index % 3000 ==0): print('Processing:: %s' %logs[len(logs)-1])
             with open(file, 'r', encoding='utf-8') as fin:
                 for line in fin.readlines():
-                    big_document.write(line)
-            big_document.write('\n')
-        else:
-            print('Empty File:: %s' %logs[len(logs)-1])#if file is empty skip it
-            pass   
+                    big_document.write(removeASCIItrash(line))
+            big_document.write('\n') 
     big_document.close()   
 #creates one file with each line being a document in the files list
 
@@ -62,3 +58,8 @@ def fname_splitter(docslist):
         fnames.append(blocks[len(blocks)-1])
     return(fnames)
 #getting the filenames from uri of whatever documents were processed in the input folder   
+
+def removeASCIItrash(words):
+    cwords = words.encode('ascii', 'ignore').decode("utf-8")
+    return (cwords)
+#removing unwanted chars/trash from sentences as strings
