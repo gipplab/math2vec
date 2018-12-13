@@ -65,7 +65,6 @@ module PlaneText
     end
 
     opts.on('-m', '--max-threads NUM', 'Activates a cap for parallel threads (the cap can\'t be higher than the processor count.)') do |num|
-      puts "Na sowas #{num}"
       if num.to_i < 1
         puts "Tried to break the program? Nice try... (set a threads cap higher or equal to 1)"
         exit

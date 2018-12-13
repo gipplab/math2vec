@@ -141,6 +141,7 @@ module PlaneText
 
       progress_data = get_progress_data(@progress_file)
 
+      puts "Collecting files... "
       @unknown_standoffs = Concurrent::Array.new
       all_files = Dir.chdir(@dataset_dir) { |dir|
         if @recursive
@@ -149,8 +150,11 @@ module PlaneText
           Dir['*.{xml,xhtml,html}']
         end
       }
+      puts "done.\n"
 
       num_of_files = all_files.length
+
+      puts "Start processing #{num_of_files} files."
 
       processed_files = @all && [] || progress_data[:processed_files] || all_files
       unprocessed_files = all_files - processed_files
