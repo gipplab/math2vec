@@ -27,6 +27,10 @@ module PlaneText
       exit
     end
 
+    opts.on('-r', '--recursive', 'Parse input path file recursively') do
+      recursive
+    end
+
     %i(independent decoration object metainfo).each do |column|
       opts.on( "-#{column[0]}", "--#{column} SELECTOR", "Classify a selector as #{column}") do |selector|
         changes[column] << selector
@@ -68,7 +72,7 @@ module PlaneText
 
   if output_dir
     unless File.exist?(output_dir)
-      FileUtils.cp_r(input_dir, output_dir)
+      FileUtils.mkdir_p(output_dir)
     end
   end
 
