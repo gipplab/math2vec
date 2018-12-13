@@ -60,7 +60,12 @@ module PaperVu
             Nokogiri::XML(str, nil, 'UTF-8')
           end
         if @opts[:use_xpath]
-          @namespaces = @document.collect_namespaces
+          begin
+            @namespaces = @document.collect_namespaces
+          rescue NoMethodError => err
+            #if namespaces can't be collected -> skip it
+            @namespace = nil
+          end
         else
           @document.remove_namespaces!
           @namespaces = nil
