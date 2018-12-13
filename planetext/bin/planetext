@@ -12,11 +12,14 @@ module PlaneText
   class BadSelector < StandardError; end
   extend PlaneText::Common
 
+  print("Initializing...\n")
+
   changes = Hash.new { |h, k| h[k] = [] }
   output_dir = nil
   limit = 0
   verbose = false
   recursive = false
+  max_threads = 1
 
   option_parser = OptionParser.new do |opts|
     planetext = File.basename($0)
@@ -32,11 +35,11 @@ module PlaneText
       recursive = true
     end
 
-    opts.on('-pr-h', '--preserver-hierarchy', 'Preserve the directory hierarchy from the input directory (only makes sense if -r is set)') do
+    opts.on('-p', '--preserver-hierarchy', 'Preserve the directory hierarchy from the input directory (only makes sense if -r is set)') do
       @preserve_hierarchy = true
     end
 
-    opts.on('-e-xml', '--enriched-xml', 'Create an enriched xml file per processed file') do
+    opts.on('-e', '--enriched-xml', 'Create an enriched xml file per processed file') do
       @enriched_xml = true
     end
 
@@ -59,6 +62,15 @@ module PlaneText
 
     opts.on('-v', '--[no-]verbose', 'Display the current selectors and progress') do |bool|
       verbose = bool
+    end
+
+    opts.on('-m', '--max-threads NUM', 'Activates a cap for parallel threads (the cap can\'t be higher than the processor count.)') do |num|
+      puts "Na sowas #{num}"
+      if num.to_i < 1
+        puts "Tried to break the program? Nice try... (set a threads cap higher or equal to 1)"
+        exit
+      end
+      max_threads = num.to_i
     end
 
     opts.separator ''
@@ -130,7 +142,7 @@ module PlaneText
   end
 
   limit = :all if output_dir
-  searcher = UnknownSearcher.new(input_dir, progress_file, recursive, limit)
+  searcher = UnknownSearcher.new(input_dir, progress_file, recursive, max_threads, limit)
 
   input_path = Pathname.new(input_dir).realpath
   output_path = Pathname.new(output_dir).realpath
