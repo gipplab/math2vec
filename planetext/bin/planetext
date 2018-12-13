@@ -131,37 +131,37 @@ module PlaneText
 
   limit = :all if output_dir
   searcher = UnknownSearcher.new(input_dir, progress_file, recursive, limit)
-  if output_dir
-    input_path = Pathname.new(input_dir).realpath
-    output_path = Pathname.new(output_dir).realpath
 
-    searcher.per_doc do |xml_file, doc|
-      filepath = Pathname.new(xml_file).relative_path_from(input_path)
-      out = output_path
-      if @preserve_hierarchy
-        unless File.directory?(out + filepath.parent)
-          FileUtils.mkdir_p(out + filepath.parent)
-        end
-        out = out + filepath
-      else
-        out = out + filepath.basename
+  input_path = Pathname.new(input_dir).realpath
+  output_path = Pathname.new(output_dir).realpath
+
+  searcher.per_doc do |xml_file, doc|
+    filepath = Pathname.new(xml_file).relative_path_from(input_path)
+    out = output_path
+    if @preserve_hierarchy
+      unless File.directory?(out + filepath.parent)
+        FileUtils.mkdir_p(out + filepath.parent)
       end
+      out = out + filepath
+    else
+      out = out + filepath.basename
+    end
 
-      if @enriched_xml
-        File.open(out, 'w') do |f|
-          f.write(doc.enriched_xml)
-        end
-      end
-
-      File.open(out.sub_ext('.txt'), 'w') do |f|
-        f.write(doc.text)
-      end
-
-      File.open(out.sub_ext('.ann'), 'w') do |f|
-        f.puts(doc.brat_ann)
+    if @enriched_xml
+      File.open(out, 'w') do |f|
+        f.write(doc.enriched_xml)
       end
     end
+
+    File.open(out.sub_ext('.txt'), 'w') do |f|
+      f.write(doc.text)
+    end
+
+    File.open(out.sub_ext('.ann'), 'w') do |f|
+      f.puts(doc.brat_ann)
+    end
   end
+
   searcher.run
 
   searcher.unknown_standoffs.each do |standoff|
