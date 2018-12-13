@@ -91,9 +91,10 @@ module PlaneText
     using HashRefinement
 
     attr_reader :selectors, :unknown_standoffs, :done, :total
-    def initialize(dataset_dir, progress_file, limit=1)
+    def initialize(dataset_dir, progress_file, recursive, limit=1)
       @dataset_dir = dataset_dir
       @progress_file = progress_file
+      @recursive = recursive
       @all = limit == :all
       @limit = (Integer === limit && limit > 0) ? limit : nil
       @max_threads = Concurrent.processor_count # returns CPUs
@@ -102,7 +103,6 @@ module PlaneText
       else
         puts "Initialize parallel working on #{@max_threads} threads."
       end
-      @bulk_size = @max_threads
     end
 
     def per_doc(&block)
@@ -114,7 +114,11 @@ module PlaneText
 
       @unknown_standoffs = Concurrent::Array.new
       all_files = Dir.chdir(@dataset_dir) { |dir|
-        Dir['**/*.{xml,xhtml,html}']
+        if @recursive
+          Dir['**/*.{xml,xhtml,html}']
+        else
+          Dir['*.{xml,xhtml,html}']
+        end
       }
 
       processed_files = @all && [] || progress_data[:processed_files] || all_files
@@ -129,6 +133,8 @@ module PlaneText
         replaced: to_xpath(progress_data[:tags][:object]),
         removed: to_xpath(progress_data[:tags][:metainfo])
       }
+
+      thread_pool = Concurrent::FixedThreadPool.new(@max_threads)
 
       dirty_files = 0
       proc_files = 0
@@ -146,73 +152,23 @@ module PlaneText
         0
       )
 
-      # let's try bulk operations
-      unprocessed_files.each_slice(@bulk_size) do |xml_file_bulk|
-        loaded_xml_files = Concurrent::Array.new
-        loaded_xml_opts = Concurrent::Array.new
-        xml_file_paths = Concurrent::Array.new
+      unprocessed_files.each do |xml_file_name|
+        xml_file = File.absolute_path(xml_file_name, @dataset_dir)
+        print("\n#{xml_file}\n")
+        xml = File.read(xml_file)
+        read_as_html = xml_file_name[-5..-1] == '.html'
+        write_as_xhtml = xml_file_name[-5..-1] != '.xml'
+        opts = {
+          file_name: xml_file_name,
+          read_as_html: read_as_html,
+          write_as_xhtml: write_as_xhtml,
+          deactivate_scripts: write_as_xhtml
+        }.merge(@selectors)
 
-        time = (Time.now.to_f - start_time)
-        printf(
-          "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%02d [reading]\r",
-          current_process,
-          "=" * (current_process/2),
-          proc_files,
-          NUM_OF_FILES,
-          (time/3600),
-          (time/60)%60,
-          time%60
-        )
+        thread_pool.post do
+          doc = extract(xml, opts)
 
-        # read bulk of files to cache
-        xml_file_bulk.each do |xml_file_name|
-          xml_file = File.absolute_path(xml_file_name, @dataset_dir)
-          xml_file_paths.push(xml_file)
-          loaded_xml_files.push(File.read(xml_file))
-          read_as_html = xml_file_name[-5..-1] == '.html'
-          write_as_xhtml = xml_file_name[-5..-1] != '.xml'
-          opts = {
-            file_name: xml_file_name,
-            read_as_html: read_as_html,
-            write_as_xhtml: write_as_xhtml,
-            deactivate_scripts: write_as_xhtml
-          }.merge(@selectors)
-          loaded_xml_opts.push(opts)
-        end
-
-        time = (Time.now.to_f - start_time)
-        printf(
-          "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%02d [processing]\r",
-          current_process,
-          "=" * (current_process/2),
-          proc_files,
-          NUM_OF_FILES,
-          (time/3600),
-          (time/60)%60,
-          time%60
-        )
-
-        thread_pool = Concurrent::FixedThreadPool.new(@max_threads-1)
-        processed_xml_files = Concurrent::Array.new
-
-        # parallel processing of bulk of cached files
-        while !loaded_xml_opts.empty? do
-          thread_pool.post do
-            processed_xml_files.push(
-              extract(loaded_xml_files.pop,loaded_xml_opts.pop)
-            )
-          end
-        end
-
-        thread_pool.shutdown
-        thread_pool.wait_for_termination
-
-        # writing files
-        while !processed_xml_files.empty? do
-          doc = processed_xml_files.pop
-          xml_file_name = xml_file_bulk.pop
-
-          @per_doc[xml_file_paths.pop, doc] if @per_doc # writes files
+          @per_doc[xml_file, doc] if @per_doc # writes files
 
           # atomic operations are not thread safe
           @unknown_standoffs += doc.unknown_standoffs
@@ -230,18 +186,20 @@ module PlaneText
           time = (Time.now.to_f - start_time)
 
           printf(
-            "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%02d [write %d]\r",
+            "Processed %3d%% [%-50s] %06d/%06d %02d:%02d:%02d \r",
             current_process,
             "=" * (current_process/2),
             proc_files,
             NUM_OF_FILES,
             (time/3600),
             (time/60)%60,
-            time%60,
-            proc_files
+            time%60
           )
         end
       end
+
+      thread_pool.shutdown
+      thread_pool.wait_for_termination
 
       print "\nProcess terminate. Cleaning up...\n"
 
