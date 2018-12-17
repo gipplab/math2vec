@@ -42,13 +42,13 @@ def cleanText(fname, input_file_abs, output_path):
             
             words = str(lines) #stream into string
             words = tokenizeWords(words) #tokenize things for tagger
-            words = applyPOStag(words) #POS-tagger via NLTK  
-            words = makeLowerCase(words)
-            words = removeStopWords(words) #get rid of stop words     
-            words = cleanStringPunctuation(words) #remove punctuation and weird chars
-            words = removePluras(words)
+            #words = applyPOStag(words) #POS-tagger via NLTK  
+            words = makeLowerCase_notags(words) # makeLowerCase_tags(words) if applyPOS(words) is executed
+            #words = removeStopWords(words) #get rid of stop words     
+            #words = cleanStringPunctuation(words) #remove punctuation and weird chars
+            #words = removePluras(words)
             if not words:continue #in case after all pre-processing cleans all words we skip this sentence
-            words = concatenateTAG(words)
+            #words = concatenateTAG(words)
             outputFile(words, ops)
         ops.close()
         fin.close()
@@ -96,7 +96,7 @@ def tokenizeWords(sentence):
     return(nltk.word_tokenize(sentence))
 #tokenize words - makes POS_Tagger mor efficient
 
-def makeLowerCase(words):
+def makeLowerCase_tags(words):
     lower_case = []
     for word,tag in words:
         if(word.startswith('math')):
@@ -104,7 +104,20 @@ def makeLowerCase(words):
         else:
             lower_case.append((word.lower(),tag))
     return(lower_case)
+#everything in lower case from string - considering POS tags
+
+def makeLowerCase_notags(words):
+    lower_case = []
+    
+    for word in words:
+        if(word.startswith('math')):
+            print(word)
+            lower_case.append(word)
+        else:
+            lower_case.append(word.lower())
+    return(lower_case)
 #everything in lower case from string
+
 
 def removePluras(words):
     singles=[]

@@ -13,13 +13,15 @@ Folder used to read/write should be in the same level at 'default' package
   
 UPDATES:
 ==========
+[2018-12-14]
+1. Added one extra filter option to just lowercase words without any tag
+2. cleanText calls all the filter-functions comment and/or uncomment the ones desired
+
 [2018-12-07]
 1. removePlurals() using `inflection`
 2. Included all POS tags from NLTK in the end od `file_manipulation.py`
 3. Simple refactoring
 4. Fixed relative imports from default. package
-
-
 
 [2018-12-04]
 1. Major changes in the code to work with (word,pos_tag)
