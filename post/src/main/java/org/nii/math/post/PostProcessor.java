@@ -6,8 +6,7 @@ import org.nii.math.post.processor.AbstractDataProcessor;
 import org.nii.math.post.processor.ParagraphParser;
 import org.nii.math.post.processor.SentenceSplitter;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -22,9 +21,9 @@ public class PostProcessor {
 
     private static final Logger LOG = LogManager.getLogger(PostProcessor.class.getName());
 
-    private static final int maxDocs = 137_864; // no_problems data
+    private static int maxDocs = 137_864; // no_problems data
     private static int currentlyProcessedDocs = 0;
-    private static final int parallelism = 16;
+    private static int parallelism = 8;
 
     private UpdateProgress progressRunnable;
 
@@ -146,6 +145,33 @@ public class PostProcessor {
         if ( in == null || out == null ){
             System.out.println("You must specify in and output directories. Type -h for requesting manual.");
             return;
+        }
+
+        try {
+            parallelism = Runtime.getRuntime().availableProcessors();
+        } catch (Exception e){
+            System.out.println("Cannot determine available CPUs. So we run on default settings.");
+        }
+
+        System.out.println("Run on " + parallelism + " CPUs.");
+
+        System.out.println("Asking the system for the files in the input direcotry.");
+        try {
+            ProcessBuilder processBuilder =
+                    new ProcessBuilder("./filecounter.sh", in);
+            processBuilder.directory(Paths.get(".").toFile());
+            Process process = processBuilder.start();
+            try ( BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()))){
+                String result = br.readLine();
+                maxDocs = Integer.parseInt(result)/2;
+                System.out.println("Determined " + maxDocs + " existing files.");
+                process.waitFor();
+            } catch (Exception e){
+                e.printStackTrace();
+                throw e;
+            }
+        } catch (Exception e){
+            System.out.println("Cannot determine how many files are in the directory.");
         }
 
         PostProcessor splitter = new PostProcessor(in, out);
