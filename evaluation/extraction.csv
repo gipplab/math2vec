@@ -1,0 +1,425 @@
+1,Van_der_Waerden's_theorem,W,[[Van der Waerden number]]
+1,Van_der_Waerden's_theorem,k,[[arithmetic progression]]
+1,Van_der_Waerden's_theorem,k,[[integer]]
+1,Van_der_Waerden's_theorem,k,integers
+2,Bounded_variation,X,[[normed vector space]]
+2,Bounded_variation,X,values
+3,Lindemann–Weierstrass_theorem,n,[[algebraic number]]
+3,Lindemann–Weierstrass_theorem,n,[[algebraically independent]]
+3,Lindemann–Weierstrass_theorem,n,[[transcendence degree]]
+3,Lindemann–Weierstrass_theorem,n,algebraic numbers
+3,Lindemann–Weierstrass_theorem,p,[[p-adic exponential function]]
+3,Lindemann–Weierstrass_theorem,p,[[prime number]]
+3,Lindemann–Weierstrass_theorem,p,adic conjecture
+3,Lindemann–Weierstrass_theorem,p,adic numbers
+3,Lindemann–Weierstrass_theorem,p,exp
+4,Orbit_portrait,c,[[complex quadratic polynomial]]
+4,Orbit_portrait,c,center
+4,Orbit_portrait,c,Parabolic orbit portrait
+4,Orbit_portrait,c,Parameter
+4,Orbit_portrait,f_{c},[[Complex_quadratic_polynomial]]
+4,Orbit_portrait,f_{c},infinity
+4,Orbit_portrait,f_{c},iteration
+5,First-order_logic,P,example
+5,First-order_logic,P,uppercase letters
+5,First-order_logic,x,alphabet
+5,First-order_logic,x,man
+5,First-order_logic,x,Phil
+5,First-order_logic,x,philosopher
+5,First-order_logic,x,variables
+5,First-order_logic,y,alphabet
+7,Isolation_lemma,\alpha,threshold
+7,Isolation_lemma,\alpha,weight
+7,Isolation_lemma,x,element
+7,Isolation_lemma,x,elements
+7,Isolation_lemma,x,weight
+8,Singularity_spectrum,x,point
+9,Time-evolving_block_decimation,N,[[qubit]]
+9,Time-evolving_block_decimation,N,bipartite splitting
+9,Time-evolving_block_decimation,N,chain
+9,Time-evolving_block_decimation,\Gamma,special case
+9,Time-evolving_block_decimation,\Psi,natural way
+9,Time-evolving_block_decimation,\Psi,such state
+11,Differentiation_rules,c,complex number
+11,Differentiation_rules,c,derivative
+11,Differentiation_rules,c,number
+11,Differentiation_rules,c,yields
+11,Differentiation_rules,x,function
+11,Differentiation_rules,x,respect
+12,Fermat's_spiral,\theta,angle
+12,Fermat's_spiral,n,center
+12,Fermat's_spiral,n,index number
+13,Consistency_criterion,\mathcal{R},Kemeny-Young score
+14,Basis_(universal_algebra),\ell,certain functions
+14,Basis_(universal_algebra),m,argument
+15,Adequality,b,length
+15,Adequality,b,maximal area
+15,Adequality,b,perimeter
+15,Adequality,b,rectangle
+15,Adequality,b,segment
+15,Adequality,b,segments
+15,Adequality,x,polynomial P
+15,Adequality,x,segments
+16,Mason–Weaver_equation,\omega_{k},eigenfrequencies
+16,Mason–Weaver_equation,\omega_{k},frequencies
+16,Mason–Weaver_equation,\omega_{k},value
+17,Kernel_Fisher_discriminant_analysis,\mathbf{m}_{1},class
+18,Implicit_solvation,r_{ij},distance
+18,Implicit_solvation,r_{ij},particle
+19,Partition_function_(statistical_mechanics),E_{j},same energy level
+19,Partition_function_(statistical_mechanics),Z,classical form
+19,Partition_function_(statistical_mechanics),Z,Hamiltonian
+19,Partition_function_(statistical_mechanics),j,degeneracy factor
+19,Partition_function_(statistical_mechanics),j,energy levels
+20,Color_balance,S',tristimulus values
+21,Hilbert's_theorem_(differential_geometry),S',geometric surface
+21,Hilbert's_theorem_(differential_geometry),S',plane
+21,Hilbert's_theorem_(differential_geometry),S',real space
+22,Mayer–Vietoris_sequence,i,maps
+22,Mayer–Vietoris_sequence,k,sphere
+23,Graphlets,D,distance
+23,Graphlets,D,graphlet frequency distance
+23,Graphlets,D,total distance
+23,Graphlets,G,graph
+23,Graphlets,G,graphlets
+23,Graphlets,G,graphs
+23,Graphlets,G,network
+23,Graphlets,H,graphs
+23,Graphlets,H,networks
+23,Graphlets,H,particular orbit
+23,Graphlets,i,2-5-node graphlet
+23,Graphlets,i,graphlets
+23,Graphlets,i,network
+23,Graphlets,i,orbit
+23,Graphlets,i,type
+25,Lattice_problem,B,algorithm
+25,Lattice_problem,B,basis
+25,Lattice_problem,B,lattice basis
+25,Lattice_problem,B,number
+25,Lattice_problem,B,output
+25,Lattice_problem,L,lattice
+25,Lattice_problem,d,number
+26,Huffman_coding,C,code
+26,Huffman_coding,C,Output
+26,Huffman_coding,C,weighted path length
+26,Huffman_coding,L,maximum length
+27,Dispersion_(optics),c,[[speed of light]]
+27,Dispersion_(optics),c,formula
+27,Dispersion_(optics),n,[[refractive index]]
+27,Dispersion_(optics),n,light
+27,Dispersion_(optics),n,refraction indices
+27,Dispersion_(optics),n,vacuum
+27,Dispersion_(optics),n,wave
+27,Dispersion_(optics),n,wavelength
+27,Dispersion_(optics),v,[[phase velocity]]
+27,Dispersion_(optics),v,formula
+27,Dispersion_(optics),v,group velocity
+27,Dispersion_(optics),v,wave
+28,Allan_variance,\tau,measures
+28,Allan_variance,\tau,observation
+28,Allan_variance,\tau,observation time
+28,Allan_variance,\tau,values
+30,Vienna_rectifier,\phi_{1},period
+30,Vienna_rectifier,\phi_{1},phase
+31,Modigliani–Miller_theorem,T_{c},tax rate
+32,Proximity_effect_(superconductivity),T_{c},[[critical temperature]]
+32,Proximity_effect_(superconductivity),T_{c},proximity effect enhancement
+32,Proximity_effect_(superconductivity),T_{c},superconductor
+33,Multicritical_point,T_{c},[[ferromagnetic]]
+33,Multicritical_point,T_{c},point
+33,Multicritical_point,T_{c},temperature
+33,Multicritical_point,T_{c},transition temperature
+34,Jenkins–Traub_algorithm,P,zeros
+34,Jenkins–Traub_algorithm,X,degree
+35,Doomsday_argument,k,valid distribution
+35,Doomsday_argument,k,value
+35,Doomsday_argument,n,absolute position
+35,Doomsday_argument,n,fractional position
+35,Doomsday_argument,n,position
+35,Doomsday_argument,n,total population
+36,Divisor_function,a_{i},maximum power
+36,Divisor_function,a_{i},prime factor
+36,Divisor_function,i,prime factor
+36,Divisor_function,n,[[divides]]
+36,Divisor_function,n,[[divisor]]
+36,Divisor_function,n,Divisor
+36,Divisor_function,n,divisors
+36,Divisor_function,n,function σ0
+36,Divisor_function,n,function σ1
+36,Divisor_function,n,Sigma
+36,Divisor_function,n,Sum
+36,Divisor_function,p_{i},binary selection
+36,Divisor_function,p_{i},maximum power
+36,Divisor_function,p_{i},sequence
+37,LTI_system_theory,H,system function
+37,LTI_system_theory,\omega,[[Continuum (set theory)]]
+37,LTI_system_theory,h,impulse response
+37,LTI_system_theory,h,system
+37,LTI_system_theory,h,weighting function
+37,LTI_system_theory,t,amount
+37,LTI_system_theory,t,changes
+37,LTI_system_theory,t,input signal
+37,LTI_system_theory,t,output signal
+37,LTI_system_theory,t,time
+38,Phase-shift_keying,\pi,DQPSK
+38,Phase-shift_keying,\pi,QPSK
+38,Phase-shift_keying,\pi,radians
+39,Binomial_theorem,k,factors
+39,Binomial_theorem,n,[[positive integer]]
+39,Binomial_theorem,n,[[sum]]
+39,Binomial_theorem,n,coefficients
+39,Binomial_theorem,x,power
+40,Rate_equation,A,concentration
+40,Rate_equation,A,species
+40,Rate_equation,A,Zero-order reaction
+40,Rate_equation,k,coefficient
+40,Rate_equation,k,conditions
+40,Rate_equation,t,straight line
+40,Rate_equation,t,time
+41,Martingale_(betting_system),q,tosses
+42,Borsuk's_conjecture,\alpha,correct order
+42,Borsuk's_conjecture,\alpha,magnitude
+42,Borsuk's_conjecture,d,[[Compact space]]
+42,Borsuk's_conjecture,d,[[Set (mathematics)]]
+42,Borsuk's_conjecture,d,[[subset]]
+42,Borsuk's_conjecture,d,ball
+42,Borsuk's_conjecture,d,dimensional ball
+43,Theoretical_motivation_for_general_relativity,A,general relativity
+43,Theoretical_motivation_for_general_relativity,A,key advantage
+43,Theoretical_motivation_for_general_relativity,A,Theoretical motivation
+43,Theoretical_motivation_for_general_relativity,B,ambiguity
+43,Theoretical_motivation_for_general_relativity,G,[[gravitational constant]]
+43,Theoretical_motivation_for_general_relativity,c,[[speed of light]]
+43,Theoretical_motivation_for_general_relativity,c,proper time interval
+43,Theoretical_motivation_for_general_relativity,c,times
+44,Q-Vectors,\beta,[[ideal gas constant]]
+44,Q-Vectors,\beta,latitudinal change
+44,Q-Vectors,f_{0},[[Coriolis parameter]]
+44,Q-Vectors,y,component
+44,Q-Vectors,y,quasi-geostrophic momentum equation
+44,Q-Vectors,y,thermal wind equation
+45,Stencil_code,I_{c},corresponding tuple
+45,Stencil_code,I_{c},neighbors indices
+45,Stencil_code,I_{c},tuple
+46,Geometric_algebra,A,Algebraic geometry
+46,Geometric_algebra,A,basis
+46,Geometric_algebra,A,geometric algebra
+46,Geometric_algebra,A,multivector
+46,Geometric_algebra,M,reflection versor
+46,Geometric_algebra,\alpha,[[automorphism]]
+47,Stochastic_game,\Gamma_{\infty},game
+47,Stochastic_game,\Gamma_{\infty},stochastic game
+48,331_model,I,parameters
+49,Sigma_additivity,A,[[disjoint set]]
+49,Sigma_additivity,A,consequence
+49,Sigma_additivity,\mu,function
+50,Marcus_theory,\lambda_{in},expression
+52,Backstepping,V_{x},[[Lyapunov function]]
+52,Backstepping,V_{x},function
+52,Backstepping,V_{x},stable subsystem
+52,Backstepping,\dot{\mathbf{x}},effect
+52,Backstepping,\dot{\mathbf{x}},part
+52,Backstepping,\dot{u}_{x},control
+52,Backstepping,\dot{u}_{x},control law
+52,Backstepping,\dot{u}_{x},term
+52,Backstepping,\mathbf{x},subsystem
+52,Backstepping,e_{1},state
+52,Backstepping,e_{1},system
+52,Backstepping,g_{x},system
+52,Backstepping,k_{1},control law
+52,Backstepping,k_{1},convergence rate
+52,Backstepping,k_{1},gain
+52,Backstepping,k_{1},parameter
+52,Backstepping,u_{1},control
+52,Backstepping,u_{x},choice
+52,Backstepping,u_{x},control
+52,Backstepping,u_{x},system
+52,Backstepping,v_{1},control
+52,Backstepping,v_{1},control law
+52,Backstepping,v_{1},new control
+52,Backstepping,z_{1},control
+52,Backstepping,z_{1},drive
+52,Backstepping,z_{1},next state
+52,Backstepping,z_{1},subsystem
+53,Stochastic_volatility,\sigma,constant volatility
+53,Stochastic_volatility,\sigma,security price
+53,Stochastic_volatility,\sigma,stock prices
+54,Separation_logic,\mathsf{fv},free variable
+55,Image_moment,I,image
+55,Image_moment,I,pixel intensities
+55,Image_moment,x,continuous function
+55,Image_moment,x,pixel intensities
+55,Image_moment,y,[[Moment (mathematics)]]
+55,Image_moment,y,raw image moments
+56,Geostrophic_wind,\boldsymbol{F}_{r},air pressure
+56,Geostrophic_wind,\boldsymbol{F}_{r},friction
+57,Ext_functor,A,Mod
+57,Ext_functor,B,Hom
+57,Ext_functor,B,Mod
+58,Covariant_derivative,T,cotangent bundle
+58,Covariant_derivative,T,covariant derivative
+58,Covariant_derivative,T,tensor field
+58,Covariant_derivative,Y,covariant derivative
+59,Anderson_localization,C,.794
+59,Anderson_localization,C,Conti
+59,Anderson_localization,C,Fratalocchi
+59,Anderson_localization,C,Hefei
+59,Anderson_localization,\psi,probability distribution
+59,Anderson_localization,d,dimensional lattice
+59,Anderson_localization,d,following
+60,Trajectory_of_a_projectile,g,[[gravitational acceleration]]
+60,Trajectory_of_a_projectile,v,magnitude
+60,Trajectory_of_a_projectile,v,projectile
+60,Trajectory_of_a_projectile,v,velocity
+60,Trajectory_of_a_projectile,x,arbitrary distance
+60,Trajectory_of_a_projectile,x,distance
+60,Trajectory_of_a_projectile,x,Height
+60,Trajectory_of_a_projectile,y,altitude
+60,Trajectory_of_a_projectile,y,height
+60,Trajectory_of_a_projectile,y,projectile
+62,Spectrum_(functional_analysis),I,[[identity operator]]
+62,Spectrum_(functional_analysis),I,[[inverse function]]
+62,Spectrum_(functional_analysis),I,inverse
+62,Spectrum_(functional_analysis),I,linear operator
+62,Spectrum_(functional_analysis),T,[[inverse function]]
+62,Spectrum_(functional_analysis),T,linear operator
+62,Spectrum_(functional_analysis),T,operator
+62,Spectrum_(functional_analysis),\lambda,eigenvalue
+62,Spectrum_(functional_analysis),\lambda,scalars
+63,Multivariate_normal_distribution,\rho,[[Pearson product-moment correlation coefficient]]
+63,Multivariate_normal_distribution,\rho,correlation parameter
+63,Multivariate_normal_distribution,\rho,increases
+63,Multivariate_normal_distribution,x,[[covariance matrix]]
+63,Multivariate_normal_distribution,x,random vector
+63,Multivariate_normal_distribution,y,plane
+64,Algebraically_closed_group,x,element
+64,Algebraically_closed_group,x,equations
+64,Algebraically_closed_group,x,group
+65,Analytic_capacity,H,[[Hausdorff dimension]]
+65,Analytic_capacity,K,[[compact subset]]
+65,Analytic_capacity,K,[[complex plane]]
+65,Analytic_capacity,K,analytic functions
+66,Block_cipher_mode_of_operation,x,bits
+66,Block_cipher_mode_of_operation,x,ciphertext
+66,Block_cipher_mode_of_operation,x,plaintext
+67,Partial_derivative,f,function
+67,Partial_derivative,f,partial derivative
+67,Partial_derivative,f,respect
+67,Partial_derivative,x,respect
+68,Poset_game,P,[[partially ordered set]]
+68,Poset_game,P_{x},Grundy
+68,Poset_game,P_{x},move
+68,Poset_game,P_{x},other hand
+68,Poset_game,P_{x},value
+68,Poset_game,a,[[partially ordered set]]
+68,Poset_game,a,[[poset]]
+68,Poset_game,a,players
+68,Poset_game,a,point
+68,Poset_game,x,[[covering relation]]
+68,Poset_game,x,element
+68,Poset_game,x,point
+68,Poset_game,x,poset
+70,Legendre_transformation,f,[[convex conjugate]]
+70,Legendre_transformation,f,convex function
+70,Legendre_transformation,f,function
+70,Legendre_transformation,p,slope
+70,Legendre_transformation,v,convex function
+70,Legendre_transformation,v,function
+70,Legendre_transformation,v,Hamiltonian function
+70,Legendre_transformation,x,[[dot product]]
+70,Legendre_transformation,y,independent variables
+71,Cooperative_diversity,"h_{r,s}",destination nodes
+71,Cooperative_diversity,"h_{r,s}",noise signal
+72,Algebraic_K-theory,K,[[]]
+72,Algebraic_K-theory,K,theory
+72,Algebraic_K-theory,M,module
+72,Algebraic_K-theory,M,rank
+72,Algebraic_K-theory,a,[[ideal class group]]
+72,Algebraic_K-theory,a,conjecture
+72,Algebraic_K-theory,a,ring
+72,Algebraic_K-theory,a,sequence
+72,Algebraic_K-theory,k,[[field (mathematics)]]
+72,Algebraic_K-theory,k,[[vector space]]
+72,Algebraic_K-theory,k,computations
+72,Algebraic_K-theory,k,field
+73,Cone_of_curves,C,1-cycles
+73,Cone_of_curves,C,intersections
+73,Cone_of_curves,C,irreducible curve
+73,Cone_of_curves,K_{X},curves
+73,Cone_of_curves,K_{X},intersection
+74,Geometrothermodynamics,n,indices
+74,Geometrothermodynamics,n,number
+75,Darcy's_law,u_{i},velocity
+75,Darcy's_law,u_{i},viscosity
+76,Unit_root,\lambda_{1},slope coefficient
+78,Antiplane_shear,b_{3},body force
+79,Table_of_thermodynamic_equations,V,Isochoric transition
+79,Table_of_thermodynamic_equations,V,pressure
+79,Table_of_thermodynamic_equations,p,gas law
+79,Table_of_thermodynamic_equations,p,Ideal
+79,Table_of_thermodynamic_equations,p,Isobaric transition
+79,Table_of_thermodynamic_equations,p,Isobaric Δ
+79,Table_of_thermodynamic_equations,p,pressure
+80,Fulton–Hansen_connectedness_theorem,Z,projective variety
+80,Fulton–Hansen_connectedness_theorem,Z,theorem
+80,Fulton–Hansen_connectedness_theorem,f,natural inclusion
+81,E_(mathematical_constant),e,number
+81,E_(mathematical_constant),e,unique value
+81,E_(mathematical_constant),t,years
+81,E_(mathematical_constant),t,yield
+85,Almost_surely,X_{i},outcome
+85,Almost_surely,X_{i},records
+86,Lagrangian_mechanics,L,preceding equation
+86,Lagrangian_mechanics,q_{i},number
+86,Lagrangian_mechanics,t,=-LRB-
+86,Lagrangian_mechanics,t,initial state
+86,Lagrangian_mechanics,t,time
+88,Polynomial_interpolation,\Pi_{n},[[monomial basis]]
+88,Polynomial_interpolation,\Pi_{n},[[vector space]]
+88,Polynomial_interpolation,\Pi_{n},polynomials
+88,Polynomial_interpolation,\Pi_{n},vector space
+89,Mutual_fund_separation_theorem,T,[[transpose]]
+89,Mutual_fund_separation_theorem,V,asset returns
+89,Mutual_fund_separation_theorem,X,[[first-order condition]]
+89,Mutual_fund_separation_theorem,X,asset quantities
+89,Mutual_fund_separation_theorem,X,available assets
+89,Mutual_fund_separation_theorem,X,optimal vector
+89,Mutual_fund_separation_theorem,X,provisional solution
+89,Mutual_fund_separation_theorem,X,respect
+89,Mutual_fund_separation_theorem,X,terms
+89,Mutual_fund_separation_theorem,X,vector
+89,Mutual_fund_separation_theorem,\sigma,[[matrix algebra]]
+89,Mutual_fund_separation_theorem,\sigma,subject
+89,Mutual_fund_separation_theorem,\sigma,variance
+90,Coarea_formula,n,function
+90,Coarea_formula,n,open set
+91,Dirac_bracket,x,plane
+91,Dirac_bracket,y,loss
+91,Dirac_bracket,y,plane
+92,Pickands–Balkema–de_Haan_theorem,\sigma,[[expected value]]
+92,Pickands–Balkema–de_Haan_theorem,\sigma,[[Exponential distribution]]
+92,Pickands–Balkema–de_Haan_theorem,\sigma,[[Uniform distribution (continuous)]]
+93,Quantum_channel,C,algebra
+93,Quantum_channel,C,algebras
+93,Quantum_channel,C,continuous functions
+93,Quantum_channel,C,map
+93,Quantum_channel,H_{B},state spaces
+93,Quantum_channel,L,operators
+93,Quantum_channel,L,spaces
+93,Quantum_channel,X,continuous functions
+94,Ehrenfest_model,N,containers
+94,Ehrenfest_model,N,model
+94,Ehrenfest_model,N,particles
+94,Ehrenfest_model,i,[[Continuous-time Markov process]]
+96,Yield_surface,\boldsymbol{s},Cauchy stress
+96,Yield_surface,\boldsymbol{s},part
+96,Yield_surface,\boldsymbol{s},principal values
+97,Non-linear_least_squares,y,errors
+97,Non-linear_least_squares,y,log
+98,Markov_decision_process,\bar{V},function
+98,Markov_decision_process,\bar{V},order
+99,Hilbert_series_and_Hilbert_polynomial,\delta,homogeneous polynomial
+99,Hilbert_series_and_Hilbert_polynomial,n,dimension
+99,Hilbert_series_and_Hilbert_polynomial,n,integer
+99,Hilbert_series_and_Hilbert_polynomial,n,vector space
+100,Overlap–add_method,n,short segments

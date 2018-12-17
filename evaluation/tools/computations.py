@@ -1,7 +1,13 @@
 import smart_open
 import csv
 import json
+import re
+
 import gensim
+from gensim import matutils
+
+import numpy as np
+from numpy import array
 
 from scipy import spatial
 
@@ -129,6 +135,52 @@ class DefinienIdentifier:
         text_vec = self.model.infer_vector(text_arr)
         return self.doc2vec.most_similar([text_vec], topn=self.d2v_topn)
 
+    def score_extraction_csv(self, data):
+        # first get all entries per identifier
+        pattern = '\[{0,2}([\w ]*)]{0,2}'
+        output = []
+        for id in range(len(data)):
+            curr_id = data[id][0]
+            curr_identifier = data[id][2]
+            words = [ re.search(pattern, data[id][3]).group(1) ]
+            for same_idx in range(id, len(data)):
+                if curr_id != data[same_idx][0] or curr_identifier != data[same_idx][2]:
+                    break
+                words.append( re.search(pattern, data[same_idx][3]).group(1) )
+                id = same_idx
+
+    def get_score(self, identifier, words):
+        t_identifier = forward_translation(identifier)
+
+        scores = []
+        for word in words:
+            w_vecs = [w for w in word.split().lower() if self.word2vec.vocab]
+            w_vec = np.mean(self.word2vec[w_vecs], axis=0)
+
+            for case in self.semantic_combinations:
+                mean_vec = self.compute_mean_vec(
+                    positive=[case[0], t_identifier],
+                    negative=[case[1]]
+                )
+                scores.append(self.compute_cosine_distance(w_vec, mean_vec))
+        return
+
+    def compute_mean_vec(self, positive, negative):
+        positive = [(word, 1.0) for word in positive]
+        negative = [(word, -1.0) for word in negative]
+
+        # compute the weighted average of all words
+        all_words, mean = set(), []
+        for word, weight in positive + negative:
+            mean.append(weight * self.word2vec.word_vec(word, use_norm=True))
+            if word in self.vocab:
+                all_words.add(self.word2vec.vocab[word].index)
+        return matutils.unitvec(array(mean).mean(axis=0))
+
+    @staticmethod
+    def compute_cosine_distance(vec1, vec2):
+        return 1 - spatial.distance.cosine(vec1, vec2)
+
     @staticmethod
     def prepare_document(document):
         # TODO change this according to the current model
@@ -166,7 +218,7 @@ class DefinienIdentifier:
 
     @staticmethod
     def load_word2vec(path):
-        return gensim.models.KeyedVectors.load_word2vec_format(path, binary=False)
+        return gensim.models.KeyedVectors.load_word2vec_format(path, binary=True)
 
     @staticmethod
     def load_doc2vec_model(path):
@@ -183,6 +235,12 @@ class DefinienIdentifier:
         writer = csv.writer(outf)
         for row in data:
             writer.writerow(row)
+
+    @staticmethod
+    def read_csv(file):
+        csvfile = open(file, 'rt')
+        data = csv.reader(csvfile, delimiter=',')
+        return list(data)
 
     @staticmethod
     def read_document_corpus(fname, tokens_only=False):

@@ -7,8 +7,18 @@ d2v_model_path = base_path + "nptrain-dbow-400d-25w-10mc-05ns-30e-d2v.model"
 
 gold_file = "gold.json"
 
-evaluator = computations.DefinienIdentifier(w2v_model_path, d2v_model_path, gold_file)
+csvdata = computations.DefinienIdentifier.read_csv("extraction.csv")
 
-evaluator.get_closest_word_vectors()
-evaluator.get_closest_semantic_vectors()
-evaluator.get_closest_distance_semantic_combined_vectors()
+
+# evaluator = computations.DefinienIdentifier(w2v_model_path, d2v_model_path, gold_file)
+
+# evaluator.get_closest_word_vectors()
+# evaluator.get_closest_semantic_vectors()
+# evaluator.get_closest_distance_semantic_combined_vectors()
+
+/home/truas/arxiv_andre_models/np_train_181213/
+nptrain-dbow-400d-25w-10mc-05ns-30e-d2v.model                           nptrain-dbow-400d-25w-10mc-05ns-30e-d2v.model.wv.vectors.npy
+nptrain-dbow-400d-25w-10mc-05ns-30e-d2v.model.docvecs.vectors_docs.npy  nptrain-dbow-400d-25w-10mc-05ns-30e-w2v.vector
+nptrain-dbow-400d-25w-10mc-05ns-30e-d2v.model.trainables.syn1neg.npy
+base_p = "/home/truas/arxiv_andre_models/np_train_181213/"
+w2v_p = base_p + "nptrain-dbow-400d-25w-10mc-05ns-30e-w2v.vector"

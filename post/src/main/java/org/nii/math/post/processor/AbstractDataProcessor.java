@@ -35,6 +35,9 @@ public abstract class AbstractDataProcessor {
                             "([\\s]{2,})|" + // 6
                             "(\\t+)");      // 7
 
+    public static final Pattern LLAMAPUN_SUBSCRIPT_PATTERN =
+            Pattern.compile("(\\w:.*?)\\s+POSTSUBSCRIPT:start\\s+(.*?)\\s+POSTSUBSCRIPT:end");
+
     public static final Pattern MATH_PATTERN =
             Pattern.compile("(__MATH_\\d+__)");
 
@@ -87,7 +90,8 @@ public abstract class AbstractDataProcessor {
                     if (lastTag[0].matches("__MATH.*")) { // math token
                         Matcher m = LLAMAPUNG_PATTERN.matcher(data);
                         if (m.matches()) {
-                            annotations.put(lastTag[0], tagByMath(m.group(1)));
+                            annotations.put(lastTag[0],
+                                    tagByMath(m.group(1)));
                         } else {
                             LOG.error("MML doesn't match LLAMAPUN pattern. Ann-File: " + annFile.toString() +
                                     ", Token: " + lastTag[0]);
@@ -119,20 +123,71 @@ public abstract class AbstractDataProcessor {
     public static String tagByMath(String in){
         Set<String> cache = new TreeSet<>();
         String[] t = in.split(" ");
-        StringBuilder buf = new StringBuilder("");
-        for (String aT : t) {
-            if ( !IgnorableLLamapunTokens.ignore(aT) ){
+
+        boolean skipRELOP = false;
+        if (t.length > 30) skipRELOP = true;
+
+        int tokens = 0;
+
+        for (int i = 0; i < t.length; i++) {
+            String aT = t[i];
+
+            // ignore right-hand side of math
+            if ( skipRELOP && aT.matches("RELOP.*") ){
+                for (int j=i; j < t.length; j++){
+                    t[j] = "";
+                }
+                break;
+            }
+
+            t[i] = "";
+            if ( aT.matches("POSTSUBSCRIPT:start")
+                    && i >= 1 && !t[i-1].isEmpty()){
+                StringBuffer b = new StringBuffer();
+                for (int j = i+1; j < t.length; j++){
+                    String bT = t[j];
+                    t[j] = "";
+                    if ( bT.matches("POSTSUBSCRIPT:end") ) {
+                        t[i-1] = t[i-1]+"_{"+b.toString()+"}";
+                        i = j;
+                        break;
+                    }
+
+                    Matcher m = IgnorableLLamapunTokens.GENERAL_TOKEN_PATTERN.matcher(bT);
+                    if (m.matches()){
+                        if ( m.group(1) == null )
+                            b.append(m.group(2));
+                        else b.append(m.group(1));
+                    }
+                }
+
+                continue;
+            }
+
+            if ( !IgnorableLLamapunTokens.ignore(aT)
+                    && !aT.matches("ATOM:and")){
                 aT = IgnoreTypes.clean(aT);
-                if ( cache.contains(aT) ) continue;
+                if ( cache.contains(aT) ||
+                        aT.isEmpty() ||
+                        aT.matches("\\s*")
+                        ) continue;
                 else cache.add(aT);
-                buf.append("math");
-                if ( aT.startsWith("-") )
-                    buf.append(aT);
-                else buf.append("-").append(aT);
-                buf.append(" ");
+
+                if (aT.startsWith("-"))
+                    t[i] = "math"+aT;
+                else t[i] = "math-"+aT;
             }
         }
-        return buf.toString();
+
+        StringBuffer sb = new StringBuffer();
+        for (String s : t){
+            if(!s.isEmpty()) {
+                tokens++;
+                sb.append(s).append(" ");
+            }
+        }
+
+        return sb.toString();
     }
 
     public abstract void start() throws RuntimeException;
@@ -174,7 +229,10 @@ public abstract class AbstractDataProcessor {
         }
 
         tokenMatcher.appendTail(sentence);
-        return sentence.toString(); //mathReplaceAndSplit(sentence.toString());
+        if (sentence.toString().endsWith(":")
+                || sentence.length() < 250)
+            return sentence.toString() + " ";
+        else return sentence.toString() + NL;
     }
 
     private String mathReplaceAndSplit( String paragraph ){

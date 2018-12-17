@@ -1,5 +1,7 @@
 package org.nii.math.post.processor;
 
+import java.util.regex.Pattern;
+
 /**
  * @author Andre Greiner-Petter
  */
@@ -68,8 +70,11 @@ public enum IgnorableLLamapunTokens {
     UNDERACCENT,
     UNKNOWN,
     VERTBAR,
-//    Weierstrass
+//    Weierstrass,
     ;
+
+    public static Pattern GENERAL_TOKEN_PATTERN =
+            Pattern.compile("\\w+[:-](.*)|(\\w+)");
 
     private static String IGNORE_PATTERN;
 

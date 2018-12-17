@@ -17,6 +17,7 @@ public class ParagraphParser extends AbstractDataProcessor {
     private static final Logger LOG = LogManager.getLogger(ParagraphParser.class.getName());
 
     public ParagraphParser(Path inDir, Path outDir, Path file){
+//        System.out.println("Start " + file);
         loadInitFiles(inDir, outDir, file);
     }
 
@@ -48,7 +49,7 @@ public class ParagraphParser extends AbstractDataProcessor {
 
     private void write( BufferedWriter w, String l ){
         try {
-            w.write(l + NL);
+            w.write(l);
         } catch (IOException e) {
             throw new RuntimeException("Cannot ");
         }

@@ -2,6 +2,7 @@ package org.nii.math.post;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.nii.math.post.processor.AbstractDataProcessor;
 import org.nii.math.post.processor.ParagraphParser;
 import org.nii.math.post.processor.SentenceSplitter;
 
@@ -10,7 +11,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Stream;
 
 /**
  * @author Andre Greiner-Petter
@@ -21,6 +24,7 @@ public class PostProcessor {
 
     private static final int maxDocs = 137_864; // no_problems data
     private static int currentlyProcessedDocs = 0;
+    private static final int parallelism = 16;
 
     private UpdateProgress progressRunnable;
 
@@ -36,7 +40,7 @@ public class PostProcessor {
         progressRunnable = new UpdateProgress();
     }
 
-    public void startProcessing(){
+    public void startProcessing() {
         System.out.println("Start processing files in " + docsPath.toString());
         System.out.println("Logging will be written to log file.");
         startTimeMillis = System.currentTimeMillis();
@@ -44,23 +48,37 @@ public class PostProcessor {
         new Thread(progressRunnable).start();
 
         try {
-            Files
-                    .walk(docsPath) // no SecurityException possible, we checked "can read" beforehand
-                    .parallel()
-                    .filter( p -> p.toString().endsWith(".txt") ) // only take txt and not annotation file
-                    .map( p -> new ParagraphParser(docsPath, outputPath, p) )
-                    .forEach( ss -> {
-                        try {
-                            ss.start();
-                        } catch ( RuntimeException re ){
-                            LOG.info("Skipped " + ss.getOrigIn().toString() + " because: " + re.getMessage());
-                        }
-                        currentlyProcessedDocs++;
-                    } );
-        } catch ( IOException ioe ){
+            // there is trick to not compute parallel streams in the common fork-join pool.
+            // When we create an outer pool and submit the stream, the stream threads run in the given
+            // outer pool and NOT in the common fork-join pool.
+            ForkJoinPool outerPool = new ForkJoinPool(parallelism);
+
+            // no SecurityException possible, we checked "can read" beforehand
+            Stream<Path> filesStream = Files.walk(docsPath);
+            outerPool.submit(
+                    () -> filesStream
+                            .parallel()
+                            .filter(p -> p.toString().endsWith(".txt")) // only take txt and not annotation file
+                            .map(p -> new ParagraphParser(docsPath, outputPath, p))
+                            .forEach(ss -> {
+                                try {
+                                    ss.start();
+                                } catch (RuntimeException re) {
+                                    LOG.info("Skipped " + ss.getOrigIn().toString() + " because: " + re.getMessage());
+                                }
+                                currentlyProcessedDocs++;
+                            })
+            );
+
+            outerPool.shutdown();
+            outerPool.awaitTermination(7, TimeUnit.DAYS);
+
+        } catch (IOException ioe) {
             LOG.error("Cannot start walking through the directory.", ioe);
             System.out.println("I/O Error detected, process stopped.");
             ioe.printStackTrace();
+        } catch (InterruptedException ie) {
+            LOG.error("Timeout after 7 days... Enough computed.");
         } finally {
             progressRunnable.stoppingProgressUpdates();
         }
@@ -105,9 +123,9 @@ public class PostProcessor {
     }
 
     public static void main(String[] args) throws InterruptedException, IOException {
-        String in = "/home/andreg-p/Projects/Math2Vec/planetext/data-out";
-        String out = "/home/andreg-p/Projects/Math2Vec/planetext/data-out-processed";
-//        String in = null, out = null;
+//        String in = "/home/andreg-p/Projects/Math2Vec/planetext/data-out";
+//        String out = "/home/andreg-p/Projects/Math2Vec/planetext/data-out-processed";
+        String in = null, out = null;
 
         for ( int i = 0; i < args.length; i++ ){
             if ( args[i].matches("-{1,2}(h|help)") ){
@@ -132,7 +150,7 @@ public class PostProcessor {
 
         PostProcessor splitter = new PostProcessor(in, out);
         splitter.startProcessing();
-        splitter.progressRunnable.stoppingProgressUpdates();
+        //splitter.progressRunnable.stoppingProgressUpdates();
     }
 
     private class UpdateProgress implements Runnable {
@@ -147,7 +165,7 @@ public class PostProcessor {
         public void run() {
             while(!stopped){
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(10);
                     PostProcessor.startPrintingProcess();
                 } catch (InterruptedException e) {
                     e.printStackTrace();

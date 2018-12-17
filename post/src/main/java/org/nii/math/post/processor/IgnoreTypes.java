@@ -1,36 +1,36 @@
 package org.nii.math.post.processor;
 
 /**
+ * mathbf -> bold
+ * mathrm -> <>
+ * mathsf -> sansserif
+ * mathcal -> caligraphic
+ *
  * @author Andre Greiner-Petter
  */
 public enum IgnoreTypes {
-    smallcaps,
-    sansserif,
-    typewriter,
-    bold,
-    blackboard,
+//    smallcaps,
+//    sansserif,
+//    typewriter,
+//    bold,
+//    blackboard,
     italic,
-    caligraphic,
+//    caligraphic,
     not,
     normal,
     ATOM,
     OPFUNCTION,
     OOPFUNCTION,
     TRIGFUNCTION,
-    script;
+//    script
+    ;
 
     private static String IGNORE_PATTERN;
 
     static {
         StringBuffer bf = new StringBuffer();
-        boolean first = true;
         for ( IgnoreTypes token : IgnoreTypes.values() ){
-            if (first){
-                bf.append(token.name()).append("[_-]");
-                first = false;
-            } else {
-                bf.append("|").append(token.name());
-            }
+            bf.append(token.name()).append("[:-]*").append("|");
         }
         bf.append("end$");
         IGNORE_PATTERN = bf.toString();
