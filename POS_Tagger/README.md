@@ -13,6 +13,9 @@ Folder used to read/write should be in the same level at 'default' package
   
 UPDATES:
 ==========
+[2018-12-17]
+1. Fixed all filters to ignore `math-<?>` tokens. It also does not concatenate `math-<?>` tokens
+
 [2018-12-14]
 1. Added one extra filter option to just lowercase words without any tag
 2. cleanText calls all the filter-functions comment and/or uncomment the ones desired

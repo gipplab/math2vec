@@ -42,13 +42,14 @@ def cleanText(fname, input_file_abs, output_path):
             
             words = str(lines) #stream into string
             words = tokenizeWords(words) #tokenize things for tagger
-            #words = applyPOStag(words) #POS-tagger via NLTK  
-            words = makeLowerCase_notags(words) # makeLowerCase_tags(words) if applyPOS(words) is executed
-            #words = removeStopWords(words) #get rid of stop words     
-            #words = cleanStringPunctuation(words) #remove punctuation and weird chars
-            #words = removePluras(words)
+            words = applyPOStag(words) #POS-tagger via NLTK  
+            #words = makeLowerCase_notags(words) # makeLowerCase_tags(words) if applyPOS(words) is executed
+            words = makeLowerCase_tags(words) # makeLowerCase_notags(words) if applyPOS(words) is NOT executed
+            words = removeStopWords(words) #get rid of stop words     
+            words = cleanStringPunctuation(words) #remove punctuation and weird chars
+            words = removePluras(words)
             if not words:continue #in case after all pre-processing cleans all words we skip this sentence
-            #words = concatenateTAG(words)
+            words = concatenateTAG(words)
             outputFile(words, ops)
         ops.close()
         fin.close()
@@ -75,18 +76,26 @@ def concatenateTAG(words):
     
     for index, word_tag in enumerate(words[:-1]):
         word,tag = word_tag #unpack word and tag
-        
-        n_word,n_tag = words[index+1]
-        if((tag in keep_tags) and (n_tag in keep_tags)):
-            no_tag_words.append(word +'_'+n_word)
-        else:
+        if(word.startswith('math-')):
             no_tag_words.append(word)
+        else:
+            n_word,n_tag = words[index+1]
+            if(n_word.startswith('math')):continue #prevents a non math token to be put together with future math token
+            no_tag_words.append(glueNounsAdjective(word, tag, n_word, n_tag))
             
     last_word,last_tag = words[-1] # we need to have the last word regardless of the outcome
     no_tag_words.append(last_word)
     return(no_tag_words)    
 #concatenate words that share a common POS_TAG in keep_tags - only working for 2 consecutive words
-#Todo (maybe) improve concatenatio of tokens
+
+def glueNounsAdjective(current_word, current_tag, next_word, next_tag):
+    if((current_tag in keep_tags) and (next_tag in keep_tags)):
+        new_token = current_word +'_'+ next_word
+    else:
+        new_token = current_word
+    return (new_token)
+#returns one single token composed by Noun-Adjective (any owrder) based on their tags
+
 def applyPOStag(words):
     tagged_words = nltk.pos_tag(words) #uses the Penn Treebank Tag Set.
     return (tagged_words)
@@ -99,7 +108,7 @@ def tokenizeWords(sentence):
 def makeLowerCase_tags(words):
     lower_case = []
     for word,tag in words:
-        if(word.startswith('math')):
+        if(word.startswith('math-')):
             lower_case.append((word,tag))
         else:
             lower_case.append((word.lower(),tag))
@@ -108,25 +117,25 @@ def makeLowerCase_tags(words):
 
 def makeLowerCase_notags(words):
     lower_case = []
-    
     for word in words:
-        if(word.startswith('math')):
-            print(word)
+        if(word.startswith('math-')):
+            #print(word)
             lower_case.append(word)
         else:
             lower_case.append(word.lower())
     return(lower_case)
 #everything in lower case from string
 
-
 def removePluras(words):
     singles=[]
     for word,tag in words:
-        singles.append((inflection.singularize(word),tag)) #using infletcion library
-        #singles.append((singularize(word),tag)) #using pattern.en
+        if(word.startswith('math-')):
+            singles.append((word,tag))
+        else:
+            singles.append((inflection.singularize(word),tag)) #using infletcion library
+            #singles.append((singularize(word),tag)) #using pattern.en
     return (singles)
 #gets rid of plurals
-
 
 def removeStopWords(words):
     #no_sw_words = [i for i in words[:] if not i in en_stop] #Simple - use this if you do not have tags
@@ -137,11 +146,14 @@ def removeStopWords(words):
 def cleanStringPunctuation(words):
     tokens = []
     for word,tag in words:
-        clean_word = word.translate({ord(c): None for c in '()[]{}\'\".;:,!@#$'})
-        if(clean_word): 
-            tokens.append((clean_word,tag)) #only keep valid items
+        if(word.startswith('math-')):
+            tokens.append((word,tag))
         else:
-            continue # we don't want a empty space in the list
+            clean_word = word.translate({ord(c): None for c in '()[]{}\'\".;:,!@#$'})
+            if(clean_word): 
+                tokens.append((clean_word,tag)) #only keep valid items
+            else:
+                continue # we don't want a empty space in the list
     return(tokens)
 #returns a list of clean tokens - gets rid of anything between ' ' by  replacing for None
 #it also removes the entry for that empty token in our list
@@ -174,7 +186,7 @@ def applyStemmer(words):
     st = LancasterStemmer()
     ste_words = []
     for word,tag in words:
-        if(word.startswith('math')):
+        if(word.startswith('math-')):
             ste_words.append((word,tag))
         else:
             ste_words.append((st.stem(word),tag))
