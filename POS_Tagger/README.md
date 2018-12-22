@@ -13,6 +13,20 @@ Folder used to read/write should be in the same level at 'default' package
   
 UPDATES:
 ==========
+[2018-12-22]
+1. Stopwords considering NLTK. The one from PyPl is still na option, no clear difference about
+2. Concatenation of NOUNS working
+ 2.a. Has to be done before ADJ chains for more sound results
+3. removeLastRepWord(word) in case this is part of a previous concatenation
+ 3.a. Important to removePunctuation first
+4. Concatenation of ADJ*NOUN+ is not working for consecutive adjectives - To Do 
+
+[2018-12-20]
+1. Implemented NOUNS+ concatenation
+2. Better punctuation removal
+3. Holy Grail `math-<?>`
+
+
 [2018-12-17]
 1. Fixed all filters to ignore `math-<?>` tokens. It also does not concatenate `math-<?>` tokens
 
