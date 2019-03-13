@@ -242,6 +242,8 @@ class DefinienIdentifier:
         data = csv.reader(csvfile, delimiter=',')
         return list(data)
 
+    # Returns a generator... you should convert the result to a list immediately via
+    # list(read_document_corpus(path))
     @staticmethod
     def read_document_corpus(fname, tokens_only=False):
         with smart_open.smart_open(fname, encoding="utf-8") as f:

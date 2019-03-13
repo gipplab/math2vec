@@ -66,4 +66,11 @@ public class MathTokensTest {
         String expected = "math-t_{sput} math-a math-da math-dt ";
         test(in, expected);
     }
+
+    @Test
+    void testMathTokenizerSum(){
+        String in = "SUMOP:sum POSTSUBSCRIPT:start italic-n RELOP:element-of italic-Z POSTSUPERSCRIPT:start italic-d POSTSUPERSCRIPT:end POSTSUBSCRIPT:end VERTBAR:| italic-psi OPEN:( italic-t PUNCT:, italic-n CLOSE:) VERTBAR:| POSTSUPERSCRIPT:start NUMBER:2 POSTSUPERSCRIPT:end VERTBAR:| italic-n VERTBAR:| RELOP:less-than-or-equals italic-C";
+        String expected = "math-n math-Z math-d math-psi math-t math-C ";
+        test(in, expected);
+    }
 }
